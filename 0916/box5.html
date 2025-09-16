@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            background-color: aqua;
+            border: 1px solid #333;
+        }
+         .box2{
+            width: 150px;
+            height: 150px;
+            padding: 10px;
+            background-color: palevioletred;
+            border: 1px solid #333;
+            box-sizing: border-box;
+            /* box-sizing: border-box; 패딩과 보더를 포함한 150 사이즈 */
+        }
+         .box3{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(103, 78, 243);
+            border: 1px solid #333;
+            border-radius: 20px 0 20px 0;
+        }
+         .box4{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(235, 247, 72);
+            border: 1px solid #333;
+            border-radius: 10px;
+
+        }
+        .box5{
+            width: 150px;
+            height: 150px;
+            background-color: rgb(235, 247, 72);
+            border: 1px solid #333;
+            border-radius: 50%;
+        }
+        .dog1{
+            border-radius: 30px;
+        }
+        .box6{
+             width: 150px;
+            height: 150px;
+            background-color: rgb(235, 247, 72);
+            border: 1px solid #333;
+           /* box-shadow: 5px 5px 5px red; 색상 */
+           /* box-shadow: -5px 5px 5px black;  좌측 왼쪽방향 음수 완쪽 양수 오른쪽*/
+           /* box-shadow: 5px -5px 5px black; 색상 위쪽(음수)그림자 아래(양수)*/
+           box-shadow: 5px 5px 20px black;
+           /* 색상 */
+           /* 20px 퍼짐효과(blur) */
+           /* x y blur 색상 */ 
+        }
+        .box7{
+           width: 150px;
+            height: 150px;
+            background-color: rgb(235, 247, 72);
+            border: 1px solid #333;
+            box-shadow: 5px 5px 5px black;
+            margin: 30px;
+        }
+
+        .box8{
+             width: 150px;
+            height: 150px;
+            background-color: rgb(235, 247, 72);
+            border: 1px solid #333;
+            box-shadow: -5px 5px 5px black;
+            margin: 30px;
+          
+        }
+         .box9{
+             width: 150px;
+            height: 150px;
+            background-color: rgb(235, 247, 72);
+            border: 1px solid #333;
+            box-shadow: 5px -5px 5px black;
+          
+        }
+
+
+
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <div class="box1">박스1</div>
+    <div class="box2">박스2</div>
+    <div class="box3">박스3</div>
+    <div class="box4">박스4</div>
+    <div class="box5">박스5</div>
+   
+    <img src="images/dog1.jpg" alt="강아지1" class="dog1"> 
+    <div class="box6">박스6</div>
+    <div class="box7">박스7</div>
+    <div class="box8">박스8</div>
+    <div class="box9">박스9</div>
+
+</body>
+</html>
