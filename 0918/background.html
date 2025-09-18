@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{margin: 0; padding: 0;}
+.header1{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/r1.png);
+    /* 전체가 배경사진으로 채워짐 */
+}
+.header2{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/r1.png);
+    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; 1개만나옴 */
+    background-repeat: repeat-x;
+    /* background-repeat: repeat-x x축으로 사진이 채워짐 */
+}
+.header3{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/r1.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    /* 오른쪽 중앙 */
+    background-position: center center;
+    /* 정중앙 50% 50% 도 동일 */
+}
+.header4{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/cw1.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* contain 화면에 맞게 사진 사이즈를 맞춤(좌측상단을 기준으로) */
+}
+.header5{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background-image: url(images/cw1.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    /* cover 사진이 화면을 꽉채움 */
+}
+.header6{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    background-color: pink;
+    background: url(images/cw1.jpg) no-repeat 50% 50% / cover;
+    /* 헤더5를 한줄로 정리하는방법 */
+}
+
+</style>
+
+</head>
+<body>
+    <div class="header1"> 헤더1</div>
+    <div class="header2"> 헤더2</div>
+    <div class="header3"> 헤더3</div>
+    <div class="header4"> 헤더4</div>
+    <div class="header5"> 헤더5</div>
+    <div class="header6"> 헤더6</div>
+       
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0;padding: 0;}
+#wrap{
+    width: 1000px;
+    height: 650px;
+    background-color: palevioletred;
+}
+header .logo{
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+}
+#header{
+    width: 200px;
+    height: 650px;
+    background-color: pink;
+    text-align: center;
+    position: absolute;
+}
+a{text-decoration: none; color: black;
+    font-size: 20px;
+}
+#header ul a{
+    display: block;
+    width: 180px;
+    height: 60px;
+    background-color: brown;
+    
+}
+#header ul:hover a{
+    background-color: aqua;
+    color: blue;
+}
+#slider{
+    height: 350px;
+    width: 800px;
+    background-color: aquamarine;
+}
+#contents{
+    height: 200px;
+    width: 800px;
+    background-color: beige;
+}
+#contents > div{
+    float: left;
+}
+.notice{
+    height: 200px;
+    width: 270px;
+    background-color: gray;
+}
+.banner{
+    height: 200px;
+    width: 265px;
+    background-color: lightgrey;
+}
+.icons{
+    height: 200px;
+    width: 265px;
+    background-color: rgb(175, 175, 175);
+}
+.footer{
+    height: 100px;
+    width: 800px;
+    background-color: pink;
+}
+.footer > div{
+    float: left;
+}
+.footer .f1{
+    width: 180px;
+    height: 100px;
+    background-color: slateblue;
+}
+.footer .f2{
+    width: 620px;
+    height: 50px;
+    background-color: rgb(177, 166, 247);
+    
+}
+.footer .f3{
+    width: 620px;
+    height: 50px;
+    background-color: rgb(133, 123, 199);
+
+}
+.mo{
+    float: right;
+}
+
+
+</style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <h1 class="logo">LOGO</h1>
+            <div id="header">
+            <ul><a href="#">MENU-1</a></ul>
+            <ul><a href="#">MENU-2</a></ul>
+            <ul><a href="#">MENU-3</a></ul>
+            <ul><a href="#">MENU-4</a></ul>
+        </div>
+        </header>
+    <div class="mo">
+    <div id="slider">
+    이미지 슬라이더</div>
+    <div id="contents">
+        <div class="notice">공지사항/갤러리</div>
+        <div class="banner">배너</div>
+        <div class="icons">바로가기</div>
+    </div>
+    <div class="footer">
+        <div class="f1">로고</div>
+        <div class="f2">하단메뉴</div>
+        <div class="f3">Copyright</div>
+
+    </div>
+</div>
+</div>
+
+</body>
+</html>
