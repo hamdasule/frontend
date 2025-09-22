@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+#mybox{
+    position: relative;
+    top: 25px;
+    width: 116px;
+    height: 160px;
+    margin-left: 50px ;
+    background: url(img/bg-main1.png)no-repeat 50% 50%;
+    animation: mybox 3s infinite alternate;
+}
+@keyframes mybox {
+    0%{top:25px;}
+    100%{top:550px}
+}
+#mybox2{
+    position: relative;
+    top: 25px;
+    width: 116px;
+    height: 160px;
+    margin-left: 400px ;
+    background: url(img/bg-main1.png)no-repeat 50% 50%;
+    animation: mybox2 3s infinite alternate;
+}
+@keyframes mybox2 {
+    0%{top:25px;}
+    100%{top:550px}
+}
+
+
+</style>
+
+</head>
+<body>
+    <div id="mybox"></div>
+    <div id="mybox2"></div>
+
+</body>
+</html>
