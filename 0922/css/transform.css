@@ -10,15 +10,18 @@ p{
     font-size: 30px;
     padding-bottom: 30px;
     cursor: pointer;
+    /* 가짜링크 손가락 */
 }
 .tra{
     background-color: #ae5329;
     transform: translate(-500px , 0);
+    /* 변형 : 이동 (x,y) */
     transition: all 0.5s;
 }
 /* + next 의미 */
 .btn1:hover + .tra{
     transform: translate(0 , 0);
+    /*btn1 마우스올리면 tra 원래위치 */
 
 }
 .rot1{
