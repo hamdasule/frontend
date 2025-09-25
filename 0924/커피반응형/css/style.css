@@ -30,12 +30,13 @@ nav{
 nav ul li{
     float: left;
     margin-top: 13px;
-    margin-left: 10px;
+    width: 33.33%;
     
 }
 nav ul li a{
     display: block;
-    width: 150px;
+    width: 100px;
+    margin: 0 auto;
     height: 45px;
     line-height: 45px;
     text-align: center;
@@ -67,7 +68,7 @@ section article{
     height: 130px;
     border: 1px solid black;
     background-color: #fff;
-    margin: 0 0 16px 48px ;
+    margin: 0 auto 16px  ;
     text-align: justify;
     
 }
