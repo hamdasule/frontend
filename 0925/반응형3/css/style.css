@@ -26,7 +26,7 @@ header{
 section{
     width: 85%;
     margin-left: 15%;
-    background-color: #333;
+    /* background-color: #333; */
 }
 
 article{
@@ -34,7 +34,7 @@ article{
     height: 280px;
     float: left;
 }
-article:nth-child(1){width: 60%; background-color: #111; height: 560px;}
+article:nth-child(1){width: 60%; background-color: #00116d; height: 560px;}
 article:nth-child(2){width: 40%; background-color: #fff; }
 article:nth-child(3){width: 20%; background-color: #fff; }
 article:nth-child(4){width: 20%; background-color: #444; }
@@ -100,7 +100,9 @@ header h1{
 article > div{
     position: relative;
     width: 100%;
+    padding: 30px 40px 0;
     height: 100%;
+    box-sizing: border-box;
     overflow: hidden;
     cursor: pointer;
 }
@@ -143,8 +145,8 @@ article .bg span{
 }
 article .bg1 span{
     font-size: 105px;
-    bottom: -76px;
-    right: -6px;
+    bottom: 10px;
+    right: 20px;
     opacity: 1;
 }
 
@@ -165,4 +167,80 @@ article .bg1 span{
 article .bg1:hover span{
     transform: scale(1) rotateY(360deg);
     color: #222;
+}
+article .txt p strong{
+    color: #333;
+    font-size: 30px;
+} 
+
+article .txt3 p em{
+    height: 120px;
+}
+article p strong{
+    margin-bottom: 20px;
+}
+
+article .txt i{
+    font-size: 220px;
+    color: #fff;
+    position: absolute;
+    bottom: -20px;
+    right: -200px;
+    opacity: 0;
+}
+article:nth-child(3) .txt i{
+    font-size: 200px;
+    color: #333;
+    position: absolute;
+    bottom: -20px;
+    right: -15px;
+    opacity: 0.7;
+}
+article:nth-child(6) .txt i{
+    font-size: 220px;
+    color: #333;
+    position: absolute;
+    bottom: -20px;
+    right: -200px;
+    opacity: 0;
+}
+
+article:hover .txt2{
+    background-color: rgb(29, 172, 255);
+    color: #fff;
+}
+article:hover .txt3{
+    background-color: yellow;
+    color: black;
+}
+article:hover .txt4{
+    background-color: rgb(15, 209, 41);
+    color: #fff;
+}
+article:hover .txt5{
+    background-color: rgb(73, 55, 49);
+    color: #fff;
+}
+article:hover .txt2 strong{color: #fff;}
+article:hover .txt3 strong{color: #333;}
+article:hover .txt4 strong{color: #fff;}
+article:hover .txt5 strong{color: #fff;}
+
+
+
+/* 텍스트 박스 호버 효과 */
+article .txt, article .txt i{
+    transition: all 1s;
+}
+article .txt strong{transition: all 0.7s;}
+
+/* article:hover .txt{
+    background-color: #6ce2fb;
+    color: #fff;
+} */
+/* 제목제외한 작은글씨 및 배경색 변화 */
+article:hover .txt i{
+    /* right -200, opacity 0 줬던 화살표가 제자리로 오면서 opacity 0.5 */
+    right: 0;
+    opacity: 0.5;
 }
