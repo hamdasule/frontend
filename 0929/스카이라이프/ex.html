@@ -9,21 +9,26 @@
 .skylife-container{
     width: 1900px;
     height: 100%;
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
+    margin: 0 auto;
+    position: relative;
 }
 h1{
     font-size: 50px;
-    margin: 20px 0 30px 300px;
+    margin: 15px 0 35px 320px;
 }
 .f3{
     font-size: 18px;
     color: #666;
+    position: absolute;
+    top: 30px;
+    right: 350px;
    
 }
 .box-container{
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 23px;
 }
 .bigbox{
     width: 400px;
@@ -51,7 +56,7 @@ img{
     background-color: #fff;
     border-radius: 10px;
     position: absolute;
-    bottom: 20px;
+    bottom: 15px;
     /* padding: 20px 12px 20px 20px; */
 }
 .box .f1{
@@ -68,7 +73,17 @@ img{
     width: 24px;
     height: 24px;
     float: right;
-
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.skylife-container > img{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 30px;
+    right: 325px;
 }
     
 </style>
@@ -77,6 +92,7 @@ img{
 <body>
     <div class="skylife-container">
         <h1>KT망 그대로 이용하는</h1>
+        <img src="images/right_b94.png" alt="그레이화살표">
         <p class="f3">모바일 상품 모두보기</p>
         <div class="box-container">
         <div class="bigbox bigbox1">
