@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //놀이공원 입장 13미만 이거나 65세 이상이면 입장료 2000원
+        // 13세 이상 20세 미만이면 4000원
+        //나머지 성인은 6000원 이라고 prompt로 입력받아 처리하시오
+
+        var age = prompt("당신의 나이는?","");
+        var pay;
+        if(age < 13 || age >= 65){
+            pay = '2000원';
+        }
+        else if(age >= 13 && age < 20){
+            pay = '4000원';
+        }
+        else{
+            pay = '6000원';
+        }
+        document.write('당신의 입장료는' + pay + '입니다.' );
+        // || (or) &&(그리고)
+
+
+
+
+
+    </script>
+</body>
+</html>
