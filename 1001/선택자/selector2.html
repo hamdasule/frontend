@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/coffee-pink.jpg" alt="sample" id="myImage">
+</body>
+</html>
+<script>
+    const img1= document.getElementById('myImage');
+    let srcVal = img1.getAttribute('src'); //현재 img1 src속성에 들어있는 속성값
+    
+    //images/coffee-pink.jpg 
+    //alert(srcVal);
+    img1.addEventListener('mouseover',function(){
+        img1.setAttribute('src','images/coffee-blue.jpg')
+
+    });
+    img1.addEventListener('mouseout',function(){
+        img1.setAttribute('src','images/coffee-pink.jpg')
+
+    });
+    //getAttribute('속성'); 속성에 접근한다 - get가져온다
+    //setAttribute('속성','값') 속성을 추가한다 - set 설정한다
+    //removeAttribute('속성') 속성을 제거한다 
+
+
+</script>
