@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0;padding: 0;}
+li{
+    list-style: none;
+    float: left;
+    width: 1200px;
+}
+#banner-wrap{
+    width: 1200px;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    position: relative;
+}
+header{
+    width: 1200px;
+    height: 200px;
+    background-color: #bbb;
+}
+#banner{
+    width: 5000px;
+    height: 300px;
+    border: 1px solid orange;
+}
+#container{
+    width: 1200px;
+    height: 300px;
+    border: 1px solid red;
+    /* overflow: hidden; */
+}
+p .prev{
+    position: absolute;
+    bottom: 130px;
+    left: 17px;
+}
+p .next{
+    position: absolute;
+    bottom: 130px;
+    right: 17px;
+}
+
+</style>
+
+</head>
+<body>
+    <div id="banner-wrap">
+        <header></header>
+        <div id="container">
+            <ul id="banner">
+                <li><a href="#"><img src="images/slide1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/slide2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/slide3.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <P>
+            <a class="prev" href="#"> <img src="images/prev_btn.png" alt=""></a>
+            <a class="next" href="#"> <img src="images/next_btn.png" alt=""></a>
+        </P>
+    </div>
+</body>
+</html>
+<script>
+
+    
+</script>
