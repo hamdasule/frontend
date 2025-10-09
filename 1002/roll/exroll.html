@@ -6,10 +6,11 @@
     <title>Document</title>
 <style>
 *{margin: 0;padding: 0;}
-li{
-    list-style: none;
-    float: left;
-    width: 1200px;
+
+#banner li {
+  float: left;
+  width: 1200px;  
+  list-style: none;
 }
 #banner-wrap{
     width: 1200px;
@@ -24,15 +25,14 @@ header{
     background-color: #bbb;
 }
 #banner{
-    width: 5000px;
+    width: 7200px;
     height: 300px;
-    border: 1px solid orange;
+    transition: margin-left 0.5s;
 }
 #container{
     width: 1200px;
     height: 300px;
-    border: 1px solid red;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 p .prev{
     position: absolute;
@@ -66,6 +66,73 @@ p .next{
 </body>
 </html>
 <script>
+let list = document.getElementById('banner');
+let listLi = document.querySelectorAll('#banner li');
+let total = 3;
+let num = 0;
+
+
+for(let i = 0; i < total; i++){
+    let clone = listLi[i].cloneNode(true);
+    list.appendChild(clone);
+}
+
+function slideTo(index){
+    list.style.transition = 'margin-left 0.5s';
+    list.style.marginLeft = -1200 * index + 'px';
+}
+
+// 다음 버튼
+document.querySelector('.next').addEventListener('click', function(e){
+    e.preventDefault();
+    num++;
+    slideTo(num);
+
+    if(num > total){ 
+        setTimeout(() => {
+            list.style.transition = 'none';
+            num = 0;
+            list.style.marginLeft = '0px';
+        }, 500);
+    }
+});
+
+// 이전 버튼
+document.querySelector('.prev').addEventListener('click', function(e){
+    e.preventDefault();
+    if(num === 0){
+        list.style.transition = 'none';
+        num = total;
+        list.style.marginLeft = -1200 * num + 'px';
+        setTimeout(() => {
+            num--;
+            list.style.transition = 'margin-left 0.5s';
+            list.style.marginLeft = -1200 * num + 'px';
+        }, 20);
+    } else {
+        num--;
+        slideTo(num);
+    }
+});
+
+function autoPlay(){
+    num++;
+    slideTo(num);
+    if(num > total){
+        setTimeout(() => {
+            list.style.transition = 'none';
+            num = 0;
+            list.style.marginLeft = '0px';
+        }, 500);
+    }
+}
+
+const container = document.getElementById('container');
+let interval = setInterval(autoPlay, 3000);
+
+container.addEventListener('mouseover', () => clearInterval(interval));
+container.addEventListener('mouseout', () => interval = setInterval(autoPlay, 3000));
+
 
     
 </script>
