@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <div class="top_p">
+                <h2>THECOLDESTMOMENT</h2>
+            </div>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">COLLECTION</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">ACCOUNT</a></li>
+                <li><a href="#">SEARCH</a></li>
+                <li><a href="#">CART</a></li>
+            </ul>
+        </nav>
+        <div id="slide-wrap">
+        <div id="slider">
+            <ul id="slide">
+                <li><a href="#"><img src="coffe_images/thecol1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="coffe_images/thecol2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="coffe_images/thecol3.jpg" alt=""></a></li>
+                <li><a href="#"><img src="coffe_images/thecol4.jpg" alt=""></a></li>
+                <li><a href="#"><img src="coffe_images/thecol5.jpg" alt=""></a></li>
+                <li><a href="#"><img src="coffe_images/thecol6.jpg" alt=""></a></li>
+                <li><a href="#"><img src="coffe_images/thecol7.jpg" alt=""></a></li>
+                <li><a href="#"><img src="coffe_images/thecol8.jpg" alt=""></a></li>
+                <li><a href="#"><img src="coffe_images/thecol9.jpg" alt=""></a></li>
+            </ul>
+        </div>
+             <p>
+                <a class="prev" href="#"> <img src="coffe_images/prev_btn.png" alt=""></a>
+                <a class="next" href="#"> <img src="coffe_images/next_btn.png" alt=""></a>
+            </p>
+    </div>
+    <div class="pohto1">
+        <span>PORTFOLIO</span>
+    </div>
+
+        <div class="main">
+            <section>
+        
+                <article class="pic1">
+                    <h3>25 FALL 'project22'</h3>
+                </article>
+                <article class="pic2">
+                    <h1>TCM skirt layered pants</h1>
+                </article>
+               
+            </section>
+           
+        </div>
+        <footer>
+            <p>&#169 Copy right Hamdasule Portfolio reserved</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+<script>
+const list = document.getElementById('slide');
+const liList = list.querySelectorAll('li');
+const total = liList.length; // 9
+const visible = 4;          
+const li_width = 230;
+
+let num = 0;
+
+for(let i=0; i<visible; i++){
+    const clone = liList[i].cloneNode(true);
+    list.appendChild(clone);
+}
+
+function moveSlide(direction){
+    num += direction;
+    list.style.transition = 'margin-left 0.5s';
+    list.style.marginLeft = -li_width * num + 'px';
+}
+
+list.addEventListener('transitionend', () => {
+    if(num >= total){
+        list.style.transition = 'none';
+        num = num - total; 
+        list.style.marginLeft = -li_width * num + 'px';
+    }
+    if(num < 0){
+        list.style.transition = 'none';
+        num = total + num;
+        list.style.marginLeft = -li_width * num + 'px';
+    }
+});
+
+document.querySelector('.next').addEventListener('click', e => { e.preventDefault(); moveSlide(1); });
+document.querySelector('.prev').addEventListener('click', e => { e.preventDefault(); moveSlide(-1); });
+
+let interval = setInterval(()=> moveSlide(1), 3000);
+const frame = document.getElementById('slider');
+frame.addEventListener('mouseover', ()=> clearInterval(interval));
+frame.addEventListener('mouseout', ()=> interval = setInterval(()=> moveSlide(1), 3000));
+</script>
+
+<!-- <script>
+    let list = document.getElementById('slide');
+    let listLi = document.querySelectorAll('#slide li'); 
+    let total = listLi.length; 
+    let li_width = 230;
+   
+     for(let i = 0; i < 4; i++){
+        let copyObj = listLi[i].cloneNode(true);
+        list.append(copyObj); //ul 맨뒤로 copyObj를 추가해라(복사한 내용 붙이겠다)
+     }
+
+     let num = 0;
+     document.querySelector('.next').addEventListener('click',function(e){
+        e.preventDefault();
+
+        if(num === total){
+            num =0;
+            list.style.transition = 'none';
+            list.style.marginLeft = 0;
+            //트렌지션이 없으므로 움직임없이 첫번째사진으로 순간적으로 이동
+        }
+        setTimeout(function(){
+        num++;
+        list.style.transition = 'margin-left 0.5s';
+        list.style.marginLeft = -li_width * num + 'px';
+        },50);
+     });
+
+
+     document.querySelector('.prev').addEventListener('click',function(e){
+        e.preventDefault();
+
+        if(num ===0){
+            num = total;
+            list.style.transition = 'none';
+            list.style.marginLeft = -li_width * num + 'px';
+            
+        }
+        setTimeout(function(){
+        num--;
+        list.style.transition = 'margin-left 0.5s';
+        list.style.marginLeft = -li_width * num + 'px';
+        },50);
+     });
+
+
+     function autoPlay(){
+        if(num === total){
+            num = 0;
+            list.style.transition = 'none';
+            list.style.marginLeft = 0;
+            
+        }
+        setTimeout(function(){
+        num++;
+        list.style.transition = 'margin-left 0.5s';
+        list.style.marginLeft = -li_width * num + 'px';
+        },50);
+     };
+
+     let frame = document.getElementById('slider');
+
+     let interVal = setInterval(autoPlay, 3000);
+     frame.addEventListener('mouseover',function(){
+        clearInterval(interVal);
+     });
+
+     frame.addEventListener('mouseout',function(){
+        interVal = setInterval(autoPlay, 3000);
+     });
+
+
+</script> -->
