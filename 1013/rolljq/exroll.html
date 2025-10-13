@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{margin: 0;padding: 0;}
+
+#banner li {
+  float: left;
+  width: 1200px;  
+  list-style: none;
+}
+#banner-wrap{
+    width: 1200px;
+    height: 500px;
+    border: 1px solid #ccc;
+    margin: 0 auto;
+    position: relative;
+}
+header{
+    width: 1200px;
+    height: 200px;
+    background-color: #bbb;
+}
+#banner{
+    width: 7200px;
+    height: 300px;
+    transition: margin-left 0.5s;
+}
+#container{
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+}
+p .prev{
+    position: absolute;
+    bottom: 130px;
+    left: 17px;
+}
+p .next{
+    position: absolute;
+    bottom: 130px;
+    right: 17px;
+}
+
+</style>
+
+</head>
+<body>
+    <div id="banner-wrap">
+        <header></header>
+        <div id="container">
+            <ul id="banner">
+                <li><a href="#"><img src="images/slide1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/slide2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/slide3.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <P>
+            <a class="prev" href="#"> <img src="images/prev_btn.png" alt=""></a>
+            <a class="next" href="#"> <img src="images/next_btn.png" alt=""></a>
+        </P>
+    </div>
+</body>
+</html>
+<script>
+let list = document.getElementById('banner');
+let listLi = document.querySelectorAll('#banner li');
+let total = 3;
+let num = 0;
+
+
+for(let i = 0; i < total; i++){
+    let clone = listLi[i].cloneNode(true);
+    list.appendChild(clone);
+}
+
+function slideTo(index){
+    list.style.transition = 'margin-left 0.5s';
+    list.style.marginLeft = -1200 * index + 'px';
+}
+
+// 다음 버튼
+document.querySelector('.next').addEventListener('click', function(e){
+    e.preventDefault();
+    num++;
+    slideTo(num);
+
+    if(num > total){ 
+        setTimeout(() => {
+            list.style.transition = 'none';
+            num = 0;
+            list.style.marginLeft = '0px';
+        }, 500);
+    }
+});
+
+// 이전 버튼
+document.querySelector('.prev').addEventListener('click', function(e){
+    e.preventDefault();
+    if(num === 0){
+        list.style.transition = 'none';
+        num = total;
+        list.style.marginLeft = -1200 * num + 'px';
+        setTimeout(() => {
+            num--;
+            list.style.transition = 'margin-left 0.5s';
+            list.style.marginLeft = -1200 * num + 'px';
+        }, 20);
+    } else {
+        num--;
+        slideTo(num);
+    }
+});
+
+function autoPlay(){
+    num++;
+    slideTo(num);
+    if(num > total){
+        setTimeout(() => {
+            list.style.transition = 'none';
+            num = 0;
+            list.style.marginLeft = '0px';
+        }, 500);
+    }
+}
+
+const container = document.getElementById('container');
+let interval = setInterval(autoPlay, 3000);
+
+container.addEventListener('mouseover', () => clearInterval(interval));
+container.addEventListener('mouseout', () => interval = setInterval(autoPlay, 3000));
+
+
+    
+</script>
