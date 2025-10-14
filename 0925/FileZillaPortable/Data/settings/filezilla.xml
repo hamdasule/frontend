@@ -138,7 +138,23 @@
 		<Setting name="Window position and size">0 360 43 1184 843 </Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
-				<Tab selected="1">
+				<Tab connected="1">
+					<Host>uoy1013.dothome.co.kr</Host>
+					<Port>21</Port>
+					<Protocol>0</Protocol>
+					<Type>0</Type>
+					<User>uoy1013</User>
+					<Pass encoding="base64">Z2thZWt0bWY5Nio=</Pass>
+					<Logontype>1</Logontype>
+					<PasvMode>MODE_DEFAULT</PasvMode>
+					<EncodingType>Auto</EncodingType>
+					<BypassProxy>0</BypassProxy>
+					<Name>dasule</Name>
+					<Site>0/dasule</Site>
+					<RemotePath>1 0 4 html</RemotePath>
+					<LocalPath>C:\Users\tjoeun\</LocalPath>
+				</Tab>
+				<Tab connected="1" selected="1">
 					<Host>uoy1013.dothome.co.kr</Host>
 					<Port>21</Port>
 					<Protocol>0</Protocol>
