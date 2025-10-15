@@ -8,17 +8,16 @@
 <style>
     *{margin: 0;padding: 0;}
     ul{list-style: none;}
-
-
+    
     .tab_menu{
-    height: 40px;
-    line-height: 40px;
-}
+        height: 40px;
+        line-height: 40px;
+    }
     .tab_menu li{
-        width: 155px;
-        background-color: black;
-        border: 1px solid #fff;
+        width: 165px;
+        background-color: #000;
         color: #fff;
+        border: 1px solid #fff;
         text-align: center;
         float: left;
     }
@@ -26,28 +25,22 @@
         background-color: red;
         color: gold;
     }
-
-
     .tab_list{
         width: 770px;
         height: 140px;
         border: 1px solid #ccc;
     }
     .tab_list li{
-        margin-left: 15px;
-        margin-top: 20px;
-        color: rgb(4, 4, 165);
-        display: none;
-
+       margin-top: 17px;
+       margin-left: 15px;
+       color: rgb(2, 2, 189);
+       display: none;
     }
-    .tab_list h3{
-        margin-bottom: 5px;
+    .tab_list li h3{
         color: #000;
+        margin-bottom: 5px;
     }
-
     .tab_list li.on{display: block;}
-
-
 
 </style>
 
@@ -66,15 +59,14 @@
         </li>
             <li>
             <h3>menu2</h3>
-            02.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!
+            02.Start ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!
         </li>
             <li>
             <h3>menu3</h3>
-            03.Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!
+            03.Offset ipsum dolor sit amet consectetur adipisicing elit. Tenetur, eius eum iste est placeat qui deleniti sed doloribus, eaque necessitatibus molestias nihil accusantium dolores aut vitae! Doloremque consectetur eius modi!
         </li>
         </ul>
     </div>
-    
 </body>
 </html>
 <script>
@@ -86,10 +78,6 @@
 
             $('.tab_list li').removeClass('on');
             $('.tab_list li').eq(i).addClass('on');
-
         });
-
     });
-
-
 </script>

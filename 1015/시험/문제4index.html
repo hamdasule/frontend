@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/subway_slide.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    
+</head>
+<body>
+    <div id="container">
+    <div id="wrap">
+        <div id="brandSubway">
+            <ul>
+                <li class="subway1"><a href="#">배너이미지1</a></li>
+                <li class="subway2"><a href="#">배너이미지2</a></li>
+                <li class="subway3"><a href="#">배너이미지3</a></li>
+                <li class="subway4"><a href="#">배너이미지4</a></li>
+                <li class="subway5"><a href="#">배너이미지5</a></li>
+            </ul>
+        </div>
+        <ul id="buttonList">
+            <li class="on"><a href="#">배너1</a></li>
+            <li><a href="#">배너2</a></li>
+            <li><a href="#">배너3</a></li>
+            <li><a href="#">배너4</a></li>
+            <li><a href="#">배너5</a></li>
+        </ul>
+    </div>
+      <div id="box">
+    <div class="font font1">
+        <p class="fo1"><a href="#">매장찾기</a></p>
+        <p><a href="#"><img src="img/icon_map.png" alt=""></a></p>
+    </div>
+    <div class="font font2">
+    <p class="fo2"><a href="#">가맹신청ㆍ문의</a></p>
+    <p><a href="#"><img src="img/icon_franchise.png" alt=""></a></p>
+    </div>
+      </div> 
+    </div>
+</body>
+</html>
+    <script>
+
+    $(function(){
+    var subway = $("#brandSubway > ul > li");
+    var btn = $("#buttonList li");
+    var current = 0;
+    var id;
+    var i;
+
+    btn.click(function(){
+        i = $(this).index();
+        btn.removeClass('on');
+        btn.eq(i).addClass('on');
+        move();
+        return false;
+    });
+
+    function timer(){
+        id = setInterval(function(){
+            var n = current + 1;
+            if(n === 5){n = 0;}
+            btn.eq(n).trigger('click');
+
+        },3000);
+    }
+    timer();
+
+   function move(){
+    if(current == i) return;
+
+    var cu = subway.eq(current);
+    var ne = subway.eq(i);
+    cu.css('left','0').stop().animate({'left':'-100%'},500);
+    ne.css('left','100%').stop().animate({'left':'0%'},500);
+
+       current = i;
+   }
+});
+
+</script>
