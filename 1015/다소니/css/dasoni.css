@@ -244,3 +244,26 @@ header .gnb{
     visibility: visible;
     animation: slide 1s;
 }
+
+#s3{
+    height: 635px;
+    padding: 80px 0 40px;
+    background: url(../img/sec2_bg.jpg);
+    box-sizing: border-box;
+}
+.s3_title{
+    width: 1000px;
+    height: 180px;
+    text-align: center;
+    margin: 0 auto;
+}
+.s3_title h2{
+    font-size: 48px;
+    margin: 20px 0 0; 
+}
+.s3_title p{
+    font-size: 16.5px;
+    line-height: 30px;
+    margin: 30px 0 40px;
+    color: #000;
+}

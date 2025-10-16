@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<style>
+    *{margin: 0;padding: 0;}
+    a{text-decoration: none;}
+    ul{list-style: none;}
+    
+    .s_Top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 100;
+}
+    nav{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100px;
+        background-color: rgba(255, 255, 255, 0.6);
+        z-index: 10;
+        transition: all 0.5s;
+    }
+    nav.fixed{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+    nav ul{
+        width: 1000px;
+        height: 100px;
+        margin: 0 auto;
+        background-color: aqua;
+    }
+    nav ul li{
+        float: left;
+        
+    }
+    nav ul li a{
+        display: block;
+        font-size: 32px;
+        color: #000;
+        width: 250px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+    }
+    nav ul li:hover a{
+        color: #ffa500;
+        font-weight: bold;
+    }
+    .article{
+    width:100%;
+    height:100vh;
+    position: absolute;
+    }    
+    .article1{
+    background-color: burlywood;
+    left: 0;
+    }
+    .article2 {
+    background-color: coral;
+    left: 100%;
+    }
+
+    .article3 {
+    background-color: darkcyan;
+    left: 200%;
+    }
+
+    .article4 {
+    background-color: darksalmon;
+    left: 300%;
+    }
+
+</style>
+<body>
+    <nav>
+        <ul>
+            <li class="on"><a href="#">회사소개</a></li>
+            <li><a href="#">제품소개</a></li>
+            <li><a href="#">커뮤니티</a></li>
+            <li><a href="#">다운로드</a></li>
+        </ul>
+    </nav>
+    <h1 class="sTop">0000</h1>
+    <div id="container">
+        <div class="article article1">메인1</div>
+        <div class="article article1">메인2</div>
+        <div class="article article1">메인3</div>
+        <div class="article article1">메인4</div>
+    </div>
+    <div class="floatdiv">
+        <ul>
+            <li class="on"><span id="btn1"></span></li>
+            <li><span id="btn2"></span></li>
+            <li><span id="btn3"></span></li>
+            <li><span id="btn4"></span></li>
+        </ul>
+     </div>
+</body>
+</html>
+<script>
+    $(function(){
+        $(window).scroll(function(){
+
+         let sct = $(this).scrollLeft();
+        $('.sTop').text(sct);
+        $('.floatdiv').stop().animate({left:dLeft+sct},500)
+    })
+        
+
+     var offset_t =  $('section>article').eq(i).offset().left;
+
+
+    
+    });
+
+
+</script>
