@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #wrap{
+        width: 1000px;
+        height: 650px;
+        display: flex;
+        background-color: #999;
+    }
+    aside{
+        width: 25%;
+        height: 650px;
+        background-color: paleturquoise;
+    }
+    aside .logo{
+        width: 100%;
+        height: 100px;
+        background-color: aqua;
+    }
+    aside nav{
+        width: 100%;
+        height: 550px;
+        background-color: skyblue;
+    }
+    #main{
+        width: 75%;
+        height: 650px;
+        background-color: #888;
+    }
+    #main .slide{
+        width: 100%;
+        height: 350px;
+        background-color: blue;
+    }
+    #main .contents{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        background-color: #777;
+    }
+    #main .contents .notice{
+        width: 33.333%;
+        height: 200px;
+        background-color: green;
+    }
+    #main .contents .gallery{
+        width: 33.333%;
+        height: 200px;
+        background-color: darkgreen;
+    }
+    #main .contents .shortcut{
+        width: 33.333%;
+        height: 200px;
+        background-color: darkolivegreen;
+    }
+    #main footer{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        background-color: #666;
+    }
+    #main footer .f_1{
+        width: 80%;
+        height: 100px;
+        background-color: yellowgreen;
+    }
+    #main footer .f_2{
+        width: 20%;
+        height: 100px;
+        background-color: orange;
+    }
+    #main footer .f_2 .f_sns{
+        width: 100%;
+        height: 50px;
+        background-color: red;
+    }
+    #main footer .f_2 .f_family{
+        width: 100%;
+        height: 50px;
+        background-color: palevioletred;
+    }
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+    <div id="wrap">
+        <aside>
+            <div class="logo"><a href="#"><img src="" alt=""></a></div>
+            <nav></nav>
+        </aside>
+
+        <div id="main">
+            <div class="slide"></div>
+
+            <div class="contents">
+                <div class="content notice"></div>
+                <div class="content gallery"></div>
+                <div class="content shortcut"></div>
+            </div>
+
+            <footer>
+                <div class="f_1"></div>
+                <div class="f_2">
+                    <div class="f_sns"></div>
+                    <div class="f_family"></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

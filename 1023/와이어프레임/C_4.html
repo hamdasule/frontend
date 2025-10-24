@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #wrap{
+        width: 1000px;
+        display: flex;
+    }
+    aside{
+        width: 25%;
+        height: 650px;
+        background-color: #888;
+    }
+    aside .logo{
+        width: 100%;
+        height: 100px;
+        background-color: aqua;
+    }
+    aside nav{
+        width: 100%;
+        height: 550px;
+        background-color: blue;
+    }
+    #main{
+        width: 75%;
+        height: 650px;
+        background-color: #777;
+    }
+    #main .slide{
+        width: 100%;
+        height: 350px;
+        background-color: yellow;
+    }
+    #main .contents{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        background-color: #666;
+    }
+    #main .contents .notice{
+        width: 33.333%;
+        height: 200px;
+        background-color: palegreen;
+    }
+    #main .contents .gallery{
+        width: 33.333%;
+        height: 200px;
+        background-color: green;
+    }
+    #main .contents .shortcut{
+        width: 33.333%;
+        height: 200px;
+        background-color: darkgreen;
+    }
+    #main footer{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        background-color: #555;
+    }
+    #main footer .f_logo{
+        width: 20%;
+        height: 100px;
+        background-color: blueviolet;
+    }
+    #main footer .f_copy{
+        width: 60%;
+        height: 100px;
+        background-color: plum;
+    }
+    #main footer .f_family{
+        width: 20%;
+        height: 100px;
+        background-color: purple;
+    }
+
+
+</style>
+
+</head>
+<body>
+    <div id="wrap">
+
+        <aside>
+            <div class="logo"><a href="#"><img src="" alt=""></a></div>
+            <nav></nav>
+        </aside>
+
+        <div id="main">
+            <div class="slide"></div>
+
+            <div class="contents">
+                <div class="content notice"></div>
+                <div class="content gallery"></div>
+                <div class="content shortcut"></div>
+            </div>
+
+            <footer>
+                <div class="f_logo"></div>
+                <div class="f_copy"></div>
+                <div class="f_family"></div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
