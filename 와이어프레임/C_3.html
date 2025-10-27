@@ -5,89 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-    *{margin: 0;padding: 0;}
     #wrap{
         width: 1000px;
-        height: 650px;
-        
+        display: flex;
+       
     }
     aside{
         width: 25%;
         height: 650px;
-        float: left;
-        background-color: #888;
+        background-color: #999;
     }
     aside .logo{
         width: 100%;
         height: 100px;
-        background-color: aqua;
+        background-color: #111;
     }
     aside nav{
         width: 100%;
         height: 550px;
-        background-color: blue;
+        background-color: #888;
     }
     #main{
         width: 75%;
         height: 550px;
-        float: right;
         background-color: #777;
     }
     #main .slide{
         width: 100%;
         height: 350px;
-        background-color: yellow;
+        background-color: aqua;
     }
     #main .contents{
         width: 100%;
         height: 200px;
-        background-color: green;
+        display: flex;
+        background-color: blue;
     }
-    #main .contents .c1{
-        width: 33.33%;
+    #main .contents .notice{
+        width: 33.333%;
         height: 200px;
-        float: left;
-        background-color: pink;
+        background-color: #666;
     }
-    #main .contents .c2{
-        width: 33.33%;
+    #main .contents .gallery{
+        width: 33.333%;
         height: 200px;
-        float: left;
-        background-color: hotpink;
+        background-color: #222;
     }
-    #main .contents .c3{
-        width: 33.33%;
+    #main .contents .banner{
+        width: 33.333%;
         height: 200px;
-        float: left;
-        background-color: plum;
+        background-color: #555;
     }
     #main footer{
         width: 100%;
         height: 100px;
-        background-color: orange;
+        display: flex;
+        background-color: #444;
     }
     footer .f_1{
-        width: 20%;
+        width: 25%;
         height: 100px;
-        float: left;
-        background-color: #333;
+        background-color: pink;
     }
     footer .f_2{
-        width: 80%;
+        width: 75%;
         height: 100px;
-        float: right;
-        background-color: #222;
+        background-color: palevioletred;
     }
     footer .f_2 .f_menu{
         width: 100%;
         height: 50px;
-        background-color: palevioletred;
+        background-color: plum;
     }
     footer .f_2 .f_copy{
         width: 100%;
         height: 50px;
-        background-color: purple;
+        background-color: palegreen;
     }
+
+
 
 
 </style>
@@ -101,11 +97,13 @@
         </aside>
         <div id="main">
             <div class="slide"></div>
+
             <div class="contents">
-                <div class="content c1"></div>
-                <div class="content c2"></div>
-                <div class="content c3"></div>
+                <div class="content notice"></div>
+                <div class="content gallery"></div>
+                <div class="content banner"></div>
             </div>
+        
         <footer>
             <div class="f_1"></div>
             <div class="f_2">

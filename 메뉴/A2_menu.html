@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.3.js"></script>
+
+    <style>
+        *{margin: 0;padding: 0;}
+        ul, li{list-style: none;}
+        a{text-decoration: none; color: #111;}
+        #wrap{
+            width: 1200px;
+            height: 700px;
+            margin: 0 auto;
+        }
+        header{
+            width: 100%;
+            height: 100px;
+            display: flex;
+            position: relative;
+        }
+        header .logo{
+            width: 20%;
+            height: 100px;
+            background-color: #888;
+        }
+        header nav{
+            width: 80%;
+            height: 100px;
+            background-color: #777;
+        }
+        header nav .gnb{
+            width: 600px;
+            height: 50px;
+            position: absolute;
+            bottom: 0;
+            right: 25px;
+            background-color: skyblue;
+        }
+        header nav .gnb > li{
+            float: left;
+            width: 25%;
+            height: 50px;
+            text-align: center;
+            position: relative;
+        }
+        header nav .gnb > li > a{
+            display: block;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+        header nav .gnb > li:hover > a{
+            background-color: rgb(52, 102, 211);
+            color: #fff;
+        }
+        header .nav-bg{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgb(52, 102, 211);
+            width: 100%;
+            height: 150px;
+            display: none;
+        }
+        header nav .gnb > li > ul{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            line-height: 40px;
+            background-color: rgb(52, 102, 211);
+            display: none;
+        }
+        header nav .gnb > li > ul > li > a{
+            color: #fff;
+            display: block;
+            width: 100%;
+        }
+        header nav .gnb > li > ul > li > a:hover{
+            background-color: darkblue;
+            color: skyblue;
+        }
+
+
+
+        .slide{
+            width: 100%;
+            height: 300px;
+            background-color: #666;
+        }
+        .contents{
+            width: 100%;
+            height: 200px;
+            display: flex;
+        }
+        .contents .notice{
+            width: 33.33%;
+            height: 200px;
+            background-color: #444;
+        }
+        .contents .gallery{
+            width: 33.33%;
+            height: 200px;
+            background-color: #333;
+        }
+        .contents .banner{
+            width: 33.33%;
+            height: 200px;
+            background-color: #222;
+        }
+        footer{
+            width: 100%;
+            height: 100px;
+            display: flex;
+        }
+        footer .f_logo{
+            width: 200px;
+            height: 100px;
+            background-color: #aaa;
+        }
+        footer .f_copy{
+            width: 700px;
+            height: 100px;
+            background-color: #bbb;
+        }
+        footer .f_family{
+            width: 300px;
+            height: 100px;
+            background-color: #ccc;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+
+        <header>
+            <div class="logo"><a href="#"><img src="" alt=""></a></div>
+                <div class="nav-bg"></div>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">재단소개</a>
+                        <ul>
+                            <li><a href="#">설립취지</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">찾아오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">후원하기</a>
+                        <ul>
+                            <li><a href="#">국내후원</a></li>
+                            <li><a href="#">국외후원</a></li>
+                            <li><a href="#">맞춤후원</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">자료실</a>
+                        <ul>
+                            <li><a href="#">서식자료실</a></li>
+                            <li><a href="#">사진자료실</a></li>
+                            <li><a href="#">후원양식</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">스토리</a>
+                        <ul>
+                            <li><a href="#">웹진</a></li>
+                            <li><a href="#">보고서</a></li>
+                            <li><a href="#">나의 후원</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="slide"></div>
+
+        <div class="contents">
+            <div class="content notice"></div>
+            <div class="content gallery"></div>
+            <div class="content banner"></div>
+        </div>
+
+        <footer>
+            <div class="foot f_logo"></div>
+            <div class="foot f_copy"></div>
+            <div class="foot f_family"></div>
+        </footer>
+    </div>
+    
+</body>
+</html>
+<script>
+    $(function(){
+        $('.gnb').mouseenter(function(){
+            $('.gnb > li > ul, .nav-bg').stop().slideDown();
+        });
+        $('.gnb').mouseleave(function(){
+            $('.gnb > li > ul, .nav-bg').stop().slideUp();
+        });
+    });
+</script>

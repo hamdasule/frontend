@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{margin: 0;padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: #111;}
+    #wrap{
+        width: 1000px;
+        display: flex;
+    }
+    aside{
+        width: 20%;
+        height: 650px;
+        position: relative;
+    }
+    aside .logo{
+        width: 100%;
+        height: 100px;
+        background-color: #888;
+    }
+    aside nav{
+        width: 100%;
+        height: 550px;
+        background-color: #333;
+    }
+    aside nav .gnb{
+        width: 170px;
+        height: 200px;
+        background-color: aliceblue;
+        position: absolute;
+        top: 115px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    aside nav .gnb > li{
+        text-align: center;
+        height: 50px;
+        width: 100%;
+        position: relative;
+    }
+    aside nav .gnb > li > a{
+        display: block;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 50px;
+    }
+    aside nav .gnb > li:hover > a{
+        background-color: purple;
+        color: #fff;
+    }
+    aside nav .gnb > li > ul{
+        line-height: 40px;
+        width: 100%;
+        background-color: purple;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    aside nav .gnb > li > ul > li >a{
+        display: block;
+        width: 100%;
+        color: #fff;
+    }
+    aside nav .gnb > li > ul > li >a:hover{
+        background-color: plum;
+        color: darkmagenta;
+    }
+
+
+
+    #main{
+        width: 80%;
+        height: 650px;
+    }
+    #main .slide{
+        width: 100%;
+        height: 350px;
+        background-color: #222;
+    }
+    #main .contents{
+        width: 100%;
+        height: 200px;
+        display: flex;
+    }
+    #main .contents .c1{
+        width: 33.3333%;
+        height: 200px;
+        background-color: skyblue;
+    }
+    #main .contents .c2{
+        width: 33.3333%;
+        height: 200px;
+        background-color: darkkhaki;
+    }
+    #main .contents .c3{
+        width: 33.3333%;
+        height: 200px;
+        background-color: pink;
+    }
+    #main footer{
+        width: 100%;
+        height: 100px;
+        display: flex;
+    }
+    #main footer .f_1{
+        width: 20%;
+        height: 100px;
+        background-color: #444;
+    }
+    #main footer .f_2{
+        width: 80%;
+        height: 100px;
+    }
+    #main footer .f_2 .f_menu{
+        width: 100%;
+        height: 50px;
+        background-color: papayawhip;
+    }
+    #main footer .f_2 .f_copy{
+        width: 100%;
+        height: 50px;
+        background-color: darkcyan;
+    }
+
+</style>
+
+</head>
+<body>
+    <div id="wrap">
+        <aside>
+            <div class="logo"><a href="#"><img src="" alt=""></a></div>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">이용안내</a>
+                        <ul>
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">이용시간</a></li>
+                            <li><a href="#">이용요금</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트정보</a>
+                        <ul>
+                            <li><a href="#">현장이벤트</a></li>
+                            <li><a href="#">온라인이벤트</a></li>
+                            <li><a href="#">이벤트예약</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">프로그램</a>
+                        <ul>
+                            <li><a href="#">프로그램안내</a></li>
+                            <li><a href="#">온라인예약</a></li>
+                            <li><a href="#">단체예약상담</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <div id="main">
+            <div class="slide"></div>
+
+            <div class="contents">
+                <div class="c1">
+                    <div class="notice"></div>
+                    <div class="gallery"></div>
+                </div>
+                <div class="c2"></div>
+                <div class="c3"></div>
+            </div>
+        
+        <footer>
+            <div class="f_1"></div>
+            <div class="f_2">
+                <div class="f_menu"></div>
+                <div class="f_copy"></div>
+            </div>
+        </footer>
+        </div>
+    </div>
+</body>
+</html>

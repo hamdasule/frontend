@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.3.js"></script>
+<style>
+    *{margin: 0;padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: #222;}
+    #wrap{
+        width: 1200px;
+        margin: 0 auto;
+    }
+    header{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        position: relative;
+    }
+    header .logo{
+        width: 20%;
+        height: 100px;
+        background-color: #999;
+    }
+    header nav{
+        width: 80%;
+        height: 100px;
+        background-color: #888;
+    }
+    header nav .gnb{
+        width: 600px;
+        height: 50px;
+        background-color: #fff;
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+    header nav .gnb > li{
+        float: left;
+        width: 25%;
+        height: 50px;
+        text-align: center;
+        position: relative;
+    }
+    header nav .gnb > li > a{
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 50px;
+        display: block;
+    }
+    header nav .gnb > li:hover > a{
+        background-color: darkkhaki;
+        color: green;
+    }
+    header nav .gnb > li > ul{
+        width: 100%;
+        line-height: 40px;
+        background-color: darkkhaki;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+    }
+    header nav .gnb > li > ul > li >a{
+        display: block;
+        width: 100%;
+    }
+    header nav .gnb > li > ul > li >a:hover{
+        background-color: darkgreen;
+        color: #fff;
+    }
+
+
+    .slide{
+        width: 100%;
+        height: 300px;
+        background-color: #444;
+    }
+    .contents{
+        width: 100%;
+        height: 200px;
+        display: flex;
+    }
+    .contents .c1{
+        width: 33.3333%;
+        height: 200px;
+        background-color: #666;
+    }
+    .contents .c2{
+        width: 33.3333%;
+        height: 200px;
+        background-color: #333;
+    }
+    .contents .c3{
+        width: 33.3333%;
+        height: 200px;
+        background-color: #555;
+    }
+    footer{
+        width: 100%;
+        height: 100px;
+        display: flex;
+    }
+    footer .f_1{
+        width: 20%;
+        height: 100px;
+        background-color: salmon;
+    }
+    footer .f_2{
+        width: 80%;
+        height: 100px;
+        background-color: bisque;
+    }
+    footer .f_2 .f_menu{
+        width: 100%;
+        height: 50px;
+        background-color: #222;
+    }
+    footer .f_2 .f_copy{
+        width: 100%;
+        height: 50px;
+        background-color: #a2a2a2;
+    }
+
+</style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="logo"><a href="#"><img src="" alt=""></a></div>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">강원천문대</a>
+                        <ul>
+                            <li><a href="#">천문대소개</a></li>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이용안내</a>
+                        <ul>
+                            <li><a href="#">프로그램</a></li>
+                            <li><a href="#">관람시간표</a></li>
+                            <li><a href="#">이달의 별자리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">천문대예약</a>
+                        <ul>
+                            <li><a href="#">예약하기</a></li>
+                            <li><a href="#">예약확인</a></li>
+                            <li><a href="#">예약취소</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">커뮤니티</a>
+                        <ul>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">방문후기</a></li>
+                            <li><a href="#">자유게시판</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </header>
+
+        <div class="slide"></div>
+
+        <div class="contents">
+            <div class="c1">
+                <div class="notice"></div>
+                <div class="gallery"></div>
+            </div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+        </div>
+
+        <footer>
+            <div class="f_1"></div>
+            <div class="f_2">
+                <div class="f_menu"></div>
+                <div class="f_copy"></div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+<script>
+    $(function(){
+        $('.gnb > li').mouseenter(function(){
+            $(this).children('ul').stop().slideDown(270);
+        });
+        $('.gnb > li').mouseleave(function(){
+            $(this).children('ul').stop().slideUp(270);
+        });
+    });
+</script>
