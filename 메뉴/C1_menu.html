@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./js/jquery-1.12.3.js"></script>
 <style>
     *{margin: 0;padding: 0;}
     ul, li{list-style: none;}
@@ -28,23 +29,22 @@
         background-color: #333;
     }
     aside nav .gnb{
-        width: 170px;
-        height: 200px;
+        width: 90%;
+        /* height: 200px; */
         background-color: aliceblue;
         position: absolute;
         top: 115px;
         left: 50%;
         transform: translateX(-50%);
     }
-    aside nav .gnb > li{
+      aside nav .gnb > li{
         text-align: center;
-        height: 50px;
         width: 100%;
-        position: relative;
+        /* height: 50px; */
     }
     aside nav .gnb > li > a{
         display: block;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: bold;
         line-height: 50px;
     }
@@ -55,10 +55,8 @@
     aside nav .gnb > li > ul{
         line-height: 40px;
         width: 100%;
-        background-color: purple;
-        position: absolute;
-        top: 100%;
-        left: 0;
+        background-color: rgb(150, 32, 144);
+        display: none;
     }
     aside nav .gnb > li > ul > li >a{
         display: block;
@@ -69,9 +67,6 @@
         background-color: plum;
         color: darkmagenta;
     }
-
-
-
     #main{
         width: 80%;
         height: 650px;
@@ -136,28 +131,28 @@
             <nav>
                 <ul class="gnb">
                     <li><a href="#">이용안내</a>
-                        <ul>
+                        <ul class="sub">
                             <li><a href="#">이용방법</a></li>
                             <li><a href="#">이용시간</a></li>
                             <li><a href="#">이용요금</a></li>
                         </ul>
                     </li>
                     <li><a href="#">이벤트정보</a>
-                        <ul>
+                        <ul class="sub">
                             <li><a href="#">현장이벤트</a></li>
                             <li><a href="#">온라인이벤트</a></li>
                             <li><a href="#">이벤트예약</a></li>
                         </ul>
                     </li>
                     <li><a href="#">프로그램</a>
-                        <ul>
+                        <ul class="sub">
                             <li><a href="#">프로그램안내</a></li>
                             <li><a href="#">온라인예약</a></li>
                             <li><a href="#">단체예약상담</a></li>
                         </ul>
                     </li>
                     <li><a href="#">고객센터</a>
-                        <ul>
+                        <ul class="sub">
                             <li><a href="#">공지사항</a></li>
                             <li><a href="#">자주묻는질문</a></li>
                             <li><a href="#">자료실</a></li>
@@ -189,3 +184,22 @@
     </div>
 </body>
 </html>
+
+<script>
+    $(function(){
+        $('.gnb li ul').css('display','none');
+        $('.gnb > li > a').click(function(){
+           var s = $(this).next('.sub').css('display');
+
+           if(s === 'none'){
+            $('.sub').slideUp();
+            $(this).next('.sub').slideDown();
+           }else{
+            $('.sub').slideUp();
+           }
+           return false;
+        });
+
+    });
+ 
+</script>

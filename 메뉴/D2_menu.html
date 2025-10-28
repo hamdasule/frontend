@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.3.js"></script>
+<style>
+    *{margin: 0;padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none; color: #111;}
+    #wrap{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    aside{
+        width: 200px;
+        height: 650px;
+        position: relative;
+    }
+    aside .logo{
+        width: 100%;
+        height: 20%;
+        background-color: palevioletred;
+    }
+    aside nav{
+        width: 100%;
+        height: 80%;
+        background-color: pink;
+    }
+    aside nav .gnb{
+        width: 90%;
+        background-color: aliceblue;
+        position: absolute;
+        top: 145px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    aside nav .gnb > li{
+        text-align: center;
+        width: 100%;
+    }
+    aside nav .gnb > li > a{
+        display: block;
+        line-height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    aside nav .gnb > li:hover > a{
+        background-color: #444;
+        color: #fff;
+    }
+    aside nav .gnb > li > ul{
+        line-height: 40px;
+        background-color: rgb(228, 229, 238);
+        width: 100%;
+        display: none;
+    }
+    aside nav .gnb > li > ul > li > a{
+        display: block;
+        width: 100%;
+    }
+    aside nav .gnb > li > ul > li > a:hover{
+        background-color: gray;
+        color: #000;
+    }
+
+
+    #main{
+        width: calc(100% - 200px);
+        height: 650px;
+        background-color: #888;
+    }
+    #main .slide_container{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        background-color: #555;
+    }
+    #main .slide_container .slide{
+        width: calc(100% - 230px);
+        height: 400px;
+        background-color: aqua;
+    }
+    #main .slide_container .banner{
+        width: 230px;
+        height: 400px;
+        background-color: skyblue;
+    }
+    #main .contents{
+        width: 100%;
+        height: 250px;
+        display: flex;
+        background-color: plum;
+    }
+    #main .contents .notice{
+        width: 50%;
+        height: 250px;
+        background-color: orange;
+    }
+    #main .contents .gallery{
+        width: 50%;
+        height: 250px;
+        background-color: red;
+    }
+    footer{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        background-color: #444;
+    }
+    footer .f_logo{
+        width: 18%;
+        height: 100px;
+        background-color: gold;
+    }
+    footer .f_copy{
+        width: 62%;
+        height: 100px;
+        background-color: green;
+    }
+    footer .f_family{
+        width: 20%;
+        height: 100px;
+        background-color: greenyellow;
+    }
+
+
+</style>
+
+</head>
+<body>
+    <div id="wrap">
+        <aside>
+            <div class="logo"><a href="#"><img src="" alt=""></a></div>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">지금의 서울</a>
+                        <ul class="sub">
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">축제&행사</a></li>
+                            <li><a href="#">전시</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">추천</a>
+                        <ul class="sub">
+                            <li><a href="#">에디터추천</a></li>
+                            <li><a href="#">테마코스</a></li>
+                            <li><a href="#">도보해설관광</a></li>
+                            <li><a href="#">한류관광</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">여행지</a>
+                        <ul class="sub">
+                            <li><a href="#">명소</a></li>
+                            <li><a href="#">엔터테인먼트</a></li>
+                            <li><a href="#">음식</a></li>
+                            <li><a href="#">게스트하우스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">여행정보</a>
+                        <ul class="sub">
+                            <li><a href="#">가이드북&지도</a></li>
+                            <li><a href="#">시티투어버스</a></li>
+                            <li><a href="#">날씨</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="main">
+            <div class="slide_container">
+            <div class="slide"></div>
+            <div class="banner"></div>
+            </div>
+
+            <div class="contents">
+                <div class="content notice"></div>
+                <div class="content gallery"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="f_logo"></div>
+            <div class="f_copy"></div>
+            <div class="f_family"></div>
+        </footer>
+    </div>
+</body>
+</html>
+<script>
+    $(function(){
+        $('.gnb li ul').css('display','none');
+        $('.gnb > li >a').click(function(){
+            var s = $(this).next('.sub').css('display');
+
+            if(s === 'none'){
+                $('.sub').slideUp();
+                $(this).next('.sub').slideDown();
+            }else{
+                $('.sub').slideUp();
+            }
+            return false;
+        });
+    });
+</script>
