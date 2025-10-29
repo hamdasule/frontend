@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <div id="wrap">
+
+        <header>
+            <div class="logo"><a href="#"><img src="" alt=""></a></div>
+            <nav></nav>
+        </header>
+    
+    <div class="slide"></div>
+
+    <div class="contents">
+        <div class="c1">
+            <div class="tab_menu">
+
+                <div class="tab_title">
+                    <h2 class="on">공지사항</h2>
+                    <h2>갤러리</h2>
+                </div>
+
+            <div class="tab_list">
+                <div class="notice">
+                    <table>
+                        <tr>
+                            <td>네번째 공지사항입니다.</td><td>2019.05.21</td>
+                        </tr>
+                        <tr>
+                            <td>세번째 공지사항입니다.</td><td>2019.04.20</td>
+                        </tr>
+                        <tr>
+                            <td>두번째 공지사항입니다.</td><td>2019.03.23</td>
+                        </tr>
+                        <tr>
+                            <td>첫번째 공지사항입니다.</td><td>2019.02.25</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div class="gallery">
+                    <!-- <a href="#"><img src="" alt="갤러리이미지1"></a>
+                    <a href="#"><img src="" alt="갤러리이미지2"></a>
+                    <a href="#"><img src="" alt="갤러리이미지3"></a> -->
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="c2"></div>
+        <div class="c3"></div>
+    </div>
+
+    <footer>
+        <div class="f_logo"></div>
+        <div class="f_copy"></div>
+        <div class="f_sns"></div>
+    </footer>
+</div>
+
+</body>
+</html>
+<script>
+const tabs = document.querySelectorAll('.tab_title h2');
+const contents = document.querySelectorAll('.tab_list > div');
+
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        // 모든 탭에서 밑줄 제거
+        tabs.forEach(t => t.classList.remove('on'));
+
+        // 클릭한 탭에 밑줄 추가
+        tab.classList.add('on');
+
+        // 내용 전환
+        contents.forEach(c => c.style.display = 'none');
+        contents[index].style.display = 'block';
+    });
+});
+
+
+
+$(".tab_title h2").click(function(){
+        var k = $(this).index();
+        $('.tab_list .list').css('display','none');
+        $('.tab_list .list').eq(k).css('display','block');
+        $(".tab_menu h2").removeClass('on').eq(k).addClass('on');
+
+    });
+    
+</script>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-1.12.3.js"></script>
+<style>
+    *{margin: 0;padding: 0;}
+    ul ,li{list-style: none;}
+    a{text-decoration: none; color: #111;}
+    #wrap{
+        width: 100%;
+    }
+    header{
+        width: 1340px;
+        height: 100px;
+        margin: 0 auto;
+        display: flex;
+        position: relative;
+    }
+    header .logo{
+        width: 20%;
+        height: 100px;
+        background-color: #111;
+    }
+    header nav{
+        width: 80%;
+        height: 100px;
+        background-color: #888;
+    }
+    header nav .gnb{
+        width: 600px;
+        height: 50px;
+        background-color: aliceblue;
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        z-index: 10;
+    }
+    header nav .gnb > li{
+        float: left;
+        width: 25%;
+        text-align: center;
+        position: relative;
+    }
+    header nav .gnb > li > a{
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 50px;
+        width: 100%;
+    }
+    header nav .gnb > li:hover > a{
+        background-color: #111;
+        color: #fff;
+    }
+    header nav .gnb > li > ul{
+        line-height: 40px;
+        width: 100%;
+        background-color: silver;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+    }
+    header nav .gnb > li > ul > li > a{
+        display: block;
+        width: 100%;
+    }
+    header nav .gnb > li > ul > li > a:hover{
+        background-color: #444;
+        color: #fff;
+    }
+    .nav-bg{
+        width: 100%;
+        height: 180px;
+        background-color: silver;
+        position: absolute; 
+        top: 100px; 
+        left: 0;
+        z-index: 5; 
+        display: none;
+    }
+    .slide{
+        width: 100%;
+        height: 350px;
+        position: relative;
+        background-color: palegoldenrod;
+         z-index: 1;
+    }
+    .slide .link{
+        width: 1340px;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: burlywood;
+    }
+    .contents{
+        width: 1340px;
+        height: 600px;
+        margin: 0 auto;
+    }
+    .contents .c1{
+        width: 100%;
+        height: 200px;
+        background-color: #222;
+    }
+    .contents .c2{
+        width: 100%;
+        height: 400px;
+        display: flex;
+    }
+    .contents .c2 .notice{
+        width: 50%;
+        height: 400px;
+        background-color: palegreen;
+    }
+    .contents .c2 .gallery{
+        width: 50%;
+        height: 400px;
+        background-color: green;
+    }
+    footer{
+        width: 1340px;
+        height: 100px;
+        margin: 0 auto;
+        display: flex;
+    }
+    footer .f_logo{
+        width: 20%;
+        height: 100px;
+        background-color: aquamarine;
+    }
+    footer .f_copy{
+        width: 60%;
+        height: 100px;
+        background-color: darkcyan;
+    }
+    footer .f_family{
+        width: 20%;
+        height: 100px;
+        background-color: darkolivegreen;
+    }
+   
+
+</style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <div class="logo"><a href="#"><img src="" alt=""></a></div>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">회사소개</a>
+                        <ul class="sub">
+                            <li><a href="#">CEO 인사말</a></li>
+                            <li><a href="#">기업문화</a></li>
+                            <li><a href="#">경영방침</a></li>
+                            <li><a href="#">회사연혁</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">사업소개</a>
+                        <ul class="sub">
+                            <li><a href="#">반도체 설비운영</a></li>
+                            <li><a href="#">건축 공사</a></li>
+                            <li><a href="#">UHP 배관 공사</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">회사활동</a>
+                        <ul class="sub">
+                            <li><a href="#">윤리경영</a></li>
+                            <li><a href="#">환경경영</a></li>
+                            <li><a href="#">안전보건경영</a></li>
+                            <li><a href="#">품질경영</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">인재채용</a>
+                        <ul class="sub">
+                            <li><a href="#">인재채용</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="nav-bg"></div>
+
+        <div class="slide">
+            <div class="link"></div>
+        </div>
+
+        <div class="contents">
+            <div class="c1"></div>
+            <div class="c2">
+                <div class="notice"></div>
+                <div class="gallery"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="f_logo"></div>
+            <div class="f_copy"></div>
+            <div class="f_family"></div>
+        </footer>
+
+    </div>
+</body>
+</html>
+<script>
+    $(function(){
+        $('.gnb > li').mouseenter(function(){
+            $('.gnb > li > ul, .nav-bg').stop().slideDown();
+        });
+        $('.gnb > li').mouseleave(function(){
+            $('.gnb > li > ul, .nav-bg').stop().slideUp();
+        });
+
+    });
+</script>
