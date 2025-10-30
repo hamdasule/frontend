@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style1.css">
+    <script src="./js/jquery-1.12.3.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -26,7 +27,7 @@
                 </div>
 
             <div class="tab_list">
-                <div class="notice">
+                <div class="list notice">
                     <table>
                         <tr>
                             <td>네번째 공지사항입니다.</td><td>2019.05.21</td>
@@ -43,17 +44,21 @@
 
                     </table>
                 </div>
-                <div class="gallery">
-                    <!-- <a href="#"><img src="" alt="갤러리이미지1"></a>
-                    <a href="#"><img src="" alt="갤러리이미지2"></a>
-                    <a href="#"><img src="" alt="갤러리이미지3"></a> -->
+                <div class="list gallery">
+                    <a href="#"><img src="images/g1.png" alt="갤러리이미지1"></a>
+                    <a href="#"><img src="images/g2.png" alt="갤러리이미지2"></a>
+                    <a href="#"><img src="images/g3.png" alt="갤러리이미지3"></a>
                 </div>
             </div>
             </div>
         </div>
         
-        <div class="c2"></div>
-        <div class="c3"></div>
+        <div class="c2">
+            <a href="#"><img src="images/banner.jpg" alt=""></a>
+        </div>
+        <div class="c3">
+            <a href="#"><img src="images/quick.jpg" alt=""></a>
+        </div>
     </div>
 
     <footer>
@@ -66,31 +71,15 @@
 </body>
 </html>
 <script>
-const tabs = document.querySelectorAll('.tab_title h2');
-const contents = document.querySelectorAll('.tab_list > div');
+    $(function(){
 
-tabs.forEach((tab, index) => {
-    tab.addEventListener('click', () => {
-        // 모든 탭에서 밑줄 제거
-        tabs.forEach(t => t.classList.remove('on'));
-
-        // 클릭한 탭에 밑줄 추가
-        tab.classList.add('on');
-
-        // 내용 전환
-        contents.forEach(c => c.style.display = 'none');
-        contents[index].style.display = 'block';
-    });
-});
-
-
-
-$(".tab_title h2").click(function(){
-        var k = $(this).index();
+        $(".tab_title h2").click(function(){
+        var i = $(this).index();
         $('.tab_list .list').css('display','none');
-        $('.tab_list .list').eq(k).css('display','block');
-        $(".tab_menu h2").removeClass('on').eq(k).addClass('on');
+        $('.tab_list .list').eq(i).css('display','block');
+        $(".tab_menu h2").removeClass('on').eq(i).addClass('on');
+
+        });
 
     });
-    
 </script>

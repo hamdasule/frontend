@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./js/jquery-1.12.3.js"></script>
 <style>
     *{margin: 0;padding: 0;}
     ul, li{list-style: none;}
@@ -11,27 +12,23 @@
     
     #wrap{
         width: 100%;
-    }
-    #top{
-        width: 100%;
-        height: 800px;
         display: flex;
-        position: relative;
+        flex-wrap: wrap;
     }
-    #top header{
+    header{
         width: 200px;
         height: 800px;
         position: relative;
         z-index: 9999;
     }
-    #top header .logo{
+    header .logo{
         width: 100%;
         height: 20%;
         background-color: pink;
     }
-    #top header nav{
+    header nav{
         width: 100%;
-        height: 200px;
+        height: 80%;
         background-color: palevioletred;
         position: relative;
     }
@@ -61,51 +58,37 @@
         position: absolute;
         top: 0;
         left: 180px;
-        width: 700px;
+        width: 900px;
         display: none;
-
     }
     header nav .gnb > li > ul > li{
         float: left;
         line-height: 50px;
-        width: 160px;
+        width: 180px;
         background-color: antiquewhite;
 
     }
     header nav .gnb > li > ul > li > a{
         display: block;
-        width: 100%;
-        
-
-        
+        width: 100%;   
     }
     header nav .gnb > li > ul > li > a:hover{
         background-color: azure;
+        color: darkblue;
 
     }
     .nav-bg{
         position: absolute;
         top: 0px;
         left: 180px;
-        width:1800px;
+        width:0px;
         height:200px;
-        display: none;
         z-index: 10;
         background-color: antiquewhite;
     }
 
- header nav .gnb:hover > li > ul{
-    display: block;
- }
-
- header nav .gnb:hover +     .nav-bg{
-    display: block;
- }
-
-
     #main{
         width: calc(100% - 200px);
-
     }
     #main .sldie{
         width: 100%;
@@ -162,13 +145,11 @@
         background-color: #333;
     }
 
-
 </style>
 
 </head>
 <body>
     <div id="wrap">
-        <div id="top">
         <header>
             <div class="logo"><a href="#"><img src="" alt=""></a></div>
             
@@ -223,8 +204,6 @@
                 <div class="content gallery"></div>
             </div>
         </div>
-        
-    </div>
 
         <footer>
             <div class="f_1"></div>
@@ -237,3 +216,15 @@
     </div>
 </body>
 </html>
+<script>
+    $(function(){
+        $('.gnb > li').mouseenter(function(){
+            $('.nav-bg').stop().animate({width:'1800px'},400)
+            $('.gnb > li > ul').stop().fadeIn(250);
+        });
+        $('.gnb > li').mouseleave(function(){
+            $('.nav-bg').stop().animate({width:'0'},400)
+            $('.gnb > li > ul').stop().fadeOut(250);
+        });
+    });
+</script>

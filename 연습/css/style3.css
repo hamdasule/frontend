@@ -3,7 +3,6 @@ ul, li{list-style: none;}
 a{text-decoration: none;}
     #wrap{
         width: 1200px;
-        height: 700px;
         margin: 0 auto;
     }
     header{
@@ -19,15 +18,14 @@ a{text-decoration: none;}
     header nav{
         width: 80%;
         height: 100px;
-        background-color: #666;
+        background-color: #888;
     }
+
     .slide{
         width: 100%;
         height: 300px;
-        background-color: #555;
+        background-color: #444;
     }
-
-
     .contents{
         width: 100%;
         height: 200px;
@@ -36,7 +34,7 @@ a{text-decoration: none;}
     .contents .c1{
         width: 400px;
         height: 200px;
-        background-color: #d1d1d1;
+        background-color: #666;
     }
     .contents .c1 .tab_menu{
         width: 100%;
@@ -47,26 +45,24 @@ a{text-decoration: none;}
         height: 30%;
         display: flex;
         gap: 10px;
-        padding-left: 15px;
+        padding-left: 10px;
+
     }
-    .tab_title h2:first-child::after {
+    .tab_title h2:first-child::after{
         content: "|";
         margin-left: 10px;
-        color: #000;
         font-size: 24px;
         position: relative;
         top: -4px;
+    }.contents .c1 .tab_menu .tab_title h2{
+        padding-top: 10px;
+        cursor: pointer;
+        font-size: 27px;
+      
     }
     .contents .c1 .tab_menu .tab_title h2.on{
         text-decoration: underline;
     }
-    .contents .c1 .tab_menu .tab_title h2{
-        padding-top: 15px;
-        font-size: 28px;
-        cursor: pointer;   
-        text-decoration: none; 
-    }
-
     .contents .c1 .tab_menu .tab_list{
         width: 100%;
         height: 70%;
@@ -74,69 +70,76 @@ a{text-decoration: none;}
     .contents .c1 .tab_menu .tab_list table{
         width: 100%;
     }
+    .contents .c1 .tab_menu .tab_list table tr td{
+        font-size: 15px;
+    }
     .contents .c1 .tab_menu .tab_list table tr td:first-child{
         text-align: left;
+        padding-left: 10px;
+        padding-top: 2px;
         cursor: pointer;
-        padding-left: 15px;
-        padding-top: 4px;
     }
     .contents .c1 .tab_menu .tab_list table tr td:first-child:hover{
         text-decoration: underline;
     }
     .contents .c1 .tab_menu .tab_list table tr td:last-child{
         text-align: right;
-        padding-right: 15px;
-        padding-top: 4px;
+        padding-right: 10px;
+        padding-top: 2px;
     }
     .contents .c1 .tab_menu .tab_list .gallery{
         display: none;
         text-align: center;
+    
     }
     .contents .c1 .tab_menu .tab_list .gallery img{
-      width: 31%;
-      height: 120px;
-      object-fit: cover;
-      margin-top: 5px;
+        width: 30%;
+        margin-left: 2px;
+        margin-right: 2px;
     }
 
     .contents .c2{
         width: 400px;
         height: 200px;
-        background-color: #aaa;
+        background-color: #333;
     }
-    .contents .c2 img{
-        width: 100%;
-        height: auto;
-        display: block;
+    .contents .c2 ul{
+        margin-top: 5px;
     }
     .contents .c3{
         width: 400px;
         height: 200px;
-        background-color: #bbb;
+        background-color: #555;
     }
-    .contents .c3 img{
-        width: 100%;
-        height: auto;
-        display: block;
+    .contents .c3 ul{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
     }
+
 
     footer{
         width: 100%;
         height: 100px;
         display: flex;
     }
-    footer .f_logo{
+    footer .f_1{
         width: 20%;
         height: 100px;
-        background-color: #ddd;
+        background-color: salmon;
     }
-    footer .f_copy{
-        width: 60%;
+    footer .f_2{
+        width: 80%;
         height: 100px;
-        background-color: #ededed;
     }
-    footer .f_sns{
-        width: 20%;
-        height: 100px;
-        background-color: #e0e0e0;
+    footer .f_2 .f_menu{
+        width: 100%;
+        height: 50px;
+        background-color: #222;
+    }
+    footer .f_2 .f_copy{
+        width: 100%;
+        height: 50px;
+        background-color: #a2a2a2;
     }
