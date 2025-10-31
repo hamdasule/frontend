@@ -4,93 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-    *{margin: 0;padding: 0;}
-    #wrap{
-        width: 100%;
-        /* height: 700px; */
-    }
-    header{
-        width: 100%;
-        height: 100px;
-        background-color: skyblue;
-    }
-    header .header_container{
-        width: 1200px;
-        height: 100px;
-        margin: 0 auto;
-    }
-    header .header_container .logo{
-        width: 20%;
-        height: 100px;
-        background-color: rgb(126, 183, 248);
-        float: left;
-    }
-     header .header_container nav{
-        width: 80%;
-        height: 100px;
-        float: left;
-        background-color: darkblue;
-     }
-     .slide{
-        width: 1200px;
-        height: 300px;
-        margin: 0 auto;
-        background-color: #999;
-     }
-     .contents{
-        width: 1200px;
-        height: 200px;
-        margin: 0 auto;
-        display: flex;
-     }
-     .contents .notice{
-        width: 33.33%;
-        height: 200px;
-        background-color: #777;
-     }
-     .contents .gallery{
-        width: 33.33%;
-        height: 200px;
-        background-color: #666;
-     }
-     .contents .shortcut{
-        width: 33.33%;
-        height: 200px;
-        background-color: #555;
-     }
-     footer{
-        width: 100%;
-        height: 100px;
-        background-color: lightgoldenrodyellow;
-     }
-     footer .footer_container{
-        width: 1200px;
-        height: 100px;
-        margin: 0 auto;
-        display: flex;
-     }
-     footer .footer_container .f_1{
-        width: 80%;
-        height: 100px;
-        background-color: #aaa;
-     }
-     footer .footer_container .f_2{
-        width: 20%;
-        height: 100px;
-     }
-     footer .footer_container .f_2 .f_sns{
-        width: 100%;
-        height: 50px;
-        background-color: yellowgreen;
-     }
-     footer .footer_container .f_2 .f_family{
-        width: 100%;
-        height: 50px;
-        background-color: green;
-     }
-
-</style>
+    <link rel="stylesheet" href="css/style6.css">
+    <script src="./js/jquery-1.12.3.js"></script>
 
 </head>
 <body>
@@ -105,9 +20,39 @@
         <div class="slide"></div>
 
         <div class="contents">
-            <div class="notice"></div>
-            <div class="gallery"></div>
-            <div class="shortcut"></div>
+            <div class="notice">
+                <h1>공지사항</h1>
+                <table>
+                    <tr>
+                        <td>10월 대한멤버스 가입 이벤트 당첨자 발표</td><td>2019-11-12</td>
+                    </tr>
+                    <tr>
+                        <td>영화 <윤희에게> 예매권 이벤트 당첨자 발표</td><td>2019-11-07</td>
+                    </tr>
+                    <tr>
+                        <td>(11/2~11/4) 쇼핑엔티 홈쇼핑 방영 장가계 추...</td><td>2019-11-05</td>
+                    </tr>
+                    <tr>
+                        <td>2019 부산출발 괌 PIC 포토이벤트 당첨자 발표</td><td>2019-10-25</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="gallery">
+                <h1>갤러리</h1>
+                <ul>
+                    <li><a href="#"><img src="images/gallery7.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/gallery8.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/gallery9.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="shortcut">
+                <h1>바로가기</h1>
+                <ul>
+                    <li><a href="#"><img src="images/s4.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/s5.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/s6.png" alt=""></a></li>
+                </ul>
+            </div>
         </div>
 
         <footer>

@@ -4,94 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-    #wrap{
-        width: 100%;
-        height: 700px;
-    }
-    header{
-        width: 100%;
-        height: 100px;
-        background-color: palevioletred;
-    }
-    header .header_container{
-        width: 1200px;
-        height: 100px;
-        margin: 0 auto;
-        display: flex;
-    }
-    header .header_container .logo{
-        width: 20%;
-        height: 100px;
-        background-color: beige;
-
-    }
-    header .header_container nav{
-        width: 80%;
-        height: 100px;
-        background-color: burlywood;
-
-    }
-    .slide{
-        width: 1200px;
-        height: 300px;
-        margin: 0 auto;
-        background-color: #999;
-    }
-    .contents{
-        width: 1200px;
-        height: 200px;
-        margin: 0 auto; 
-        display: flex;
-    }
-    .contents .c1{
-        width: 33.33%;
-        height: 200px;
-        background-color: #777;
-    }
-    .contents .c2{
-        width: 33.33%;
-        height: 200px;
-        background-color: #333;
-    }
-    .contents .c3{
-        width: 33.33%;
-        height: 200px;
-        background-color: #555;
-    }
-    footer{
-        width: 100%;
-        height: 100px;
-        background-color: sandybrown;
-    }
-    footer .footer_container{
-        width: 1200px;
-        height: 100px;
-        margin: 0 auto;
-        display: flex;
-    }
-    footer .footer_container .f_1{
-        width: 20%;
-        height: 100px;
-        background-color: #444;
-    }
-    footer .footer_container .f_2{
-        width: 80%;
-        height: 100px;
-    }
-    footer .footer_container .f_2 .f_menu{
-        width: 100%;
-        height: 50px;
-        background-color: skyblue;
-    }
-    footer .footer_container .f_2 .f_copy{
-        width: 100%;
-        height: 50px;
-        background-color: blueviolet;
-    }
-
-
-</style>
+    <link rel="stylesheet" href="css/style5.css">
+    <script src="./js/jquery-1.12.3.js"></script>
 
 </head>
 <body>
@@ -106,12 +20,59 @@
         <div class="slide"></div>
 
         <div class="contents">
-            <div class="c1">
-                <div class="notice"></div>
-                <div class="gallery"></div>
+        <div class="c1">
+            <div class="tab_menu">
+                <div class="tab_title">
+                    <h2 class="on">공지사항</h2>
+                    <h2>갤러리</h2>
+                </div>
+
+                <div class="tab_list">
+                    <div class="list notice">
+                        <table>
+                            <tr>
+                                <td>「은행여신거래기본약관(가계용)」 변...</td><td>2019.05.21</td>
+                            </tr>
+                            <tr>
+                                <td>금융·통신 융합 「Liiv M」 출시!</td><td>2019.04.20</td>
+                            </tr>
+                            <tr>
+                                <td>「오픈뱅킹 서비스」 시행 안내</td><td>2019.03.23</td>
+                            </tr>
+                            <tr>
+                                <td>로그인만 해도 사장님 잔고가 쌓이는...</td><td>2019.02.25</td>
+                            </tr>
+                            <tr>
+                                <td>「Easy & Fast! 비대면 국민-웨스턴 유...</td><td>2019.01.25</td>
+                            </tr>
+                            <tr>
+                                <td>열린다 KB! 오픈뱅킹 EVENT!</td><td>2019.01.12</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="list gallery">
+                        <a href="#"><img src="images/gallery4.jpg" alt=""></a>
+                        <a href="#"><img src="images/gallery5.jpg" alt=""></a>
+                        <a href="#"><img src="images/gallery6.jpg" alt=""></a>
+                    </div>
+                </div>
             </div>
-            <div class="c2"></div>
-            <div class="c3"></div>
+
+        </div>
+            <div class="c2">
+                <ul>
+                    <li><a href="3"><img src="images/bn1.jpg" alt=""></a></li>
+                    <li><a href="3"><img src="images/bn2.jpg" alt=""></a></li>
+                    <li><a href="3"><img src="images/bn3.jpg" alt=""></a></li>
+                </ul>
+            </div>
+            <div class="c3">
+                <ul>
+                    <li><a href="#"><img src="images/s1.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/s2.png" alt=""></a></li>
+                    <li><a href="#"><img src="images/s3.png" alt=""></a></li>
+                </ul>
+            </div>
         </div>
 
         <footer>
@@ -126,3 +87,13 @@
     </div>
 </body>
 </html>
+<script>
+    $(function(){
+        $('.tab_title h2').click(function(){
+            var i = $(this).index();
+            $('.tab_list .list').css('display','none');
+            $('.tab_list .list').eq(i).css('display','block');
+            $('.tab_title h2').removeClass('on').eq(i).addClass('on');
+        });
+    });
+</script>
