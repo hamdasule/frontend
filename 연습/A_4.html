@@ -15,7 +15,13 @@
             <nav></nav>
         </header>
 
-        <div class="slide"></div>
+        <div class="slide">
+            <ul class="slides">
+                <li><img src="images/slide10.JPG" alt=""></li>
+                <li><img src="images/slide11.JPG" alt=""></li>
+                <li><img src="images/slide12.JPG" alt=""></li>
+            </ul>
+        </div>
 
         <div class="contents">
             <div class="notice">
@@ -82,3 +88,19 @@
     </div>
 </body>
 </html>
+<script>
+    $(function(){
+
+        var s = 0;
+        setInterval(function(){
+            s++;
+            if(s==3){s=0;}
+            $('.slides li').eq(s).fadeIn(800);
+            $('.slides li').eq(s-1).fadeOut(800);
+        },3000);
+
+
+
+
+    });
+</script>

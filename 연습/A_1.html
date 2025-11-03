@@ -15,7 +15,13 @@
             <nav></nav>
         </header>
     
-    <div class="slide"></div>
+    <div class="slide">
+        <ul class="slides">
+            <li><a href="#"><img src="images/slide1.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/slide2.jpg" alt=""></a></li>
+            <li><a href="#"><img src="images/slide3.jpg" alt=""></a></li>
+        </ul>
+    </div>
 
     <div class="contents">
         <div class="c1">
@@ -78,8 +84,25 @@
         $('.tab_list .list').css('display','none');
         $('.tab_list .list').eq(i).css('display','block');
         $(".tab_menu h2").removeClass('on').eq(i).addClass('on');
-
         });
+
+
+        var s = 0;
+        setInterval(function(){
+            s++;
+            if(s==3){
+                s=0;
+            }
+            $('.slides li').eq(s).css('top','100%').animate({'top':0},600);
+            $('.slides li').eq(s-1).css('top',0).animate({'top':'-100%'},600);
+        },3000);
+
+
+
+
+
+
+
 
     });
 </script>

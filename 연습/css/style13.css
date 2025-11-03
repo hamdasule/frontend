@@ -1,0 +1,95 @@
+ *{margin: 0;padding: 0;}
+ ul, li{list-style: none;}
+ a{text-decoration: none; color: #111;}
+    #wrap{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap; /* flex 정렬을 유지하면서 줄을 바꿔라 */
+    }
+    header{
+        width: 200px;
+        height: 850px;
+        background-color: #999;
+    }
+    header .logo{
+        width: 200px;
+        height: 20%;
+        background-color: aqua;
+    }
+    header nav{
+        width: 200px;
+        height: 80%;
+        background-color: blue;
+    }
+    #main{
+        width: calc(100% - 200px); /* 단위가 다른 값을 계산할 때 쓰는 함수 */
+        height: 850px;
+        background-color: pink;
+    }
+    #main .slide{
+        width: 100%;
+        height: 400px;
+        background-color: palevioletred;
+    }
+    #main .slide .slides{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    #main .slide .slides li{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    #main .slide .slides li:first-child{
+        top: 0;
+    }
+    #main .slide .slides li img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+     #main .slide .link{
+        width: 100px;
+        height: 300px;
+        background-color: #bbb;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 5;
+     }
+    #main .banner{
+        width: 100%;
+        height: 200px;
+        background-color: #888;
+    }
+    #main .contents{
+        width: 100%;
+        height: 250px;
+        background-color: plum;
+    }
+    footer{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        background-color: #777;
+    }
+    footer .f_logo{
+        width: 18%;
+        height: 100px;
+        background-color: purple;
+    }
+    footer .f_copy{
+        width: 62%;
+        height: 100px;
+        background-color: #666;
+    }
+    footer .f_sns{
+        width: 20%;
+        height: 100px;
+        background-color: #333;
+    }

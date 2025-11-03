@@ -1,0 +1,198 @@
+    *{margin: 0;padding: 0;}
+    ul, li{list-style: none;}
+    a{text-decoration: none;color: #111;}
+    #wrap{
+        width: 1000px;
+        display: flex;
+    }
+    header{
+        width: 20%;
+        height: 650px;
+    }
+    header .logo{
+        width: 100%;
+        height: 100px;
+        background-color: #888;
+    }
+    header nav{
+        width: 100%;
+        height: 550px;
+        background-color: #333;
+    }
+    header nav .gnb{
+        width: 90%;
+        position: relative;
+        margin: 0 auto;
+    }
+    header nav .gnb > li{
+        text-align: center;
+        width: 100%;
+        background-color: antiquewhite;
+    }
+    header nav .gnb > li > a{
+        line-height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+        display: block;
+        
+    }
+    header nav .gnb > li:hover > a{
+        background-color: #222;
+        color: #fff;
+    }
+    header nav .gnb > li > ul{
+        line-height: 40px;
+        width: 100%;
+        display: none;
+    }
+    header nav .gnb > li > ul > li > a{
+        display: block;
+        width: 100%;
+    }
+    header nav .gnb > li > ul > li > a:hover{
+        background-color: #888;
+    }
+
+    #main{
+        width: 80%;
+        height: 650px;
+    }
+    #main .slide{
+        width: 100%;
+        height: 350px;
+        background-color: #222;
+    }
+    #main .slide .slides{
+        width: 100%;
+        height: 1005px;
+        position: relative;
+        overflow: hidden;
+    }
+    #main .slide .slides li{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    #main .slide .slides li:first-child{
+        display: block;
+    }
+    #main .slide .slides li img{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    #main .contents{
+        width: 100%;
+        height: 200px;
+        display: flex;
+    }
+    #main .contents .c1{
+        width: 33.3333%;
+        height: 200px;
+        background-color: skyblue;
+    }
+    .contents .c1 .tab_menu{
+        width: 100%;
+    }
+    .contents .c1 .tab_menu .tab_title{
+        width: 100%;
+        height: 30%;
+        display: flex;
+        gap: 10px;
+        padding-left: 10px;
+        padding-top: 6px;
+    }
+    .contents .c1 .tab_menu .tab_title h2{
+        font-size: 24px;
+    }
+    .contents .c1 .tab_menu .tab_title h2:first-child::after{
+        content: '|';
+        position: relative;
+        top: -2px;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+    .contents .c1 .tab_menu .tab_title h2.on{
+        text-decoration: underline;
+    }
+    .notice table{
+        width: 100%;
+        margin-top: 6px;
+    }
+   .notice table tr td{
+        font-size: 10px;
+    }
+    .notice table tr td:first-child{
+        text-align: left;
+        padding-left: 10px;
+        padding-top: 4px;
+    }
+    .notice table tr td:first-child:hover{
+        text-decoration: underline;
+    }
+    .notice table tr td:last-child{
+        text-align: right;
+        padding-right: 10px;
+        padding-top: 4px;
+    }
+    .gallery{
+        display: none;
+        text-align: center;
+    }
+    .gallery img{
+        width: 31%;
+        height: 140px;
+        object-fit: cover;
+        margin-top: 8px;
+    }
+    #main .contents .c2{
+        width: 33.3333%;
+        height: 200px;
+        background-color: darkkhaki;
+    }
+    #main .contents .c2 ul{
+        margin-top: 5px;
+    }
+    #main .contents .c3{
+        width: 33.3333%;
+        height: 200px;
+        background-color: pink;
+    }
+    #main .contents .c3 ul{
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+    }
+    #main .contents .c3 ul img{
+        width: 85px;
+        height: 200px;
+    }
+
+    #main footer{
+        width: 100%;
+        height: 100px;
+        display: flex;
+    }
+    #main footer .f_1{
+        width: 20%;
+        height: 100px;
+        background-color: #444;
+    }
+    #main footer .f_2{
+        width: 80%;
+        height: 100px;
+    }
+    #main footer .f_2 .f_menu{
+        width: 100%;
+        height: 50px;
+        background-color: papayawhip;
+    }
+    #main footer .f_2 .f_copy{
+        width: 100%;
+        height: 50px;
+        background-color: darkcyan;
+    }

@@ -4,81 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<style>
-    *{margin: 0;padding: 0;}
-    #wrap{
-        width: 1000px;
-        display: flex;
-    }
-    header{
-        width: 20%;
-        height: 650px;
-    }
-    header .logo{
-        width: 100%;
-        height: 100px;
-        background-color: #888;
-    }
-    header nav{
-        width: 100%;
-        height: 550px;
-        background-color: #333;
-    }
-    #main{
-        width: 80%;
-        height: 650px;
-    }
-    #main .slide{
-        width: 100%;
-        height: 350px;
-        background-color: #222;
-    }
-    #main .contents{
-        width: 100%;
-        height: 200px;
-        display: flex;
-    }
-    #main .contents .c1{
-        width: 33.3333%;
-        height: 200px;
-        background-color: skyblue;
-    }
-    #main .contents .c2{
-        width: 33.3333%;
-        height: 200px;
-        background-color: darkkhaki;
-    }
-    #main .contents .c3{
-        width: 33.3333%;
-        height: 200px;
-        background-color: pink;
-    }
-    #main footer{
-        width: 100%;
-        height: 100px;
-        display: flex;
-    }
-    #main footer .f_1{
-        width: 20%;
-        height: 100px;
-        background-color: #444;
-    }
-    #main footer .f_2{
-        width: 80%;
-        height: 100px;
-    }
-    #main footer .f_2 .f_menu{
-        width: 100%;
-        height: 50px;
-        background-color: papayawhip;
-    }
-    #main footer .f_2 .f_copy{
-        width: 100%;
-        height: 50px;
-        background-color: darkcyan;
-    }
-
-</style>
+    <link rel="stylesheet" href="css/style9.css">
+    <script src="./js/jquery-1.12.3.js"></script>
 
 </head>
 <body>
@@ -86,18 +13,102 @@
         <header>
             <div class="logo"><a href="#"><img src="" alt=""></a></div>
             <nav>
+                <ul class="gnb">
+                    <li><a href="#">이용안내</a>
+                        <ul class="sub">
+                            <li><a href="#">이용방법</a></li>
+                            <li><a href="#">이용시간</a></li>
+                            <li><a href="#">이용요금</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트정보</a>
+                        <ul class="sub">
+                            <li><a href="#">현장이벤트</a></li>
+                            <li><a href="#">온라인이벤트</a></li>
+                            <li><a href="#">이벤트예약</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">프로그램</a>
+                        <ul class="sub">
+                            <li><a href="#">프로그램안내</a></li>
+                            <li><a href="#">온라인예약</a></li>
+                            <li><a href="#">단체예약상담</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">고객센터</a>
+                        <ul class="sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주묻는질문</a></li>
+                            <li><a href="#">자료실</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </nav>
         </header>
         <div id="main">
-            <div class="slide"></div>
+            <div class="slide">
+                <ul class="slides">
+                    <li><img src="images/slide25.jpg" alt=""></li>
+                    <li><img src="images/slide26.jpg" alt=""></li>
+                    <li><img src="images/slide27.jpg" alt=""></li>
+                </ul>
+            </div>
 
             <div class="contents">
                 <div class="c1">
-                    <div class="notice"></div>
-                    <div class="gallery"></div>
+                <div class="tab_menu">
+                    <div class="tab_title">
+                        <h2 class="on">공지사항</h2>
+                        <h2>갤러리</h2>
+                    </div>
+                    <div class="tab_list">
+                    <div class="list notice">
+                        <table>
+                            <tr>
+                                <td>누리마루 APEC하우스는 2005년 11월 18~...</td><td>2019-11-12</td>
+                            </tr>
+                            <tr>
+                                <td>해운대 빛축제 무료관람권 이벤트 당첨자 발표</td><td>2019-11-12</td>
+                            </tr>
+                            <tr>
+                                <td>부산 국제 영화제 관람권 이벤트 당첨자 발표</td><td>2019-11-12</td>
+                            </tr>
+                            <tr>
+                                <td>방송에 소개된 해운대 빛축제 관련 질문사항...</td><td>2019-11-12</td>
+                            </tr>
+                            <tr>
+                                <td>해운대 빛축제 및 부산 국제 영화제 패키지...</td><td>2019-11-12</td>
+                            </tr>
+                            <tr>
+                                <td>해운대 호텔 예약 관련 문의사항에 대한 답변...</td><td>2019-11-12</td>
+                            </tr>
+                            <tr>
+                                <td>해운대 빛축제 쓰리데이 패키지 코스 관련 안내</td><td>2019-11-12</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="list gallery">
+                        <a href="#"><img src="images/gallery16.jpg" alt=""></a>
+                        <a href="#"><img src="images/gallery17.jpg" alt=""></a>
+                        <a href="#"><img src="images/gallery18.jpg" alt=""></a>
+                    </div>
+                    </div>
                 </div>
-                <div class="c2"></div>
-                <div class="c3"></div>
+                </div>
+                <div class="c2">
+                    <ul>
+                        <li><a href="#"><img src="images/b10.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="images/b11.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="images/b12.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="c3">
+                    <ul>
+                        <li><a href="$"><img src="images/link1.png" alt=""></a></li>
+                        <li><a href="$"><img src="images/link2.png" alt=""></a></li>
+                        <li><a href="$"><img src="images/link3.png" alt=""></a></li>
+                    </ul>
+                </div>
             </div>
         
         <footer>
@@ -111,3 +122,40 @@
     </div>
 </body>
 </html>
+<script>
+    $(function(){
+        $('.gnb li ul').css('display','none');
+        $('.gnb > li > a').click(function(){
+           var s = $(this).next('.sub').css('display')
+
+           if(s === 'none'){
+            $('.sub').slideUp();
+            $(this).next('.sub').slideDown();
+           }else{
+            $('.sub').slideUp();
+           }
+           return false;
+        });
+
+
+        $('.tab_title h2').click(function(){
+            var t = $(this).index();
+            $('.tab_list .list').css('display','none');
+            $('.tab_list .list').eq(t).css('display','block');
+            $('.tab_title h2').removeClass('on').eq(t).addClass('on');
+        });
+
+        var s = 0;
+        setInterval(function(){
+            s++;
+            if(s==3){s=0;}
+            $('.slides li').eq(s).fadeIn(800);
+            $('.slides li').eq(s-1).fadeOut(800);
+        },3000);
+
+
+
+
+
+    });
+</script>

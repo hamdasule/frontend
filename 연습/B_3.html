@@ -17,7 +17,13 @@
             </div>
         </header>
 
-        <div class="slide"></div>
+        <div class="slide">
+            <ul class="slides">
+                <li><img src="images/slide19.jpg" alt=""></li>
+                <li><img src="images/slide20.jpg" alt=""></li>
+                <li><img src="images/slide21.jpg" alt=""></li>
+            </ul>
+        </div>
 
         <div class="contents">
             <div class="notice">
@@ -67,8 +73,18 @@
                 <div class="f_sns"></div>
             </div>
         </footer>
-
-    
     </div>
 </body>
 </html>
+<script>
+    $(function(){
+
+        var s = 0;
+        setInterval(function(){
+            s++;
+            if(s==3){s=0;}
+            $('.slides li').eq(s).css('top','100%').animate({'top':0},600);
+            $('.slides li').eq(s-1).css('top',0).animate({'top':'-100%'},600);
+        },3000);
+    });
+</script>
