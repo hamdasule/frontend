@@ -154,3 +154,45 @@
         height: 50px;
         background-color: green;
      }
+
+     #pop{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+      display: none;
+     }
+     #pop .popup{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 700px;
+      background-color: #fff;
+      border-radius: 20px;
+      border: 7px solid rgb(181, 211, 135);
+     }
+     #pop .popup .p_title{
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-size: 30px;
+     }
+     #pop .popup p{
+      position: absolute;
+      top: 100px;
+      left: 30px;
+      right: 30px;
+      line-height: 25px;
+     }
+     #pop .popup button{
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      padding: 5px 25px;
+      border: 0;
+      border-radius: 5px;
+     }

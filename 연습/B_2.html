@@ -71,6 +71,37 @@
             </div>
         </footer>
     </div>
+
+    <div id="pop">
+        <div class="popup">
+            <h1 class="p_title">개인정보처리방침 개정안내</h1>
+            <p>
+                (1)개인정보처리방침 개정 사유<br/>
+                - 개인정보 위탁업체 변경<br><br/>
+
+                (2) 개정내용<br/>
+                1. 개인정보 위탁업체 추가<br/>
+                가. 업체명<br/>
+                - 중국씬싱항공, 동원여행개발, 마이비자코리아<br/>
+
+                나. 위탁내용 및 목적<br/>
+                - 비자발급 대행<br/>
+
+                다. 위탁기간<br/>
+                - 계약시작일로부터 계약종료일까지<br><br/>
+
+                (3) 개정 시행 일자<br/>
+                - 2019년 3월 13일 부터<br><br/>
+
+                (4) 동의 철회<br/>
+                - 개정된 개인정보처리방침 내용에 동의하지 않으시는 경우, 회원탈퇴를 요청하실 수 있습니다.
+                앞으로도 모두투어는 고객님들의 개인정보보호에 앞장서겠습니다.<br><br/>
+
+                ※ 기타 자세한 내용은 창구직원 또는 대한은행 스마트상담부(☎1588-7272)로 문의하시기 바랍니다.
+            </p>
+            <button>닫기</button>
+        </div>
+    </div>
 </body>
 </html>
 <script>
@@ -82,5 +113,16 @@
             $('.slides li').eq(s).css('top','100%').animate({'top':0},600);
             $('.slides li').eq(s-1).css('top',0).animate({'top':'-100%'},600);
         },3000);
+
+
+        $('table tr:first-child').click(function(){
+            $('#pop').stop().show();
+        });
+        $('#pop .popup button').click(function(){
+            $('#pop').stop().hide();
+        });
+
+
+
     });
 </script>

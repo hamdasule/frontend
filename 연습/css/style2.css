@@ -136,3 +136,45 @@
             height: 100px;
             background-color: #ccc;
         }
+
+        #pop{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+        #pop .popup{
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            width: 600px;
+            height: 280px;
+            border-radius: 10px;
+            border: 6px solid #666;
+        }
+        #pop .popup .p_title{
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            font-size: 20px;
+        }
+        #pop .popup p{
+            position: absolute;
+            left: 30px;
+            top: 95px;
+            right: 30px;
+            line-height: 26px;
+        }
+        #pop .popup button{
+            position: absolute;
+            right: 30px;
+            bottom: 30px;
+            padding: 5px 20px;
+            border: 0;
+            border-radius: 5px;
+        }

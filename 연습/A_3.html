@@ -85,6 +85,16 @@
             </div>
         </footer>
     </div>
+
+    <div class="popup">
+        <h1 class="p_title">강원천문대 공지사항</h1>
+        <p>
+            밀알복지재단 강남세움발달장애인평생교육센터에서 성인발달장애인 대상의 2020년 신규교육생을 모집합니다.
+            관심 있는 분들은 아래 내용 및 별첨 모집요강, 양식 등 참고하시어 기한 내 꼭 신청하시기 바랍니다.
+            기한 경과시 원서 접수 받지 않음을 유의하여 주시기 바랍니다.
+        </p>
+        <button>닫기</button>
+    </div>
 </body>
 </html>
 <script>
@@ -104,5 +114,13 @@
             $('.slides li').eq(s).fadeIn(1000);
             $('.slides li').eq(s-1).fadeOut(1000);
         },3000);
+
+
+        $('table tr:first-child').click(function(){
+            $('.popup').fadeIn();
+        });
+        $('.popup button').click(function(){
+            $('.popup').fadeOut();
+        });
     });
 </script>

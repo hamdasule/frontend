@@ -158,3 +158,45 @@
         height: 100px;
         background-color: #333;
     }
+    #pop{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        display: none;
+    }
+    #pop .popup{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        width: 600px;
+        height: 540px;
+        border-radius: 20px;
+        border: 8px solid #5ed2f5;
+    }
+    #pop .popup .p_title{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-size: 28px;
+    }
+    #pop .popup p{
+        position: absolute;
+        top: 100px;
+        left: 30px;
+        right: 30px;
+        font-size: 15.5px;
+        line-height: 26px;
+    }
+    #pop .popup button{
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        padding: 5px 25px;
+        border: 0;
+        border-radius: 5px;
+    }

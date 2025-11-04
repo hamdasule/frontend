@@ -73,6 +73,17 @@
         <div class="f_sns"></div>
     </footer>
 </div>
+    <div class="popup">
+        <h1 class="p_title">JUST쇼핑몰 공지사항</h1>
+        <p>
+        현금영수증은 무통장입금으로 상품 구매 시 주문서 작성 페이지에서 고객님이 직접 신청하실 수 있습니다.
+        다만, 결제가 완료된 상태에서 배송 전/후 일부 상품 부분 취소 시 현금영수증은 전액 취소 처리되며
+        최종 실 결제금액에 대한 현금영수증은 Q&A 또는 고객센터로 현금영수증 신청 번호와 함께 재신청 요청해주셔야 합니다.
+        위 사항 꼭 유의하셔서 결제금액의 변동이 있으신 경우 꼭 재신청 부탁드리며
+        호스팅사, 결제대행사, 국세청간의 전산방식의 문제로 부득이하게 불편 드리는 점 양해 부탁드립니다.
+        </p>
+        <button>닫기</button>
+    </div>
 
 </body>
 </html>
@@ -90,12 +101,19 @@
         var s = 0;
         setInterval(function(){
             s++;
-            if(s==3){
-                s=0;
-            }
+            if(s==3){s=0;}
             $('.slides li').eq(s).css('top','100%').animate({'top':0},600);
             $('.slides li').eq(s-1).css('top',0).animate({'top':'-100%'},600);
         },3000);
+
+
+        $('table tr:first-child').click(function(){
+            $('.popup').fadeIn(); 
+            });
+            $('.popup button').click(function(){
+                $('.popup').fadeOut();
+            });
+       
 
 
 
