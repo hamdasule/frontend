@@ -6,46 +6,54 @@
     }
     header{
         width: 100%;
-        height: 100px;
+        height: 90px;
         background-color: #fff;
     }
-    header .brand_name{
+    header .top_banner{
         width: 100%;
-        height: 35px;
-        background-color: #000;
+        height: 30px;
+        background-color: #000;    
     }
+    header .top_banner .top_text{
+        color: #fff;
+        font-size: 12px;
+        padding-top: 6px; 
+    }
+    .top_text span{
+        margin-left: 125px;
+    }
+
     header .header_container{
         position: relative;
         z-index: 10;
         width: 100%;
-        height: 65px;
+        height: 60px;
         display: flex;
     }
     header .logo{
         width: 15%;
-        height: 65px;
+        height: 60px;
         background-color: #d1d1d1;
     }
     header nav{
         width: 65%;
-        height: 65px;
+        height: 60px;
         position: relative;
         z-index: 9;
     }
     header nav .gnb{
         position: absolute;
-        bottom: 0;
+        bottom: 5px;
         left: 0;
         display: flex;
         gap: 45px;
-    
     }
     header nav .gnb > li{
         text-align: center;
         height: 50px;
     }
     header nav .gnb > li > a{
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 500;
         line-height: 50px;
         background-color: #fff;
@@ -56,14 +64,14 @@
     header nav .gnb > li > ul{
         position: absolute;
         width: 900px;
-        left:155PX;  
-        /* display: none; */
+        left:144PX;  
+        display: none;
         background-color: #fff;
     }
     header nav .gnb > li > ul > li{
         display:inline-block;
         line-height: 50px;
-      
+
     }
     header nav .gnb > li > ul > li > a{
         display: inline-block;
@@ -76,19 +84,102 @@
         width:100%;
         display: none;
     }
-
-
-
     header .h_icon{
         width: 20%;
-        height: 65px;
-        background-color: #333;
+        height: 60px;
+        background-color: #fff;
+        position: relative;
+    }
+    header .h_icon > ul{
+        display: flex;
+        position: absolute;
+        right: 30px;
+        /* display: none; */
+    }
+    header .h_icon > ul > li{
+
+    }
+
+    .h_icon ul img{
+        width: 35px;
+        padding: 15px 10px;
+    }
+    header .h_icon > ul > li > ul{
+        position: absolute;
+        background-color: #fff;
+        width: 200px;
+        top: 60px;
+        border: 1px solid #000;
+        padding: 8px 0;
+
+    }
+    header .h_icon > ul > li > ul > li{
+        line-height: 28px;
+    }
+    header .h_icon > ul > li > ul > li > a{
+        font-size: 14px;
+        padding-left: 10px;     
     }
     .slide{
         width: 100%;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 90px);
         background-color: #888;
     }
+    .slide .slides{
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+    .slides ul li{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    .slides .sd1{
+        left: 0;
+        background: url(../images/slide5.jpg) no-repeat 50% 0;
+    }
+    .slides .sd2{
+        left: 100%;
+        background: url(../images/slide4.jpg) no-repeat 50% 0;
+    }
+    .slides .sd3{
+        left: 200%;
+        background: url(../images/slide3.jpg) no-repeat 50% 0;
+    }
+    .slides .sd4{
+        left: 300%;
+        background: url(../images/slide2.jpg) no-repeat 50% 0;
+    }
+    .slide li a{
+    display: block;
+    text-indent: -9999px;
+    }
+    .buttonList{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    }
+    .buttonList li{
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: #fff;
+    margin: 0 5px;
+    }
+    .buttonList li.on{
+        width: 35px;
+        background-color: #333;
+        transition: all 0.3s;
+    }
+    .buttonList li a{
+    display: block;
+    text-indent: -9999px;
+    }
+  
     .content1{
         width: 100%;
         height: 1450px;
@@ -99,13 +190,14 @@
     .content1 .tab_menu .tab_title{
         width: 100%;
         height: 130px;
-        background-color: #bbb;
+        background-color: #fff;
         display: flex;
         gap: 8px;
         justify-content: center;
     }
     .tab_title h2{
         margin-top: 40px;
+        cursor: pointer;
     }
     .tab_title h2.on{
         text-decoration: underline;
@@ -121,7 +213,7 @@
     .content1 .tab_menu .tab_list{
         width: 100%;
         height: 1320px;
-        background-color: #a2a2a2;
+        background-color: #fff;
     }
     .content1 .tab_menu .tab_list .product1 ul{
         display: flex;
@@ -145,7 +237,7 @@
         top: 540px;
     }
     .product1 ul li .name .m_name{
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 5px;
     }.product1 ul li .name .p_name{
         text-decoration: line-through;
@@ -160,10 +252,12 @@
     .content1 .tab_menu .tab_list .product1 ul li img{
         width: 450px;
         height: 540px;
+        object-fit: cover;
         background-color: #b3b3b3;
         position: absolute;
         top: 0;
         left: 5px;
+        /* transition: all 0.3s; */
     }
     .product1 ul li a .img2 { opacity: 0; } 
     .product1 ul li a:hover .img2 { opacity: 1; } 
@@ -220,7 +314,6 @@
 
 
 
-
     .content2{
         width: 100%;
         height: 880px;
@@ -246,9 +339,7 @@
         width: 100%;
         height: 350px;
         background-color: #222;
-
     }
-
 
     .content3{
         width: 100%;
@@ -258,5 +349,25 @@
     footer{
         width: 100%;
         height: 200px;
-        background-color: #444;
+        display: flex;
+    }
+    footer .f_1{
+        width: 80%;
+        height: 200px;
+    }
+    footer .f_1 .f_menu{
+        width: 100%;
+        height: 50px;
+        background-color: #777;
+    }
+     footer .f_1 .f_copy{
+        width: 100%;
+        height: 150px;
+        background-color: #ccc;
+     }
+
+    footer .f_2{
+        width: 20%;
+        height: 200px;
+        background-color: #999;
     }

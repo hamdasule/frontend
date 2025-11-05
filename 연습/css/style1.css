@@ -1,196 +1,228 @@
 *{margin: 0;padding: 0;}
 ul, li{list-style: none;}
-a{text-decoration: none;}
-    #wrap{
-        width: 1200px;
-        height: 700px;
-        margin: 0 auto;
-    }
-    header{
-        width: 100%;
-        height: 100px;
-        display: flex;
-    }
-    header .logo{
-        width: 20%;
-        height: 100px;
-        background-color: #999;
-    }
-    header nav{
-        width: 80%;
-        height: 100px;
-        background-color: #666;
-    }
-    .slide{
-        width: 100%;
-        height: 300px;
-        background-color: #555;
-    }
-    .slide .slides{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-    }
-    .slide .slides li{
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .slide .slides li:first-child{
-        top: 0;
-    }
-    .slide .slides li img{
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    
-    .contents{
-        width: 100%;
-        height: 200px;
-        display: flex;
-    }
-    .contents .c1{
-        width: 400px;
-        height: 200px;
-        background-color: #d1d1d1;
-    }
-    .contents .c1 .tab_menu{
-        width: 100%;
-        height: 100%;
-    }
-    .contents .c1 .tab_menu .tab_title{
-        width: 100%;
-        height: 30%;
-        display: flex;
-        gap: 10px;
-        padding-left: 15px;
-    }
-    .tab_title h2:first-child::after {
-        content: "|";
-        margin-left: 10px;
-        color: #000;
-        font-size: 24px;
-        position: relative;
-        top: -4px;
-    }
-    .contents .c1 .tab_menu .tab_title h2.on{
-        text-decoration: underline;
-    }
-    .contents .c1 .tab_menu .tab_title h2{
-        padding-top: 15px;
-        font-size: 28px;
-        cursor: pointer;   
-        text-decoration: none; 
+a{text-decoration: none; color: #111;}
+
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+header{
+    width: 1200px;
+    height: 100px;
+    display: flex;
+    position: relative;
+    z-index: 100;
+}
+header .logo{
+    width: 20%;
+    height: 100px;
+    background-color: #999;
+}
+header nav{
+    width: 80%;
+    height: 100px;
+    background-color: #111;
+}
+header nav .gnb{
+    background-color: #d1d1d1;
+    width: 600px;
+    height: 50px;
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+header nav .gnb > li{
+    float: left;
+    width: 150px;
+    text-align: center;
+}
+header nav .gnb > li > a{
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+header nav .gnb > li:hover > a{
+    background-color: burlywood;
+    color: #6d4c25;
+}
+header nav .gnb > li > ul{
+    line-height: 40px;
+    background-color: #999;
+    display: none;
+}
+header nav .gnb > li > ul > li > a{
+    display: block;
+    width: 100%;
+}
+header nav .gnb > li > ul > li > a:hover{
+    background-color: #d1d1d1;
+    color: brown;
+}
+
+
+
+
+.slide{
+    width: 100%;
+    height: 300px;
+    background-color: #888;
+}
+.slide .slides{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slide .slides li{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide .slides li:first-child{
+    top: 0;
+}
+.slide .slides li img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.contents{
+    width: 1200px;
+    height: 200px;
+    display: flex;
+}
+.contents .c1{
+    width: 400px;
+    height: 200px;
+    background-color: #777;
+}
+.contents .c1 .tab_menu{
+    width: 100%;
+}
+.tab_menu .tab_title{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    gap: 10px;
+    padding-left: 15px;
+    padding-top: 10px;
+ 
+}
+.tab_menu .tab_title h2:first-child::after{
+    content: '|';
+    padding-left: 10px;
+    position: relative;
+    font-size: 20px;
+    top: -4px;
+   
+    display: inline-block;
+}
+.tab_menu .tab_title h2{
+    font-size: 28px;
+    cursor: pointer;
+}
+.tab_menu .tab_title h2.on{
+    text-decoration: underline;
+}
+.tab_menu .tab_list table{
+    width: 100%;
+    margin-top: 8px;
+}
+.tab_list table tr td:first-child{
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.tab_list table tr td:first-child:hover{
+    text-decoration: underline;
+}
+.tab_list table tr td:last-child{
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+.tab_list .gallery{
+    display: none;
+    text-align: center;
+}
+.contents .c1 .tab_menu .tab_list .gallery img{
+        width: 30%;
+        margin-left: 2px;
+        margin-right: 2px;
     }
 
-    .contents .c1 .tab_menu .tab_list{
-        width: 100%;
-        height: 70%;
-    }
-    .contents .c1 .tab_menu .tab_list table{
-        width: 100%;
-    }
-    .contents .c1 .tab_menu .tab_list table tr td:first-child{
-        text-align: left;
-        cursor: pointer;
-        padding-left: 15px;
-        padding-top: 4px;
-    }
-    .contents .c1 .tab_menu .tab_list table tr td:first-child:hover{
-        text-decoration: underline;
-    }
-    .contents .c1 .tab_menu .tab_list table tr td:last-child{
-        text-align: right;
-        padding-right: 15px;
-        padding-top: 4px;
-    }
-    .contents .c1 .tab_menu .tab_list .gallery{
-        display: none;
-        text-align: center;
-    }
-    .contents .c1 .tab_menu .tab_list .gallery img{
-      width: 31%;
-      height: 120px;
-      object-fit: cover;
-      margin-top: 5px;
-    }
 
-    .contents .c2{
-        width: 400px;
-        height: 200px;
-        background-color: #aaa;
-    }
-    .contents .c2 img{
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-    .contents .c3{
-        width: 400px;
-        height: 200px;
-        background-color: #bbb;
-    }
-    .contents .c3 img{
-        width: 100%;
-        height: auto;
-        display: block;
-    }
+.contents .c2{
+    width: 400px;
+    height: 200px;
+    background-color: #555;
+}
+.contents .c3{
+    width: 400px;
+    height: 200px;
+    background-color: #666;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+footer .f_logo{
+    width: 20%;
+    height: 100px;
+    background-color: #444;
+}
+footer .f_copy{
+    width: 60%;
+    height: 100px;
+    background-color: #222;
+}
+footer .f_sns{
+    width: 20%;
+    height: 100px;
+    background-color: #333;
+}
+.popup{
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 340px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 7px solid #444;
+    display: none;
+}
+.popup .p_title{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 25px;
+}
+.popup p{
+    position: absolute;
+    top: 90px;
+    left: 30px;
+    right: 30px;
+    line-height: 26px;
+}
+.popup button{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 5px 25px;
+    border: 0;
+    border-radius: 5px;
 
-    footer{
-        width: 100%;
-        height: 100px;
-        display: flex;
-    }
-    footer .f_logo{
-        width: 20%;
-        height: 100px;
-        background-color: #ddd;
-    }
-    footer .f_copy{
-        width: 60%;
-        height: 100px;
-        background-color: #ededed;
-    }
-    footer .f_sns{
-        width: 20%;
-        height: 100px;
-        background-color: #e0e0e0;
-    }
+}
 
-    .popup{
-        position: fixed;
-        left: 50%;
-        top: 35%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        width: 550px;
-        height: 350px;
-        border-radius: 20px;
-        border: 6px solid #555;
-        display: none;
-    }
-    .popup .p_title{
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        font-size: 28px; 
-    }
-    .popup p{
-        position: absolute;
-        left: 30px;
-        top: 95px;
-        right: 30px;
-        line-height: 26px;
-    }
-    .popup button{
-        position: absolute;
-        right: 30px;
-        bottom: 20px;
-        padding: 5px 25px;
-        border: 0;
-        border-radius: 5px;
-    }
+
