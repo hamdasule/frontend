@@ -58,34 +58,101 @@ h1{text-align: center;}
 </body>
 </html>
 <script>
-//let list = document.getElementById('banner'); //li를 감싸는 넓이 800 ul#banner
-//let listLi = document.querySelectorAll('#banner li'); //사진을 감싸는 li 총 5개
+// //let list = document.getElementById('banner'); //li를 감싸는 넓이 800 ul#banner
+// //let listLi = document.querySelectorAll('#banner li'); //사진을 감싸는 li 총 5개
+// let total = $('#banner>li').length; //5
+// //alert(total);
+// //let li_width = 80;
+//  // let li_width = document.querySelector('#banner>li').offsetWidth; => 80
+// let li_width =  $('#banner>li').eq(0).width();
+// //let li_width1 =  parseInt($('#banner>li').eq(0).css('width')); 80px -> 80
+// //alert(li_width1);
+// let copy1 = $('#banner>li:lt(3)').clone();//#banner>li 중 3보다 작은 0,1,2을 clone(복사 ctrl+c)
+// $('#banner').append(copy1);// #banner 맨뒤로 복사한 0,1,2추가 (append 뒤로추가)
+
+// let num = 0;
+
+// $('.next').click(function(e){
+//     e.preventDefault();
+
+//     if(num ===5 ){
+//         num = 0;
+//         // list.style.transition = 'none';
+//         // list.style.marginLeft = 0;
+//         $('#banner').css('margin-left','0');
+//         //트랜지션이 없으므로 움직임없이 첫번째사진으로 순간적으로 이동
+//     }
+//         num++;
+//         // list.style.transition = 'margin-left 0.5s';
+//         // list.style.marginLeft = -li_width * num +'px'; 
+//          $('#banner').stop().animate({'margin-left':-li_width * num},500);
+
+// });
+
+// $('.prev').click(function(e){
+//     e.preventDefault();
+
+//     if(num === 0 ){
+//         num = 5;
+//         $('#banner').css('margin-left',-li_width * num);
+//     }
+//         num--;
+//         $('#banner').stop().animate({'margin-left':-li_width * num},500);
+
+// });
+
+// var id = setInterval(autoPlay, 2000);
+
+//  function autoPlay(){
+//         if(num === 5){
+//             num =0;
+//             $('#banner').css('margin-left','0');
+//         }
+//         num++;
+//          $('#banner').stop().animate({'margin-left':-li_width * num},500);
+//         }
+
+//         $('#frame').mouseover(function(){
+//             clearInterval(id);
+//         });
+//         $('#frame').mouseout(function(){
+//             id = setInterval(autoPlay, 2000);
+//         });
+            
+//         //list.style.transition = 'margin-left 0.5s';
+//         //list.style.marginLeft = -li_width * num + 'px';
+//         //},50);
+//      //};
+
+// //document.querySelector('.prev').addEventListener("click",function(e){
+//     //e.preventDefault();
+//     //if(num === 0 ){
+//         //num = 5;
+//         //list.style.transition = 'none';
+//         //list.style.marginLeft =  -li_width * num +'px';
+//         //트랜지션이 없으므로 움직임없이 첫번째사진으로 순간적으로 이동
+    
+//     //setTimeout(function(){
+//        // num--;
+//      //   list.style.transition = 'margin-left 0.5s';
+//    //     list.style.marginLeft = -li_width * num +'px'; 
+//   //  },50);
+
+
 let total = $('#banner>li').length; //5
-//alert(total);
-//let li_width = 80;
- // let li_width = document.querySelector('#banner>li').offsetWidth; => 80
 let li_width =  $('#banner>li').eq(0).width();
-//let li_width1 =  parseInt($('#banner>li').eq(0).css('width')); 80px -> 80
-//alert(li_width1);
-let copy1 = $('#banner>li:lt(3)').clone();//#banner>li 중 3보다 작은 0,1,2을 clone(복사 ctrl+c)
-$('#banner').append(copy1);// #banner 맨뒤로 복사한 0,1,2추가 (append 뒤로추가)
-
+let copy1 = $('#banner>li:lt(3)').clone();
+$('#banner').append(copy1);
 let num = 0;
-
 $('.next').click(function(e){
     e.preventDefault();
 
     if(num ===5 ){
         num = 0;
-        // list.style.transition = 'none';
-        // list.style.marginLeft = 0;
-        $('#banner').css('margin-left','0');
-        //트랜지션이 없으므로 움직임없이 첫번째사진으로 순간적으로 이동
-    }
+$('#banner').css('margin-left','0');
+}
         num++;
-        // list.style.transition = 'margin-left 0.5s';
-        // list.style.marginLeft = -li_width * num +'px'; 
-         $('#banner').stop().animate({'margin-left':-li_width * num},500);
+$('#banner').stop().animate({'margin-left':-li_width * num},500);
 
 });
 
@@ -118,25 +185,6 @@ var id = setInterval(autoPlay, 2000);
         $('#frame').mouseout(function(){
             id = setInterval(autoPlay, 2000);
         });
-            
-        //list.style.transition = 'margin-left 0.5s';
-        //list.style.marginLeft = -li_width * num + 'px';
-        //},50);
-     //};
-
-//document.querySelector('.prev').addEventListener("click",function(e){
-    //e.preventDefault();
-    //if(num === 0 ){
-        //num = 5;
-        //list.style.transition = 'none';
-        //list.style.marginLeft =  -li_width * num +'px';
-        //트랜지션이 없으므로 움직임없이 첫번째사진으로 순간적으로 이동
-    
-    //setTimeout(function(){
-       // num--;
-     //   list.style.transition = 'margin-left 0.5s';
-   //     list.style.marginLeft = -li_width * num +'px'; 
-  //  },50);
 
 
 

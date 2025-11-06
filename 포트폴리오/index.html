@@ -237,7 +237,7 @@
             <div class="c2_1">
                 <h2>CENTAUR FLEEC SETUP</h2>
                 <p>일상에 자연스럽게 스며드는 가볍고 편안한 데일리 웨어를 제안합니다.</p>
-                <a href="#"><img src="" alt=""></a>
+                <a href="#"><img src="images/img.jpg" alt=""></a>
             </div>
             
             <div class="c2_2">
@@ -254,19 +254,51 @@
                     </ul>
                 </div>
                 <p>
-                    <a href="#"><img src="images/prev_btn.png" alt=""></a>
-                    <a href="#"><img src="images/next_btn.png" alt=""></a>
+                    <a class="prev" href="#"><img src="images/prev_btn.png" alt=""></a>
+                    <a class="next" href="#"><img src="images/next_btn.png" alt=""></a>
                 </p>
             </div>
 
         </section>
 
-        <section class="content3"></section>
+        <section class="content3">
+            <div class="c3_1">
+                <h2>CENTAUR Style Daily</h2>
+            </div>
+            <div class="c3_2">
+                <ul>
+                    <li><a href="#"><img src="" alt=""></a></li>
+                    <li><a href="#"><img src="" alt=""></a></li>
+                    <li><a href="#"><img src="" alt=""></a></li>
+                    <li><a href="#"><img src="" alt=""></a></li>
+                    <li><a href="#"><img src="" alt=""></a></li>
+                    <li><a href="#"><img src="" alt=""></a></li>
+                    <li><a href="#"><img src="" alt=""></a></li>
+                    <li><a href="#"><img src="" alt=""></a></li>
+                </ul>
+            </div>
+        </section>
 
         <footer>
             <div class="f_1">
-                <div class="f_menu"></div>
-                <div class="f_copy"></div>
+                <div class="f_menu">
+                    <div class="f_menus">
+                        <a href="#">㈜포트폴리오</a>
+                        <a href="#">ABOUT</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">이용안내</a>
+                        <a href="#">고객센터</a>
+                    </div>
+                </div>
+                <div class="f_copy">
+                    <p>
+                        대표이사 : 함다슬 / 대표전화 : 010-2805-1624, 경기 부천시 소사구 은성로30번길 48<br/>
+                        사업자등록번호 : 828-98-00524[사업자정보확인] / 개인정보보호책임자 : 함다슬<br/>
+                        비즈니스 관련문의 : uoy1013@naver.com<br/>
+                        PORTFOLIO All rights reserved.<br/>
+                    </p>
+                </div>
             </div>
             <div class="f_2"></div>
         </footer>
@@ -333,10 +365,60 @@
             cu.css('left','0').stop().animate({'left':'-100%'},600);
             ne.css('left','100%').stop().animate({'left':'0%'},600);
             current = s;
-
         }
 
+        
 
+
+
+        let num = 0;
+        let li_width = $('.roll-slides>li').eq(0).outerWidth(true);
+        // alert(li_width);
+        let total = $('.roll-slides>li').length; //8
+        let copy1 = $('.roll-slides>li:lt(6)').clone();
+        $('.roll-slides').append(copy1);
+        
+        $('.next').click(function(e){
+            e.preventDefault();
+
+            if(num === total){
+                num = 0;
+                $('.roll-slides').css('margin-left','0');
+            }
+            num++;
+            $('.roll-slides').stop().animate({'margin-left':-li_width * num},500);
+
+        });
+
+        $('.prev').click(function(e){
+            e.preventDefault();
+
+            if(num === 0){
+                num = total;
+                $('.roll-slides').css('margin-left',-li_width * num);
+            }
+            num--;
+            $('.roll-slides').stop().animate({'margin-left':-li_width * num},500);
+
+        });
+
+        var id = setInterval(autoPlay, 2000);
+
+        function autoPlay(){
+            if(num === total){
+                num = 0;
+                $('.roll-slides').css('margin-left','0');
+            }
+            num++;
+            $('.roll-slides').stop().animate({'margin-left':-li_width * num},500);
+        }
+
+        $('.roll-slide').mouseover(function(){
+            clearInterval(id);
+        });
+        $('.roll-slide').mouseout(function(){
+            id = setInterval(autoPlay, 2000);
+        });
 
 
     });
