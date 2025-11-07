@@ -265,18 +265,131 @@
             <div class="c3_1">
                 <h2>CENTAUR Style Daily</h2>
             </div>
+           
             <div class="c3_2">
-                <ul>
-                    <li><a href="#"><img src="" alt=""></a></li>
-                    <li><a href="#"><img src="" alt=""></a></li>
-                    <li><a href="#"><img src="" alt=""></a></li>
-                    <li><a href="#"><img src="" alt=""></a></li>
-                    <li><a href="#"><img src="" alt=""></a></li>
-                    <li><a href="#"><img src="" alt=""></a></li>
-                    <li><a href="#"><img src="" alt=""></a></li>
-                    <li><a href="#"><img src="" alt=""></a></li>
+                <ul class="c3_container">
+                    
+                    <li>
+                        <div class="c3_box">
+                        <a href="#"><img src="images/ds4.jpg" alt="" class="m_img"></a>
+                        <button>
+                            <img src="images/btn1.jpg" alt="열기" class="icon plus">
+                            <img src="images/btn2.jpg" alt="닫기" class="icon close">
+                        </button>
+                        <div class="c3_info">
+                            <img src="images/info1.jpg" alt="상세정보">
+                        </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="c3_box">
+                        <a href="#"><img src="images/ds1.jpg" alt="" class="m_img"></a>
+                        <button>
+                            <img src="images/btn1.jpg" alt="열기" class="icon plus">
+                            <img src="images/btn2.jpg" alt="닫기" class="icon close">
+                        </button>
+                        <div class="c3_info">
+                            <img src="images/info1.jpg" alt="상세정보">
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c3_box">
+                        <a href="#"><img src="images/ds7.jpg" alt="" class="m_img"></a>
+                        <button>
+                            <img src="images/btn1.jpg" alt="열기" class="icon plus">
+                            <img src="images/btn2.jpg" alt="닫기" class="icon close">
+                        </button>
+                        <div class="c3_info">
+                            <img src="images/info1.jpg" alt="상세정보">
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c3_box">
+                        <a href="#"><img src="images/ds2.jpg" alt="" class="m_img"></a>
+                        <button>
+                            <img src="images/btn1.jpg" alt="열기" class="icon plus">
+                            <img src="images/btn2.jpg" alt="닫기" class="icon close">
+                        </button>
+                        <div class="c3_info">
+                            <img src="images/info1.jpg" alt="상세정보">
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c3_box">
+                        <a href="#"><img src="images/ds6.jpg" alt="" class="m_img"></a>
+                        <button>
+                            <img src="images/btn1.jpg" alt="열기" class="icon plus">
+                            <img src="images/btn2.jpg" alt="닫기" class="icon close">
+                        </button>
+                        <div class="c3_info">
+                            <img src="images/info1.jpg" alt="상세정보">
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c3_box">
+                        <a href="#"><img src="images/ds5.jpg" alt="" class="m_img"></a>
+                        <button>
+                            <img src="images/btn1.jpg" alt="열기" class="icon plus">
+                            <img src="images/btn2.jpg" alt="닫기" class="icon close">
+                        </button>
+                        <div class="c3_info">
+                            <img src="images/info1.jpg" alt="상세정보">
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c3_box">
+                        <a href="#"><img src="images/ds8.jpg" alt="" class="m_img"></a>
+                        <button>
+                            <img src="images/btn1.jpg" alt="열기" class="icon plus">
+                            <img src="images/btn2.jpg" alt="닫기" class="icon close">
+                        </button>
+                        <div class="c3_info">
+                            <img src="images/info1.jpg" alt="상세정보">
+                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c3_box">
+                        <a href="#"><img src="images/ds3.jpg" alt="" class="m_img"></a>
+                        <button>
+                            <img src="images/btn1.jpg" alt="열기" class="icon plus">
+                            <img src="images/btn2.jpg" alt="닫기" class="icon close">
+                        </button>
+                        <div class="c3_info">
+                            <img src="images/info1.jpg" alt="상세정보">
+                        </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
+        </section>
+
+        <section class="content4">
+            <div class="c4_container">
+            <div class="c4_1">
+                <a href="#"><img src="images/store.jpg" alt=""></a>
+                <div class="name2 n2_1">
+                    <p class="m_name2">OFFLINE STORE</p>
+                    <p class="s_name2">센토르를 오프라인에서 만나 보세요</p>
+                    <p class="k_name2"><a href="#">자세히 보기 </a></p>
+                </div>
+
+            </div>
+            <div class="c4_2">
+                <a href="#"><img src="images/collection.jpg" alt=""></a>
+                <div class="name2 n2_2">
+                    <p class="m_name2">COLLECTION</p>
+                    <p class="s_name2">25FW CENTAUR Collection</p>
+                    <p class="k_name2"><a href="#">자세히 보기 </a></p>
+                </div>
+            </div>
+        </div>
         </section>
 
         <footer>
@@ -308,6 +421,13 @@
 </html>
 <script>
     $(function(){
+
+        $('a[href="#"]').click(function(e){
+        e.preventDefault(); // 클릭 시 위로 튀는 기본 동작 막기
+        });
+
+
+
         $('.tab_title h2').click(function(){
             var i = $(this).index();
             $('.tab_list .list').css('display','none');
@@ -420,6 +540,26 @@
             id = setInterval(autoPlay, 2000);
         });
 
+
+
+
+
+         $('.c3_box button').on('click', function(){
+      const $btn = $(this);
+      const $info = $btn.next('.c3_info');
+
+      $btn.toggleClass('active');
+
+      if ($btn.hasClass('active')) {
+        $info.stop().show();
+      } else {
+        $info.stop().hide();
+      }
+    });
+
+
+
+   
 
     });
 </script>

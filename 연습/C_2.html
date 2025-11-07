@@ -6,113 +6,168 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style10.css">
     <script src="./js/jquery-1.12.3.js"></script>
-<style>
-    #wrap{
-        width: 1000px;
-        height: 650px;
-        display: flex;
-    }
-    header{
-        width: 25%;
-        height: 650px;
-    }
-    header .logo{
-        width: 100%;
-        height: 100px;
-        background-color: aqua;
-    }
-    header nav{
-        width: 100%;
-        height: 550px;
-        background-color: skyblue;
-    }
-    #main{
-        width: 75%;
-        height: 650px;
-
-    }
-    #main .slide{
-        width: 100%;
-        height: 350px;
-        background-color: #999;
-    }
-    #main .contents{
-        width: 100%;
-        height: 200px;
-        display: flex;
-    }
-    #main .contents .notice{
-        width: 33.333%;
-        height: 200px;
-        background-color: green;
-    }
-    #main .contents .gallery{
-        width: 33.333%;
-        height: 200px;
-        background-color: darkgreen;
-    }
-    #main .contents .shortcut{
-        width: 33.333%;
-        height: 200px;
-        background-color: darkolivegreen;
-    }
-    #main footer{
-        width: 100%;
-        height: 100px;
-        display: flex;
-    }
-    #main footer .f_1{
-        width: 80%;
-        height: 100px;
-        background-color: #888;
-    }
-    #main footer .f_2{
-        width: 20%;
-        height: 100px;
-    }
-    #main footer .f_2 .f_sns{
-        width: 100%;
-        height: 50px;
-        background-color: #666;
-    }
-    #main footer .f_2 .f_family{
-        width: 100%;
-        height: 50px;
-        background-color: #333;
-    }
-
-
-
-
-
-
-</style>
 
 </head>
 <body>
     <div id="wrap">
         <header>
-            <div class="logo"><a href="#"><img src="" alt=""></a></div>
-            <nav></nav>
-        </header>
+            <div class="logo"><a href="#"><img src="images/새 폴더/logo.png" alt=""></a></div>
+        
+        <nav>
+            <ul class="gnb">
+                <li><a href="#">축제소개</a>
+                    <ul class="sub">
+                        <li><a href="#">초대의 글</a></li>
+                        <li><a href="#">축제개요</a></li>
+                        <li><a href="#">축제연혁</a></li>
+                        <li><a href="#">오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">행사안내</a>
+                    <ul class="sub">
+                        <li><a href="#">셔틀버스안내</a></li>
+                        <li><a href="#">행사안내</a></li>
+                        <li><a href="#">행사일정</a></li>
+                        <li><a href="#">소공연장</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">홍보마당</a>
+                    <ul class="sub">
+                        <li><a href="#">축제소식</a></li>
+                        <li><a href="#">보도자료</a></li>
+                        <li><a href="#">음식레시피</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">참여마당</a>
+                    <ul class="sub">
+                        <li><a href="#">참가후기</a></li>
+                        <li><a href="#">연꽃갤러리</a></li>
+                        <li><a href="#">포토갤러리</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
         <div id="main">
-            <div class="slide"></div>
+            <div class="slide">
+                <ul class="slides">
+                    <li><a href="#"><img src="./images/새 폴더/slide1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./images/새 폴더/slide2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="./images/새 폴더/slide3.jpg" alt=""></a></li>
+                </ul>
+            </div>
 
             <div class="contents">
-                <div class="notice"></div>
-                <div class="gallery"></div>
-                <div class="shortcut"></div>
+                <div class="notice">
+                    <h2>공지사항</h2>
+                    <table>
+                        <tr>
+                            <td>7.27.(토) 우천으로 인한 공연 취소 및 연기...</td><td>2019.07.26</td>
+                        </tr>
+                        <tr>
+                            <td>7.20.(토) 우천과 강풍으로 인한 공연 취소 ...</td><td>2019.07.20</td>
+                        </tr>
+                        <tr>
+                            <td>제17회 부여서동연꽃축제 최종 리플릿 자료...</td><td>2019.07.16</td>
+                        </tr>
+                        <tr>
+                            <td>천화일화 연꽃 판타지쇼를 즐기자</td><td>2019.07.03</td>
+                        </tr>
+                        <tr>
+                            <td>제17회 부여서동연꽃축제 "청소년연꽃...</td><td>2019.07.01</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="gallery">
+                    <h2>갤러리</h2>
+                        <ul>
+                            <li><a href="#"><img src="./images/새 폴더/gallery1.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="./images/새 폴더/gallery2.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="./images/새 폴더/gallery3.jpg" alt=""></a></li>
+                        </ul>
+                </div>
+                <div class="shortcut">
+                    <img src="images/새 폴더/shortcut.png" alt="">
+                </div>
             </div>
 
             <footer>
-                <div class="f_1"></div>
+                <div class="f_1">
+                    <div class="f_copy">
+                    <p>
+                        Tel : 041.830.2211 ~ 2212 고유번호 : 199-80-00302<br/>
+                        주 소 : 충남 부여군 부여읍 사비로 41. 부여군민회관(1층) 문화축제추진단<br/>
+                        Copyright by 2003 ~ 2017 Buyeo gaeul Lotus Festival. All right Reserved.<br/>
+                    </p>
+                </div>
+
+                </div>
                 <div class="f_2">
-                    <div class="f_sns"></div>
-                    <div class="f_family"></div>
+                    <div class="f_sns">
+                        <a href="#"><img src="images/새 폴더/sns.png" alt=""></a>
+                    </div>
+                    <div class="f_family">
+                        <ul>
+                            <li><a href="#"><img src="images/새 폴더/family_site1.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/새 폴더/family_site3.png" alt=""></a></li>
+                            <li><a href="#"><img src="images/새 폴더/family_site2.png" alt=""></a></li>
+                        </ul>
+                    </div>
                 </div>
             </footer>
         </div>
     </div>
+
+    <div id="pop">
+        <div class="popup">
+            <h2>7.27.(토) 우천으로 인한 공연 취소 및 연기 안내</h2>
+            <p>
+                7.27.(토) 일자 공연을 우천으로 인해 다음과 같이 연기되었습니다.<br/>
+                7.27.(토) 18:00~21:00 청소년연꽃푸른음악회(예선) > 7.28.(일) 14:00~17:00<br/>
+                7.27.(토) 21:00~21:15 천화일화 연꽃판타지쇼 > 취소<br/>
+                * 본 행사는 사정에 따라 변경될 수 있습니다.<br/>
+                많은 양해 부탁드리며, 공연을 보시러 먼 발걸음 해주신<br/>
+                방문객 여러분께 죄송하다는 말씀 전해드립니다. 감사합니다.
+            </p>
+            <button>닫기</button>
+        </div>
+    </div>
+ 
 </body>
 </html>
+<script>
+
+    $(function(){
+
+        var s = 0;
+        setInterval(function(){
+            s++;
+            if(s==3){s=0;}
+            $('.slides li').eq(s).fadeIn(800);
+            $('.slides li').eq(s-1).fadeOut(800);
+        },3000);
+
+
+        $('table tr:first-child').click(function(){
+            $('#pop').stop().show();
+        });
+        $('#pop .popup button').click(function(){
+            $('#pop').stop().hide();
+        });
+
+
+        $('.gnb li ul').css('display','none');
+        $('.gnb > li > a').click(function(){
+            var m = $(this).next('.sub').css('display')
+            if(m === 'none'){
+                $('.sub').slideUp();
+                $(this).next('.sub').slideDown();
+            }else{
+                $('.sub').slideUp();
+            }
+            return false;
+        });
+
+    });
+</script>
