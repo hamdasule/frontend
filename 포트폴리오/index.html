@@ -13,13 +13,27 @@
         <header>
                 <div class="top_banner">
                     <div class="top_text">
-                        <span>전 품목 15% 추가 할인</span>
-                        <span>블랙프라이데이 UP TO ~83%</span>
-                        <span>전 품목 15% 추가 할인</span>
-                        <span>블랙프라이데이 UP TO ~83%</span>
-                        <span>전 품목 15% 추가 할인</span>
-                        <span>블랙프라이데이 UP TO ~83%</span>
-                        
+                         <div class="text_wrap">
+                    <span>전 품목 15% 추가 할인</span>
+                    <span>블랙프라이데이 UP TO ~83%</span>
+                    <span>전 품목 15% 추가 할인</span>
+                    <span>블랙프라이데이 UP TO ~83%</span>
+                    <span>전 품목 15% 추가 할인</span>
+                    <span>블랙프라이데이 UP TO ~83%</span>
+                    <span>전 품목 15% 추가 할인</span>
+                    <span>블랙프라이데이 UP TO ~83%</span>
+                        </div>
+
+                <div class="text_wrap">
+                    <span>전 품목 15% 추가 할인</span>
+                    <span>블랙프라이데이 UP TO ~83%</span>
+                    <span>전 품목 15% 추가 할인</span>
+                    <span>블랙프라이데이 UP TO ~83%</span>
+                    <span>전 품목 15% 추가 할인</span>
+                    <span>블랙프라이데이 UP TO ~83%</span>
+                    <span>전 품목 15% 추가 할인</span>
+                    <span>블랙프라이데이 UP TO ~83%</span>
+                </div>
                     </div>
                 </div>
             <div class="header_container">
@@ -49,7 +63,7 @@
                 <div class="h_icon">
                     <ul>
                         <li><a href="#"><img src="images/icon1.jpg" alt="아이콘1"></a></li>
-                        <li><a href="#"><img src="images/icon2.jpg" alt="아이콘2"></a>
+                        <li class="icon2"><a href="#"><img src="images/icon2.jpg" alt="아이콘2"></a>
                             <ul class="i_sub">
                                 <li><a href="#">마이페이지</a></li>
                                 <li><a href="#">주문/배송조회</a></li>
@@ -413,7 +427,12 @@
                     </p>
                 </div>
             </div>
-            <div class="f_2"></div>
+            <div class="f_2">
+                <ul>
+                    <li><a href="#"><img src="" alt="인스타그램"></a></li>
+                    <li><a href="#"><img src="" alt="유튜브"></a></li>
+                </ul>
+            </div>
         </footer>
       
     </div>
@@ -427,7 +446,6 @@
         });
 
 
-
         $('.tab_title h2').click(function(){
             var i = $(this).index();
             $('.tab_list .list').css('display','none');
@@ -436,22 +454,22 @@
         });
 
         $("header nav .gnb > li.shop1").hover(function(){
-            $(this).find('.sub').stop().slideDown();
-            $(".shadow").stop().slideDown();;
+            $(this).find('.sub').stop().slideDown(270);
+            $(".shadow").stop().slideDown(270);;
 
         },function(){
-            $(this).find('.sub').stop().slideUp();
-            $(".shadow").stop().slideUp();
+            $(this).find('.sub').stop().slideUp(270);
+            $(".shadow").stop().slideUp(270);
         });
 
 
-        // var s = 0;
-        // setInterval(function(){
-        //     s++;
-        //     if(s==3){s=0;}
-        //     $('.slides li').eq(s).css('left','100%').animate({'left':0},600);
-        //     $('.slides li').eq(s-1).css('left',0).animate({'left':'-100%'},600);
-        // },3000);
+        $('header .h_icon > ul > li.icon2').mouseenter(function(){
+            $(this).find('.i_sub').stop().slideDown(270);
+        });
+        $('header .h_icon > ul > li.icon2').mouseleave(function(){
+           $(this).find('.i_sub').stop().slideUp(270);
+        });
+
 
 
         var sd = $(".slides > ul >li");

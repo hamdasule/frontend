@@ -15,15 +15,30 @@
     header .top_banner{
         width: 100%;
         height: 30px;
-        background-color: #000;    
+        background-color: #000;
+        overflow: hidden;
+        position: relative; 
     }
-    header .top_banner .top_text{
+     header .top_banner .top_text {
+        display: flex;
+        white-space: nowrap;
         color: #fff;
         font-size: 12px;
-        padding-top: 6px; 
+        position: absolute;
+        top: 6px;
+        left: 0;
+        animation: rollingLoop 26s linear infinite;
+    }
+    header .top_banner .top_text .text_wrap {
+        display: flex;
     }
     .top_text span{
         margin-left: 125px;
+        cursor: pointer;
+    }
+    @keyframes rollingLoop {
+    0% { transform: translateX(-50%);}
+    100% { transform: translateX(0);}
     }
 
     header .header_container{
@@ -80,12 +95,16 @@
         display: inline-block;
         padding: 0 30px;
     }
+    header nav .gnb > li > ul > li > a:hover{
+        color: #666;
+    }
     .shadow{
         position: absolute;
         height: 50px;
         background-color: #fff;
         width:100%;
         display: none;
+        z-index: 8;
     }
     header .h_icon{
         width: 20%;
@@ -97,7 +116,7 @@
         display: flex;
         position: absolute;
         right: 30px;
-        /* display: none; */
+       
     }
     .h_icon ul img{
         width: 35px;
@@ -109,6 +128,7 @@
         width: 70%;
         top: 60px;
         padding: 7px 0;
+        display: none;
     }
     header .h_icon > ul > li > ul > li{
         line-height: 26px;
@@ -118,7 +138,9 @@
         width: 100%;
         font-size: 13px;
         padding: 0 15px;  
-   
+    }
+    header .h_icon > ul > li > ul > li > a:hover{
+        color: #666;
     }
     .slide{
         width: 100%;
@@ -139,18 +161,22 @@
     .slides .sd1{
         left: 0;
         background: url(../images/slide5.jpg) no-repeat 50% 0;
+        cursor: pointer;
     }
     .slides .sd2{
         left: 100%;
         background: url(../images/slide4.jpg) no-repeat 50% 0;
+        cursor: pointer;
     }
     .slides .sd3{
         left: 200%;
         background: url(../images/slide3.jpg) no-repeat 50% 0;
+        cursor: pointer;
     }
     .slides .sd4{
         left: 300%;
         background: url(../images/slide2.jpg) no-repeat 50% 0;
+        cursor: pointer;
     }
     .slide li a{
     display: block;
@@ -257,7 +283,7 @@
         position: absolute;
         top: 0;
         left: 5px;
-        /* transition: all 0.3s; */
+        /* transition: all 0.5s; */
     }
     .product1 ul li a .img2 { opacity: 0; } 
     .product1 ul li a:hover .img2 { opacity: 1; } 
@@ -576,5 +602,4 @@
     footer .f_2{
         width: 20%;
         height: 220px;
-        background-color: #999;
     }
