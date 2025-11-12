@@ -82,7 +82,7 @@
         height: 50px;
     }
     header nav .gnb > li > a{
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 500;
         line-height: 50px;
         background-color: #fff;
@@ -93,7 +93,7 @@
     header nav .gnb > li > ul{
         position: absolute;
         width: 900px;
-        left:144PX;  
+        left:126PX;  
         display: none;
         background-color: #fff;
     }
@@ -105,6 +105,7 @@
     header nav .gnb > li > ul > li > a{
         display: inline-block;
         padding: 0 30px;
+        font-size: 15px;
     }
     header nav .gnb > li > ul > li > a:hover{
         color: #666;
@@ -171,22 +172,22 @@
     }
     .slides .sd1{
         left: 0;
-        background: url(../images/slide5.jpg) no-repeat 50% 0;
+        background: url(../img/slide1.jpg) no-repeat 50% 0;
         cursor: pointer;
     }
     .slides .sd2{
         left: 100%;
-        background: url(../images/slide4.jpg) no-repeat 50% 0;
+        background: url(../img/slide2.jpg) no-repeat 50% 0;
         cursor: pointer;
     }
     .slides .sd3{
         left: 200%;
-        background: url(../images/slide3.jpg) no-repeat 50% 0;
+        background: url(../img/slide3.jpg) no-repeat 50% 0;
         cursor: pointer;
     }
     .slides .sd4{
         left: 300%;
-        background: url(../images/slide2.jpg) no-repeat 50% 0;
+        background: url(../img/slide4.jpg) no-repeat 50% 0;
         cursor: pointer;
     }
     .slide li a{
@@ -232,20 +233,24 @@
         gap: 8px;
         justify-content: center;
     }
-    .tab_title h2{
-        margin-top: 40px;
+    .tab_title h3{
+        margin-top: 50px;
         cursor: pointer;
+        font-size: 21px;
+        color: #222;
     }
-    .tab_title h2.on{
+    .tab_title h3.on{
         text-decoration: underline;
+        color: #222;
     }
-    .tab_title h2:first-child::after{
+    .tab_title h3:first-child::after{
         content: '|';
         font-size: 18px;
         padding-left: 8px;
         position: relative;
         top: -2px;
         font-weight: 900;
+        color: #222;
     }
     .content1 .tab_menu .tab_list{
         width: 100%;
@@ -279,12 +284,14 @@
     }.product1 ul li .name .p_name{
         text-decoration: line-through;
         font-size: 15px;
+        color: #888;
     }
     .product1 ul li .name .p_name span{
         text-decoration: none;
         font-weight: bold;
-         display: inline-block;
+        display: inline-block;
         margin-left: 10px;
+        color: #222;
     }
     .content1 .tab_menu .tab_list .product1 ul li img{
         width: 450px;
@@ -296,10 +303,7 @@
         left: 5px;
         /* transition: all 0.5s; */
     }
-    .product1 ul li a .img2 { opacity: 0; } 
-    .product1 ul li a:hover .img2 { opacity: 1; } 
-    .product1 ul li a:hover .img1 { opacity: 0; }
-
+ 
     .content1 .tab_menu .tab_list .product2{
         display: none;
     }
@@ -330,30 +334,29 @@
     }.product2 ul li .name .p_name{
         text-decoration: line-through;
         font-size: 15px;
+        color: #888;
     }
     .product2 ul li .name .p_name span{
         text-decoration: none;
         font-weight: bold;
          display: inline-block;
         margin-left: 10px;
+        color: #222;
     }
     .content1 .tab_menu .tab_list .product2 ul li img{
         width: 450px;
         height: 540px;
+        object-fit: cover;
         background-color: #b3b3b3;
         position: absolute;
         top: 0;
         left: 5px;
     }
-    .product2 ul li a .img2 { opacity: 0; } 
-    .product2 ul li a:hover .img2 { opacity: 1; } 
-    .product2 ul li a:hover .img1 { opacity: 0; }
-
 
 
     .content2{
         width: 100%;
-        height: 930px;
+        height: 960px;
         background-color: #666;
        
     }
@@ -363,15 +366,17 @@
         background-color: #fff;
         position: relative;
     }
-    .content2 .c2_1 > h2{
+    .content2 .c2_1 > h3{
+        font-size: 21px;
         text-align: center;
         padding-top: 70px;
+        color: #222;
     }
     .content2 .c2_1 > p{
         text-align: center;
-        font-size: 13px;
-        color: #333;
-        padding-top: 5px;
+        font-size: 12px;
+        color: #444;
+        padding-top: 3px;
     }
     .content2 .c2_1 img{
         position: absolute;
@@ -383,13 +388,13 @@
 
     .content2 .c2_2{
         width: 100%;
-        height: 330px;
+        height: 360px;
         background-color: #fff;
         position: relative;
     }
     .c2_2 .roll-slide{
-        height: 260px;
-        width: 88%;
+        height: 280px;
+        width: 90%;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -404,12 +409,13 @@
     }
     .roll-slides li{
         float: left;
-        height: 260px;
+        height: 280px;
         width: 260px;
-        margin: 0 8px;
+        margin: 0 12px;
+        background-color: #666;
     }
     .roll-slides li img{
-        height: 260px;
+        height: 280px;
         object-fit: cover;
         transition: transform 0.3s ease;
     }
@@ -419,7 +425,7 @@
 
     .c2_2 .prev{
         position: absolute;
-        left: 60px;
+        left: 40px;
         top: 50%;
         transform: translateY(-50%);
         opacity: 0.3;
@@ -427,7 +433,7 @@
     }
     .c2_2 .next{
         position: absolute;
-        right: 60px;
+        right: 40px;
         top: 50%;
         transform: translateY(-50%);
         opacity: 0.3;
@@ -440,23 +446,24 @@
         opacity: 1;
     }
 
-    
     .content3{
         width: 100%;
         height: 1150px;
-        background-color: #000;
+        background-color: #fff;
+        border-bottom: 1px solid #999;
     }
     .content3 .c3_1{
         width: 100%;
         height: 160px;
         position: relative;
     }
-    .content3 .c3_1 h2{
+    .content3 .c3_1 h3{
         position: absolute;
         top: 80px;
         left: 50%;
         transform: translateX(-50%);
-        color: #fff;
+        font-size: 21px;
+        color: #222;
     }
     .c3_box{
         position: relative;
@@ -468,13 +475,13 @@
         position: absolute;
         bottom: 10px;
         right: 10px;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         z-index: 2;
     }
     .c3_box button .icon {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         position: absolute;
         bottom: 0;
         left: 0;
