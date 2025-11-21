@@ -1,0 +1,289 @@
+*{margin: 0;padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: #111;}
+
+#wrap{
+    width: 100%;
+}
+
+header{
+    width: 1340px;
+    height: 100px;
+    background-color: #999;
+    margin: 0 auto;
+    display: flex;
+    
+}
+header .logo{
+    width: 20%;
+    height: 100px;
+    background-color: #222;
+}
+header nav{
+    width: 80%;
+    height: 100px;
+    background-color: pink;
+    position: relative;
+    z-index: 50;
+}
+header nav .gnb{
+    width: 600px;
+    height: 50px;
+    background-color: #b1b1b1;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+header nav .gnb > li{
+    float: left;
+    text-align: center;
+}
+header nav .gnb > li > a{
+    display: block;
+    width: 150px;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+}
+header nav .gnb > li:hover > a{
+    background-color: #111;
+    color: #fff;
+}
+header nav .gnb > li > ul{
+    line-height: 40px;
+    display: none;
+    background-color: #222;
+
+}
+header nav .gnb > li > ul > li > a{
+    display: block;
+    width: 100%;
+}
+header nav .gnb > li > ul > li > a:hover{
+    background-color: #bbb;
+    color: #000;
+
+}
+
+
+
+
+.slide{
+    width: 100%;
+    height: 350px;
+    background-color: #bbb;
+    position: relative;
+}
+
+.slide .slides li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.slide .slides li:first-child{
+    display: block;
+
+}
+.slide .slides img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slide .link{
+    width: 1340px;
+    height: 100px;
+    background-color: #d1d1d1;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slide .link ul{
+    display: flex;
+}
+
+.contents{
+    width: 1340px;
+    height: 520px;
+    background-color: #111;
+    margin: 0 auto;
+}
+.contents .content_1{
+    width: 1340px;
+    height: 170px;
+    background-color: #444;
+    display: flex;
+}
+.content_1 img{
+    width: 170px;
+    height: 140px;
+    object-fit: cover;
+    padding-left: 70px;
+    padding-top: 13px;
+}
+.content_1 .p_container{
+    padding-left: 40px;
+    padding-top: 30px;
+}
+.content_1 .p_container h4{
+    font-size: 24px;
+    padding-bottom: 8px;
+
+}
+.content_1 .p_container p{
+    font-size: 19px;
+}
+.contents .content_2{
+    width: 1340px;
+    height: 350px;
+    background-color: peachpuff;
+}
+
+.content_2 .tab_title{
+    display: flex;
+    gap: 15px;
+    padding-left: 50px;
+    padding-top: 30px;
+}
+.content_2 .tab_title h2{
+    font-size: 40px;
+    cursor: pointer;
+}
+.content_2 .tab_title h2.on{
+    text-decoration: underline;
+}
+.content_2 .tab_title h2:first-child::after{
+    content: '|';
+    padding-left: 15px;
+    font-size: 32px;
+    position: relative;
+    top: -4px;
+}
+.content_2 .tab_menu{
+    width: 100%;
+    height: 100%;
+}
+
+.content_2 .tab_list table{
+    width: 100%;
+    margin-top: 20px;
+}
+.tab_list table tr td{
+    font-size: 24px;
+}
+
+.tab_list table tr td:first-child{
+    padding-left: 50px;
+    padding-top: 10px;
+}
+.tab_list table tr td:first-child:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.tab_list table tr td:last-child{
+    padding-top: 10px;
+
+}
+.content_2 .gallery{
+    display: none;
+}
+.content_2 .gallery ul{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+.content_2 .gallery ul img{
+    width: 430px;
+    height: 230px;
+    object-fit: cover;
+}
+
+footer{
+    width: 1340px;
+    height: 120px;
+    background-color: #777;
+    display: flex;
+    margin: 0 auto;
+}
+footer .f_1{
+    width: 20%;
+    height: 120px;
+    background-color: #555;
+}
+footer .f_2{
+    width: 80%;
+    height: 120px;
+    background-color: #ccc;
+}
+footer .f_2 .f_menu{
+    width: 100%;
+    height: 60px;
+    background-color: #666;
+    position: relative;
+}
+
+footer .f_2 .f_menu .f_menus{
+    position: absolute;
+    left: 20px;
+    top: 18px;
+}
+footer .f_2 .f_menu a:not(:last-child)::after{
+    content: '|';
+    margin: 0 10px;
+}
+footer .f_2 .f_menu a:hover{
+    text-decoration: underline;
+}
+footer .f_2 .f_copy{
+    width: 100%;
+    height: 60px;
+    background-color: #a1a1a1;
+    position: relative;
+}
+footer .f_2 .f_copy p{
+    position: absolute;
+    top: 18px;
+    left: 20px;
+}
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 490px;
+    height: 270px;
+    border-radius: 20px;
+    border: 8px solid #444;
+    display: none;
+}
+.popup h2{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+
+}
+.popup p{
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    right: 20px;
+    line-height: 25px;
+    font-size: 15px;
+
+}
+.popup button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 25px;
+
+}
