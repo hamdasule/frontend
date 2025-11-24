@@ -13,7 +13,41 @@
         <header>
             <div class="header_container">
                 <div class="logo"><a href="#"><img src="" alt=""></a></div>
-                <nav></nav>
+                <nav>
+                    <ul class="gnb">
+                        <li><a href="#">개인</a>
+                            <ul class="sub">
+                                <li><a href="#">조회</a></li>
+                                <li><a href="#">이체</a></li>
+                                <li><a href="#">공과금</a></li>
+                                <li><a href="#">예금/신탁</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">기업</a>
+                            <ul class="sub">
+                                <li><a href="#">조회</a></li>
+                                <li><a href="#">이체</a></li>
+                                <li><a href="#">전자결제</a></li>
+                                <li><a href="#">수표/어음</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">금융상품</a>
+                            <ul class="sub">
+                                <li><a href="#">저축상품</a></li>
+                                <li><a href="#">대출상품</a></li>
+                                <li><a href="#">투자상품</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">카드</a>
+                            <ul class="sub">
+                                <li><a href="#">카드정보</a></li>
+                                <li><a href="#">카드신청</a></li>
+                                <li><a href="#">이용내역조회</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="nav-bg"></div>
             </div>
         </header>
 
@@ -129,6 +163,13 @@
         });
         $('.popup button').click(function(){
             $('.popup').fadeOut();
+        });
+
+        $('.gnb').mouseenter(function(){
+            $('.gnb > li > ul, .nav-bg').stop().slideDown();
+        });
+        $('.gnb').mouseleave(function(){
+            $('.gnb > li > ul, .nav-bg').stop().slideUp();
         });
 
 

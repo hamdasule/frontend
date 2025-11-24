@@ -21,6 +21,42 @@
         height: 80%;
         background-color: pink;
     }
+    aside nav .gnb{
+        width: 90%;
+        background-color: #d1d1d1;
+        position: relative;
+        margin: 0 auto;
+    }
+    aside nav .gnb > li{
+        width: 100%;
+        text-align: center;
+    }
+    aside nav .gnb > li > a{
+        display: block;
+        width: 100%;
+        line-height: 50px;
+        font-size: 19px;
+        font-weight: bold;
+    }
+    aside nav .gnb > li:hover > a{
+        background-color: #222;
+        color: #fff;
+    }
+    aside nav .gnb > li > ul{
+        line-height: 40px;
+        width: 100%;
+        display: none;
+    }
+    aside nav .gnb > li > ul > li > a{
+        display: block;
+        width: 100%;
+    }
+    aside nav .gnb > li > ul > li > a:hover{
+        background-color: #aaa;
+        color: #111;
+    }
+
+
     #main{
         width: calc(100% - 200px);
         height: 650px;

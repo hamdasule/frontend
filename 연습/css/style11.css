@@ -1,0 +1,117 @@
+ *{margin: 0;padding: 0;}
+ ul, li{list-style: none;}
+ a{text-decoration: none; color: #111;}
+ #wrap{
+        width: 1000px;
+        display: flex;  
+    }
+    header{
+        width: 25%;
+        height: 650px;
+    }
+    header .logo{
+        width: 100%;
+        height: 100px;
+        background-color: #333;
+    }
+    header nav{
+        width: 100%;
+        height: 550px;
+        background-color: #888;
+        position: relative;
+    }
+    header nav .gnb{
+        width: 220px;
+        background-color: #d1d1d1;
+        position: relative;
+        margin: 0 auto;
+    }
+    header nav .gnb > li{
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+    header nav .gnb > li > a{
+        width: 100%;
+        display: block;
+        line-height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    header nav .gnb > li:hover > a{
+        background-color: #222;
+        color: #fff;
+    }
+    header nav .gnb > li > ul{
+        width: 200px;
+        line-height: 50px;
+        background-color: #a1a1a1;
+        position: absolute;
+        left: 220px;
+        top: 0;
+        display: none;
+
+    }
+    header nav .gnb > li > ul > li > a{
+        display: block;
+        width: 100%;  
+    }
+    header nav .gnb > li > ul > li > a:hover{
+        background-color: #333;
+        color: #d1d1d1;
+
+    }
+
+    #main{
+        width: 75%;
+        height: 550px;
+    }
+    #main .slide{
+        width: 100%;
+        height: 350px;
+        background-color: #ababab;
+    }
+    #main .contents{
+        width: 100%;
+        height: 200px;
+        display: flex;
+    }
+    #main .contents .notice{
+        width: 33.333%;
+        height: 200px;
+        background-color: #666;
+    }
+    #main .contents .gallery{
+        width: 33.333%;
+        height: 200px;
+        background-color: #222;
+    }
+    #main .contents .banner{
+        width: 33.333%;
+        height: 200px;
+        background-color: #555;
+    }
+    #main footer{
+        width: 100%;
+        height: 100px;
+        display: flex;
+    }
+    footer .f_1{
+        width: 25%;
+        height: 100px;
+        background-color: pink;
+    }
+    footer .f_2{
+        width: 75%;
+        height: 100px;
+    }
+    footer .f_2 .f_menu{
+        width: 100%;
+        height: 50px;
+        background-color: plum;
+    }
+    footer .f_2 .f_copy{
+        width: 100%;
+        height: 50px;
+        background-color: palegreen;
+    }

@@ -15,6 +15,8 @@
         height: 100px;
         margin: 0 auto;
         display: flex;
+        position: relative;
+        
     }
     header .header_container .logo{
         width: 20%;
@@ -26,7 +28,59 @@
         width: 80%;
         height: 100px;
         background-color: burlywood;
+        z-index: 50;
     }
+    .header_container nav .gnb{
+        width: 600px;
+        height: 50px;
+        background-color: #d1d1d1;
+        position: absolute;
+        top: 25px;
+        right: 20px;
+    }
+    .header_container nav .gnb > li{
+        float: left;
+        width: 150px;
+        text-align: center;
+    }
+    .header_container nav .gnb > li > a{
+        display: block;
+        width: 100%;
+        line-height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .header_container nav .gnb > li:hover > a{
+        background-color: rgb(224, 157, 31);
+        color: antiquewhite;
+    }
+    .header_container nav .gnb > li > ul{
+        line-height: 40px;
+        background-color: antiquewhite;
+        width: 150px;
+        display: none;
+    }
+    .header_container nav .gnb > li > ul > li > a{
+        display: block;
+        width: 100%;
+    }
+    .header_container nav .gnb > li > ul > li > a:hover{
+        background-color: orange;
+        color: #fff;
+    }
+    .header_container .nav-bg{
+        width: 600px;
+        height: 160px;
+        background-color: antiquewhite;
+        position: absolute;
+        top: 100%;
+        right: 20px;
+        z-index: 10;
+        display: none;
+    }
+
+
+
     .slide{
         width: 1200px;
         height: 300px;
@@ -54,9 +108,6 @@
         height: auto;
         display: block;
     }
-
-
-
 
     .contents{
         width: 1200px;
