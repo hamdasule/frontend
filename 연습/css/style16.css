@@ -1,0 +1,276 @@
+*{margin: 0;padding: 0;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: #111;}
+
+#wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+ 
+}
+header{
+    width: 200px;
+    height: 800px;
+    background-color: #e6ddc1;
+    z-index: 50;
+}
+
+header .logo{
+    width: 200px;
+    height: 20%;
+    position: relative;
+}
+header .logo img{
+    position: absolute;
+    top: 35px;
+}
+
+header nav{
+    width: 200px;
+    height: 80%;
+    position: relative;
+}
+header nav .gnb{
+    width: 90%;
+    background-color: rgb(161, 138, 107);
+    position: relative;
+    margin: 0 auto;
+}
+header nav .gnb > li{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+header nav .gnb > li > a{
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    font-size: 19px;
+    font-weight: bold;
+}
+header nav .gnb > li:hover > a{
+    background-color: #f8f6dd;
+    color: #3f301a;
+}
+header nav .gnb > li > ul{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 900px;
+    background-color: #e0d0a3;
+    z-index: 20;
+    display: none;
+}
+header nav .gnb > li > ul > li{
+    line-height: 50px;
+    float: left;
+    width: 180px;
+}
+header nav .gnb > li > ul > li > a{
+    display: block;
+    width: 100%;
+}
+header nav .gnb > li > ul > li > a:hover{
+    background-color: #f1f3d4;
+    color: rgb(92, 65, 14);
+}
+header .nav-bg{
+    position: absolute;
+    top: 0;
+    left: 190px;
+    height: 200px;
+    background-color:  #e0d0a3;
+    z-index: 10;
+    /* display: none; */
+}
+
+#main{
+    width: calc(100% - 200px);
+    height: 800px;
+    background-color: #111;
+ 
+}
+#main .slide{
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+#main .slide .slides li{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+#main .slide .slides li:first-child{
+    display: block;
+}
+#main .slide .slides img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#main .link{
+    width: 100%;
+    height: 150px;
+    background-color: #333;
+}
+#main .link ul{
+    display: flex;
+}
+
+
+#main .contents{
+    width: 100%;
+    height: 250px;
+    background-color: #444;
+    display: flex;
+}
+#main .contents h2{
+    font-size: 25px;
+    text-decoration: underline;
+    padding-top: 15px;
+    padding-left: 50px;
+}
+.contents .notice{
+    width: 50%;
+    height: 250px;
+    background-color: #dacdb1;
+}
+.notice table{
+    width: 100%;
+    margin-top: 10px;
+}
+.notice table tr td{
+    font-size: 16px;
+}
+.notice table tr td:first-child{
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 5px;
+}
+.notice table tr td:first-child:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.notice table tr td:last-child{
+    text-align: right;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+.contents .gallery{
+    width: 50%;
+    height: 250px;
+    background-color: #fff;
+}
+.contents .gallery p{
+    font-size: 13px;
+    text-align: center;
+}
+.contents .gallery ul{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.contents .gallery ul img{
+    width: 240px;
+    height: 140px;
+    object-fit: cover;
+}
+footer{
+    width: 100%;
+    height: 120px;
+    background-color: #fff9e6;
+    display: flex;
+}
+footer .f_1{
+    width: 200px;
+    height: 120px;
+}
+footer .f_2{
+    width: calc(100% - 450px);
+    height: 120px;
+}
+footer .f_2 .f_menu{
+    width: 100%;
+    height: 60px;
+}
+footer .f_2 .f_menu .f_menus{
+    padding-top: 25px;
+    padding-left: 20px;
+}
+footer .f_2 .f_menu .f_menus a:not(:last-child)::after{
+    content: '|';
+    padding-left: 9px;    
+}
+footer .f_2 .f_menu .f_menus a{
+    font-size: 14px;
+    padding-left: 5px;
+}
+footer .f_2 .f_menu .f_menus a:hover{
+    text-decoration: underline;
+}
+footer .f_2 .f_copy{
+    width: 100%;
+    height: 60px;
+}
+footer .f_2 .f_copy p{
+    padding-left: 20px;
+    padding-top: 5px;
+    font-size: 15px;
+}
+
+footer .f_3{
+    width: 250px;
+    height: 120px;
+    position: relative;
+}
+
+.f_3 .familysite{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+.f_3 .familysite select{
+    padding: 3px 15px;
+    border-radius: 10px;
+    }
+.popup{ 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 8px solid #333;
+    display: none;
+}
+.popup h2{
+    position: absolute;
+    top: 20px;
+    left: 25px;
+}
+.popup p{
+    position: absolute;
+    top: 85px;
+    left: 25px;
+    right: 25px;
+    line-height: 26px;
+    font-size: 15px;
+}
+.popup button{
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 25px;
+
+}
