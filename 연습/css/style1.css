@@ -1,35 +1,39 @@
-*{margin: 0;padding: 0;}
+*{margin: 0;padding: 0; color: #333;}
 ul, li{list-style: none;}
-a{text-decoration: none; color: #111;}
-
+a{text-decoration: none;color: #333;}
 #wrap{
-    width: 1200px;
-    margin: 0 auto;
+    width: 100%;
 }
 header{
     width: 1200px;
     height: 100px;
+    background-color: #fff4d4;
     display: flex;
-    position: relative;
-    z-index: 100;
+    margin: 0 auto;
 }
 header .logo{
     width: 20%;
     height: 100px;
-    background-color: #999;
+    position: relative;
+}
+header .logo img{
+    position: absolute;
+    top: 25px;
+    left: 5px;
 }
 header nav{
     width: 80%;
     height: 100px;
-    background-color: #111;
+    position: relative;
+    z-index: 10;
 }
 header nav .gnb{
-    background-color: #d1d1d1;
     width: 600px;
     height: 50px;
+    background-color: #ebc580;
     position: absolute;
-    right: 25px;
     top: 25px;
+    right: 20px;
 }
 header nav .gnb > li{
     float: left;
@@ -40,16 +44,17 @@ header nav .gnb > li > a{
     display: block;
     width: 100%;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
+    color: #634309;
 }
 header nav .gnb > li:hover > a{
-    background-color: burlywood;
-    color: #6d4c25;
+    background-color: #f08f10;
+    color: #fff;
 }
 header nav .gnb > li > ul{
     line-height: 40px;
-    background-color: #999;
+    background-color: #f0af4d;
     display: none;
 }
 header nav .gnb > li > ul > li > a{
@@ -57,115 +62,109 @@ header nav .gnb > li > ul > li > a{
     width: 100%;
 }
 header nav .gnb > li > ul > li > a:hover{
-    background-color: #d1d1d1;
-    color: brown;
+    background-color: #ffd595;
+    color: #fa5f16;
 }
-
-
-
-
 .slide{
-    width: 100%;
+    width: 1200px;
     height: 300px;
-    background-color: #888;
+    background-color: #222;
+    margin: 0 auto;
 }
 .slide .slides{
+    position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    position: relative;
 }
 .slide .slides li{
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
-    height: 100%;
 }
 .slide .slides li:first-child{
     top: 0;
 }
-.slide .slides li img{
+.slide .slides img{
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
-
 .contents{
     width: 1200px;
     height: 200px;
+    background-color: #444;
     display: flex;
+    margin: 0 auto;
 }
 .contents .c1{
     width: 400px;
     height: 200px;
-    background-color: #777;
+    background-color: #fff8d0;
 }
-.contents .c1 .tab_menu{
-    width: 100%;
-}
-.tab_menu .tab_title{
-    width: 100%;
-    height: 30%;
+.contents .c1 .tab_title{
     display: flex;
     gap: 10px;
-    padding-left: 15px;
-    padding-top: 10px;
- 
+    padding-left: 25px;
+    padding-top: 20px;
 }
-.tab_menu .tab_title h2:first-child::after{
+.contents .c1 .tab_title h2{
+    cursor: pointer;
+    font-size: 25px;
+}
+.contents .c1 .tab_title h2.on{
+    text-decoration: underline;
+}
+.contents .c1 .tab_title h2:first-child::after{
     content: '|';
     padding-left: 10px;
+    font-size: 20px ;
     position: relative;
-    font-size: 20px;
     top: -4px;
     display: inline-block;
 }
-.tab_menu .tab_title h2{
-    font-size: 28px;
-    cursor: pointer;
-}
-.tab_menu .tab_title h2.on{
-    text-decoration: underline;
-}
-.tab_menu .tab_list table{
+.contents .c1 table{
     width: 100%;
-    margin-top: 8px;
+    margin-top: 7px;
 }
-.tab_list table tr td:first-child{
+.contents .c1 table tr td:first-child{
     text-align: left;
-    padding-left: 15px;
+    padding-left: 25px;
     padding-top: 5px;
     cursor: pointer;
 }
-.tab_list table tr td:first-child:hover{
+.contents .c1 table tr td:first-child:hover{
     text-decoration: underline;
 }
-.tab_list table tr td:last-child{
+.contents .c1 table tr td:last-child{
     text-align: right;
-    padding-right: 15px;
+    padding-right: 25px;
     padding-top: 5px;
 }
-.tab_list .gallery{
+.c1 .gallery{
     display: none;
-    text-align: center;
+    margin-top: 10px;
+    margin-left: 15px;
 }
-.contents .c1 .tab_menu .tab_list .gallery img{
-        width: 30%;
-        margin-left: 2px;
-        margin-right: 2px;
-        margin-top: 5px;
-    }
+.c1 .gallery img{
+    width: 110px;
+    height: 120px;
+    object-fit: cover;
+    padding-left: 5px;
+    padding-right: 5px;
+}
 .contents .c2{
     width: 400px;
     height: 200px;
-    background-color: #555;
+    background-color: #333;
 }
 .contents .c2 img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .contents .c3{
     width: 400px;
@@ -175,84 +174,79 @@ header nav .gnb > li > ul > li > a:hover{
 .contents .c3 img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
-
 footer{
-    width: 100%;
+    width: 1200px;
     height: 100px;
+    background-color: #969082;
     display: flex;
-    background-color: burlywood;
-    position: relative;
+    margin: 0 auto;
 }
 footer .f_logo{
     width: 20%;
     height: 100px;
+    position: relative;
 }
 footer .f_logo img{
     position: absolute;
-    top: 28px;
-    left: 10px;
+    top: 25px;
+    left: 5px;
 }
 footer .f_copy{
     width: 60%;
     height: 100px;
 }
 footer .f_copy p{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    margin-top: 25px;
 }
 footer .f_sns{
     width: 20%;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 footer .f_sns ul{
     display: flex;
-    gap: 12px;
+    gap: 5px;
+    margin-left: 30px;
+    margin-top: 21px;
 }
 footer .f_sns ul img{
     width: 60px;
-    display: block;
+    height: auto;
+    object-fit: cover;
 }
-
 .popup{
     position: fixed;
-    top: 35%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 340px;
+    transform: translate(-50%, -70%);
     background-color: #fff;
+    width: 500px;
+    height: 330px;
     border-radius: 20px;
-    border: 7px solid #444;
+    border: 9px solid #4d4d4d;
     display: none;
 }
-.popup .p_title{
+.popup h2{
     position: absolute;
-    top: 30px;
-    left: 30px;
-    font-size: 25px;
+    top: 20px;
+    left: 20px;
+    font-size: 27px;
 }
 .popup p{
     position: absolute;
-    top: 90px;
-    left: 30px;
-    right: 30px;
+    top: 80px;
+    right: 20px;
+    left: 20px;
     line-height: 26px;
+    font-size: 15px;
 }
 .popup button{
     position: absolute;
-    bottom: 30px;
-    right: 30px;
-    padding: 5px 25px;
+    bottom: 20px;
+    right: 20px;
     border: 0;
     border-radius: 5px;
-
+    padding: 5px 25px;
 }
-
-
