@@ -1,262 +1,278 @@
-*{margin: 0;padding: 0;}
+*{margin: 0; padding: 0; color: #333;}
 ul, li{list-style: none;}
-a{text-decoration: none; color: #111;}
-    #wrap{
-        width: 1200px;
-        margin: 0 auto;
-    }
-    header{
-        width: 100%;
-        height: 100px;
-        display: flex;
-        position: relative;
-        z-index: 50;
-    }
-    header .logo{
-        width: 20%;
-        height: 100px;
-        background-color: #999;
-    }
-    header nav{
-        width: 80%;
-        height: 100px;
-        background-color: #888;
-    }
-    header nav .gnb{
-        width: 600px;
-        height: 50px;
-        background-color: #d1d1d1;
-        position: absolute;
-        bottom: 25px;
-        right: 20px;
-    }
-    header nav .gnb > li{
-        float: left;
-        width: 150px;
-        text-align: center;
-    }
-    header nav .gnb > li > a{
-        display: block;
-        width: 100%;
-        line-height: 50px;
-        font-size: 20px;
-        font-weight: bold;
-    }
-    header nav .gnb > li:hover > a{
-        background-color: rgb(21, 21, 53);
-        color: #fff;
-    }
-    header nav .gnb > li > ul{
-        line-height: 40px;
-        background-color: rgb(21, 21, 53);
-        display: none;
-    }
-    header nav .gnb > li > ul > li > a{
-        display: block;
-        width: 100%;
-        color: #fff;
-    }
-    header nav .gnb > li > ul > li > a:hover{
-        background-color: rgb(171, 200, 245);
-        color: #111;
-    }
+a{text-decoration: none;}
 
-    .slide{
-        width: 100%;
-        height: 300px;
-        background-color: #444;
-        position: relative;
-    }
-    .slide .slides li{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-    }
-    .slide .slides li:first-child {
-    display: block; 
-    }
-    .slide .slides li img{
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+#wrap{
+    width: 100%;
+}
 
-    .contents{
-        width: 100%;
-        height: 200px;
-        display: flex;
-    }
-    .contents .c1{
-        width: 400px;
-        height: 200px;
-        background-color: #666;
-    }
-    .contents .c1 .tab_menu{
-        width: 100%;
-        height: 100%;
-    }
-    .contents .c1 .tab_menu .tab_title{
-        height: 30%;
-        display: flex;
-        gap: 10px;
-        padding-left: 10px;
+header{
+    width: 1200px;
+    height: 100px;
+    background-color: #e4f2ff;
+    display: flex;
+    margin: 0 auto;
+}
+header .logo{
+    width: 20%;
+    height: 100px;
+    position: relative;
+}
+header .logo img{
+    width: 220px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+header nav{
+    width: 80%;
+    height: 100px;
+    position: relative;
+    z-index: 10;
+}
+header nav .gnb{
+    width: 600px;
+    height: 50px;
+    background-color: #a0bbe4;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+}
+header nav .gnb > li{
+    float: left;
+    width: 150px;
+    text-align: center;
+}
+header nav .gnb > li > a{
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+header nav .gnb > li:hover > a{
+    background-color: rgb(84, 142, 230);
+    color: #fff
+}
+header nav .gnb > li > ul{
+    line-height: 40px;
+    background-color: #93b8f0;
+    display: none;
+}
+header nav .gnb > li > ul > li > a{
+    display: block;
+    width: 100%;
+}
+header nav .gnb > li > ul > li > a:hover{
+    background-color: rgb(65, 103, 184);
+    color: #fff;
+}
 
-    }
-    .tab_title h2:first-child::after{
-        content: "|";
-        margin-left: 10px;
-        font-size: 24px;
-        position: relative;
-        top: -4px;
-    }.contents .c1 .tab_menu .tab_title h2{
-        padding-top: 10px;
-        cursor: pointer;
-        font-size: 27px;
-      
-    }
-    .contents .c1 .tab_menu .tab_title h2.on{
-        text-decoration: underline;
-    }
+.slide{
+    width: 1200px;
+    height: 300px;
+    background-color: #222;
+    margin: 0 auto;
+    position: relative;
+}
+.slide .slides li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
 
-    .contents .c1 .tab_menu .tab_list table{
-        width: 100%;
-    }
-    .contents .c1 .tab_menu .tab_list table tr td{
-        font-size: 15px;
-    }
-    .contents .c1 .tab_menu .tab_list table tr td:first-child{
-        text-align: left;
-        padding-left: 10px;
-        padding-top: 2px;
-        cursor: pointer;
-    }
-    .contents .c1 .tab_menu .tab_list table tr td:first-child:hover{
-        text-decoration: underline;
-    }
-    .contents .c1 .tab_menu .tab_list table tr td:last-child{
-        text-align: right;
-        padding-right: 10px;
-        padding-top: 2px;
-    }
-    .contents .c1 .tab_menu .tab_list .gallery{
-        display: none;
-        text-align: center;
-    
-    }
-    .contents .c1 .tab_menu .tab_list .gallery img{
-        width: 30%;
-        margin-left: 2px;
-        margin-right: 2px;
-    }
+.slide .slides li:first-child{
+    display: block;
 
-    .contents .c2{
-        width: 400px;
-        height: 200px;
-        background-color: #333;
-    }
-    .contents .c2 ul{
-        margin-top: 5px;
-    }
-    .contents .c3{
-        width: 400px;
-        height: 200px;
-        background-color: #555;
-    }
-    .contents .c3 ul{
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 10px;
-    }
+}
+.slide .slides img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contents{
+    width: 1200px;
+    height: 200px;
+    background-color: #777;
+    display: flex;
+    margin: 0 auto;
+}
+.contents .c1{
+    width: 400px;
+    height: 200px;
+    background-color: #a9ccec;
+}
+.contents .c1 .tab_title{
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.contents .c1 .tab_title h2{
+    font-size: 25px;
+    cursor: pointer;
+}
+.contents .c1 .tab_title h2.on{
+    text-decoration: underline;
+}
+.contents .c1 .tab_title h2:first-child::after{
+    content: '|';
+    padding-left: 10px;
+    font-size: 20px;
+    position: relative;
+    top: -4px;
+    display: inline-block;
+}
+.contents .c1 .tab_list table{
+    width: 100%;
+    margin-top: 5px;
+}
+.tab_list table tr td{
+    font-size: 14px;
+}
+.tab_list table tr td:first-child{
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 4px;
+    cursor: pointer;
+}
+.tab_list table tr td:first-child:hover{
+    text-decoration: underline;
+}
+.tab_list table tr td:last-child{
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 4px;
+}
+.c1 .gallery{
+    display: none;
+    margin-top: 10px;
+    padding-left: 16px;
+}
+.c1 .gallery img{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.contents .c2{
+    width: 400px;
+    height: 200px;
+    background-color: #f3fbff;
+}
+.contents .c2 ul{
+    margin-top: 5px;
+}
+.contents .c3{
+    width: 400px;
+    height: 200px;
+    background-color: #f3fbff;
+}
+.contents .c3 ul{
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
 
+footer{
+    width: 1200px;
+    height: 100px;
+    background-color: #d1d1d1;
+    display: flex;
+    margin: 0 auto;
+}
+footer .f_1{
+    width: 20%;
+    height: 100px;
+    position: relative;
+}
+footer .f_1 img{
+    width: 220px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+}
+footer .f_2{
+    width: 80%;
+    height: 100px;
+}
+footer .f_2 .f_menu{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+footer .f_2 .f_menu .f_menus{
+    position: absolute;
+    top: 15px;
+    left: 25px;
+}
+footer .f_2 .f_menu .f_menus a:not(:last-child)::after{
+    content: '|';
+    padding-left: 8px;
+}
+footer .f_2 .f_menu .f_menus a{
+    padding-left: 4px;
+    font-size: 14px;
+}
+footer .f_2 .f_menu .f_menus a:hover{
+    text-decoration: underline;
+}
 
-    footer{
-        width: 100%;
-        height: 100px;
-        display: flex;
-        position: relative;
-        background-color: skyblue;
-    }
-    footer .f_1{
-        width: 25%;
-        height: 100px;
-    }
-    footer .f_1 img{
-        width: 220px;
-        height: auto;
-        position: absolute;
-        top: 13px;
-        left: 30px;
-    }
-    footer .f_2{
-        width: 75%;
-        height: 100px;
-    }
-    footer .f_2 .f_menu{
-        width: 100%;
-        height: 50px;
-        position: relative;
-    }
-    footer .f_2 .f_menu .f_menus{
-        position: absolute;
-        left: 100px;
-        top: 15px;
-    }
-    footer .f_2 .f_menu a:not(:last-child)::after{
-        content: '|';
-        margin: 0 10px;
-        font-size: 15px;
-    }
-    footer .f_2 .f_menu a:hover{
-        text-decoration: underline;
-    }
-    footer .f_2 .f_copy{
-        width: 100%;
-        height: 50px;
-        position: relative;
-    }
-    footer .f_2 .f_copy p{
-        position: absolute;
-        top: 50%;
-        left: 100px;
-        transform: translateY(-50%);
-        font-size: 14px;
-        
-    }
-
-    .popup{
-        position: fixed;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        width: 550px;
-        height: 280px;
-        border-radius: 10px;
-        border: 6px solid skyblue;
-        display: none;
-    }
-    .popup .p_title{
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        font-size: 28px;
-    }
-    .popup p{
-        position: absolute;
-        top: 95px;
-        left: 30px;
-        right: 30px;
-        line-height: 26px;
-    }
-    .popup button{
-        position: absolute;
-        bottom: 30px;
-        right: 30px;
-        padding: 5px 25px;
-        border: 0;
-        border-radius: 5px;
-    }
+footer .f_2 .f_copy{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+footer .f_2 .f_copy p{
+    font-size: 14px;
+    position: absolute;
+    left: 30px;
+}
+#pop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 11;
+}
+#pop .popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 500px;
+    height: 260px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 9px solid #777;
+}
+#pop .popup h2{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 25px;
+    line-height: 33px;
+}
+#pop .popup p{
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    right: 20px;
+    font-size: 14px;
+    line-height: 25px;
+}
+#pop .popup button{
+    position: absolute;
+    border: 0;
+    bottom: 20px;
+    right: 20px;
+    padding: 5px 25px;
+}
