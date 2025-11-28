@@ -3,120 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>오픈뱅킹</title>
     <link rel="stylesheet" href="css/style23.css">
-    <script src="./js/jquery-1.12.3.js"></script>
-<style>
-    *{margin: 0 ;padding: 0;}
-    #wrap{
-        width: 100%;
-    }
-    header{
-        width: 1340px;
-        height: 100px;
-        margin: 0 auto;
-        display: flex;
-    }
-    header .logo{
-        width: 20%;
-        height: 100px;
-        background-color: antiquewhite;
-    }
-    header nav{
-        width: 80%;
-        height: 100px;
-        background-color: olivedrab;
-    }
-    .slide{
-        width: 100%;
-        height: 350px;
-        position: relative;
-        background-color: #888;
-    }
-    .slide .link{
-        width: 1340px;
-        height: 100px;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #222;
-    }
-    .contents{
-        width: 1340px;
-        height: 600px;
-        margin: 0 auto;
-    }
-    .contents .c1{
-        width: 100%;
-        height: 200px;
-        background-color: plum;
-    }
-    .contents .c2{
-        width: 100%;
-        height: 400px;
-        background-color: palevioletred;
-    }
-    footer{
-        width: 1340px;
-        height: 120px;
-        margin: 0 auto;
-        display: flex;
-    }
-    footer .f_1{
-        width: 20%;
-        height: 120px;
-        background-color: #333;
-    }
-    footer .f_2{
-        width: 80%;
-        height: 120px;
-    }
-    footer .f_2 .f_menu{
-        width: 100%;
-        height: 60px;
-        background-color: #111;
-    }
-    footer .f_2 .f_copy{
-        width: 100%;
-        height: 60px;
-        background-color: #555;
-    }
-
-
-
-
-    
-</style>
-
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <div id="wrap">
         <header>
-            <div class="logo"><a href="#"><img src="" alt=""></a></div>
-            <nav></nav>
+            <div class="logo"><a href="#"><img src="images/img4/logo.png" alt=""></a></div>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">조회</a>
+                        <ul class="sub">
+                            <li><a href="#">계좌조회</a></li>
+                            <li><a href="#">거래내역조회</a></li>
+                            <li><a href="#">휴먼계좌 조회</a></li>
+                            <li><a href="#">수표/어음 조회</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이체</a>
+                        <ul class="sub">
+                            <li><a href="#">계좌이체</a></li>
+                            <li><a href="#">다계좌이체</a></li>
+                            <li><a href="#">자동이체</a></li>
+                            <li><a href="#">예약이체</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">공과금</a>
+                        <ul class="sub">
+                            <li><a href="#">지로/생활요금</a></li>
+                            <li><a href="#">지방세</a></li>
+                            <li><a href="#">국세/관세</a></li>
+                            <li><a href="#">벌칙금/벌과금</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">외환</a>
+                        <ul class="sub">
+                            <li><a href="#">금리</a></li>
+                            <li><a href="#">환율/외화예금</a></li>
+                            <li><a href="#">글로벌뱅킹</a></li>
+                            <li><a href="#">외화송금</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
         </header>
+        <div class="nav-bg"></div>
 
         <div class="slide">
-            <div class="link"></div>
+            <ul class="slides">
+                <li><a href="#"><img src="images/img4/s1.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/img4/s2.jpg" alt=""></a></li>
+                <li><a href="#"><img src="images/img4/s3.jpg" alt=""></a></li>
+            </ul>
+            <div class="link">
+                <ul>
+                    <li><a href="#"><img src="images/img4/link5.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img4/link4.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img4/link3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img4/link2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img4/link1.jpg" alt=""></a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="contents">
-            <div class="c1"></div>
+            <div class="c1">
+                <div class="c1_container">
+                    <img src="images/img4/b1.jpg" alt="">
+                    <div class="c1_f">
+                    <h3>데이터 중심의 신뢰와 혁신</h3>
+                    <p>
+                        주식회사 기능금융은 고객의 금융 경험 혁신을 위해 오픈뱅킹 기반의 안전하고 신뢰성 높은 금융 서비스를 제공합니다.<br/>
+                        데이터 보호와 편의성을 최우선 가치로 삼아, 누구나 언제든 안심하고 이용할 수 있는 금융 환경을 구축하고 있습니다.
+                    </p>
+                    </div>
+                    <img src="images/img4/b2.png" alt="">
+                </div>
+            </div>
             <div class="c2">
-                <div class="notice"></div>
-                <div class="gallery"></div>
+                <div class="tab_title">
+                    <h2 class="on">공지사항</h2>
+                    <h2>갤러리</h2>
+                </div>
+                <div class="tab_list">
+                <div class="notice list">
+                    <table>
+                        <tr>
+                            <td>오픈뱅킹 기반 고객 자산통합관리 서비스 정식 오픈 안내</td><td>2025.06.10</td>
+                        </tr>
+                        <tr>
+                            <td>차세대 결제 인프라 연동을 위한 오픈 API 협력 체결 소식</td><td>2025.05.22</td>
+                        </tr>
+                        <tr>
+                            <td>오픈뱅킹 보안성 강화를 위한 인증체계 업그레이드 시행</td><td>2025.04.28</td>
+                        </tr>
+                        <tr>
+                            <td>금융데이터 활용 혁신 프로젝트 추진 및 연구기금 1억 원 지원</td><td>2025.03.25</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="gallery list">
+                    <a href="#"><img src="images/img4/g1.jpg" alt=""></a>
+                    <a href="#"><img src="images/img4/g2.jpg" alt=""></a>
+                    <a href="#"><img src="images/img4/g3.jpg" alt=""></a>
+                </div>
+                </div>
             </div>
         </div>
 
         <footer>
-            <div class="f_1"></div>
+            <div class="f_1"><a href="#"><img src="images/img4/f_logo.png" alt=""></a></div>
             <div class="f_2">
-                <div class="f_menu"></div>
-                <div class="f_copy"></div>
+                <div class="f_menu">
+                    <div class="f_menus">
+                        <a href="#">오픈뱅킹 안내</a>
+                        <a href="#">자산조회 서비스</a>
+                        <a href="#">계좌·결제 관리</a>
+                        <a href="#">보안 및 인증정책</a>
+                        <a href="#">이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">고객센터</a>
+                    </div>
+                </div>
+                <div class="f_copy">
+                    <p>
+                        주식회사 기능오픈뱅킹 대표자 홍정길  사업자등록번호 213-82-04651<br/>
+                        Copyright © Gineung OpenBanking Co., Ltd. All Rights Reserved.
+                    </p>
+                </div>
             </div>
         </footer>
-
     </div>
+    <div class="popup">
+        <h2>2025 오픈뱅킹 서비스 업데이트 사전 안내</h2>
+        <p>
+            주식회사 기능금융은 2025년 상반기 오픈뱅킹 서비스 고도화 작업을 앞두고, 고객 및 협력 파트너사를 대상으로
+            관련 기능 변경 사항과 신규 보안정책 적용에 대한 사전 안내 등록을 실시합니다.<br/>
+            업데이트 정보를 필요로 하는 담당자께서는 아래 안내사항 및 별첨 일정표, 등록 방법 등을 참고하시어
+            기한 내 반드시 등록을 완료해 주시기 바랍니다.<br/>
+            기한 초과 시 사전 안내 자료 제공이 제한될 수 있으니 유의해 주시기 바랍니다.
+        </p>
+        <button>닫기</button>
+    </div>
+
+    
 </body>
 </html>
+<script>
+    $(function(){
+
+        var s = 0;
+        setInterval(function(){
+            s++;
+            if(s==3){s=0;}
+            $('.slides li').eq(s).css('left','100%').animate({'left':0},600);
+            $('.slides li').eq(s-1).css('left',0).animate({'left':'-100%'},600);
+        },3000);
+
+        $('.gnb > li').mouseenter(function(){
+            $('.gnb > li > ul, .nav-bg').stop().slideDown();
+        });
+        $('.gnb > li').mouseleave(function(){
+            $('.gnb > li > ul, .nav-bg').stop().slideUp();
+        });
+
+        $('.tab_title h2').click(function(){
+            var t = $(this).index();
+            $('.tab_list .list').css('display','none');
+            $('.tab_list .list').eq(t).css('display','block');
+            $('.tab_title h2').removeClass('on').eq(t).addClass('on');
+        });
+
+        $('table tr:first-child').click(function(){
+            $('.popup').fadeIn();
+        });
+        $('.popup button').click(function(){
+            $('.popup').fadeOut();
+        });
+    });
+</script>
