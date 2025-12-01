@@ -1,232 +1,276 @@
-    *{margin: 0;padding: 0;}
-    ul, li{list-style: none;}
-    a{text-decoration: none; color: #111;}
+*{margin: 0 ;padding: 0;}
+body{background-color: #fff; color: #333;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: #333;}
 
-    #wrap{
-        width: 1200px;
-        height: 700px;
-        margin: 0 auto;
-    }
-    header{
-        width: 100%;
-        height: 100px;
-        display: flex;
-    }
-    header .logo{
-        width: 20%;
-        height: 100px;
-        background-color: #777;
-    }
-    header nav{
-        width: 80%;
-        height: 100px;
-        background-color: #666;
-    }
-    .slide{
-        width: 100%;
-        height: 300px;
-        background-color: #555;
-    }
-    .slide .slides{
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-    }
-    .slide .slides li{
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-    }
-    .slide .slides li:first-child{
-        display: block;
-    }
-    .slide .slides li img{
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+#wrap{
+    width: 100%;
+}
+header{
+    width: 1200px;
+    height: 100px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    z-index: 100;
+}
+header .logo{
+    width: 20%;
+    height: 100px;
+    position: relative;
+}
+header .logo img{
+    position: absolute;
+    top: -7px;
+}
+header nav{
+    width: 80%;
+    height: 100px;
+    z-index: 50;
+}
+header nav .gnb{
+    width: 600px;
+    height: 50px;
+    background-color: #69ca60;
+    position: absolute;
+    bottom: 0;
+    right: 25px;
+}
+header nav .gnb > li{
+    float: left;
+    width: 150px;
+    text-align: center;
 
-    .contents{
-        width: 100%;
-        height: 200px;
-        display: flex;
-    }
+}
+header nav .gnb > li > a{
+    display: block;
+    width: 100%;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+header nav .gnb > li:hover > a{
+    background-color: #1e5f18;
+    color: #fff;
+}
+header nav .gnb > li > ul{
+    line-height: 40px;
+    background-color:rgb(154, 219, 154);
+    width: 100%;
+    display: none;
+}
+header nav .gnb > li > ul > li > a{
+    display: block;
+    width: 100%;
+}
+header nav .gnb > li > ul > li > a:hover{
+    background-color: #f0b63a;
+    color: #fff;
+}
+header .nav-bg{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgb(154, 219, 154);
+    z-index: 10;
+    display: none;
+}
+.slide{
+    width: 1200px;
+    height: 300px;
+    background-color: #aaa;
+    margin: 0 auto;
+}
+.slide .slides{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.slide .slides li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.slide .slides li:first-child{
+    display: block;
+}
+.slide .slides img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
-    .contents .notice{
-        width: 33.33%;
-        height: 200px;
-        background-color: #d1d1d1;
-    }
-    .contents h2{
-        margin-left: 15px;
-        margin-top: 10px;
-        font-size: 26px;
-        text-decoration: underline;
-    }
-    .contents .notice table{
-        width: 100%;
-        margin-top: 8px;
-    }
-    .contents .notice table tr td{
-        font-size: 13px;
-    }
-    .contents .notice table tr td:first-child{
-        text-align: left;
-        padding-left: 15px;
-        padding-top: 6px;
-        cursor: pointer;
-    }
-    .contents .notice table tr td:first-child:hover{
-        text-decoration: underline;
-    }
-    .contents .notice table tr td:last-child{
-        text-align: right;
-        padding-right: 15px;
-        padding-top: 6px;
-    }
-    .contents .gallery{
-        width: 33.33%;
-        height: 200px;
-        background-color: #a1a1a1;
-    }
-    .contents .gallery ul{
-        display: flex;
-        gap: 8px;
-        justify-content: center;
-        margin-top: 15px;
-    }
-    .contents .gallery img{
-        width: 121px;
-        height: auto;
-    }
-    .contents .gallery p{
-        font-size: 10px;
-        text-align: center;
-        background-color: #d1d1d1;
-        border-radius: 10px;
-        padding: 3px;
-        margin-top: 10px;
-             
-    }
+}
+.contents{
+    width: 1200px;
+    height: 200px;
+    background-color: #222;
+    display: flex;
+    margin: 0 auto;
+}
+.contents h2{
+    font-size: 25px;
+    padding-top: 15px;
+    padding-left: 15px;
+    text-decoration: underline;
+}
+.contents .notice{
+    width: 400px;
+    height: 200px;
+    background-color: #d3eec7;
+}
+.notice table{
+    width: 100%;
+    margin-top: 5px;
+}
+.notice table tr td{
+    font-size: 13px;
+}
+.notice table tr td:first-child{
+    text-align: left;
+    padding-left: 15px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+.notice table tr td:first-child:hover{
+    text-decoration: underline;
+}
+.notice table tr td:last-child{
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+.contents .gallery{
+    width: 400px;
+    height: 200px;
+    background-color: #fcd7a0;
+}
+.contents .gallery ul{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding-top: 10px;
+}
+.contents .gallery ul p{
+    font-size: 12px;
+    text-align: center;
+    padding-top: 3px;
+}
+.imgbox{
+    height: 110px;
+    width: 120px;
+    overflow: hidden;
+}
+.contents .gallery ul img{
+    height: 110px;
+    width: 120px;
+    object-fit: cover;
+    opacity: 0.85;
+    transition: transform 0.3s ease;
+}
+.contents .gallery ul img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.contents .shortcut{
+    width: 400px;
+    height: 200px;
+    background-color: #bbb;
+}
+.contents .shortcut ul{
+    display: flex;
+}
+footer{
+    width: 1200px;
+    height: 100px;
+    background-color: #b8b8b8;
+    display: flex;
+    margin: 0 auto;
+}
+footer .f_1{
+    width: 80%;
+    height: 100px;
+}
+footer .f_1 .f_menu{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+footer .f_1 .f_menu .f_menus{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+footer .f_1 .f_menu .f_menus a{
+    font-size: 13px;
+}
+footer .f_1 .f_menu .f_menus a:hover{
+    text-decoration: underline;
+}
+footer .f_1 .f_menu .f_menus a:not(:last-child)::after{
+    content: "|";
+    margin: 0 10px;
+}
+footer .f_1 .f_copy{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+footer .f_1 .f_copy p{
+    font-size: 12px;
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+}
+footer .f_2{
+    width: 20%;
+    height: 100px;
+    position: relative;
+}
+footer .f_2 select{
+    padding: 5px 15px;
+    border-radius: 15px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+}
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    background-color: #fff;
+    width: 500px;
+    height: 360px;
+    border-radius: 20px;
+    border: 10px solid #222;
+    display: none;
+}
+.popup h2{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 26px;
+}
+.popup p{
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    right: 20px;
+    line-height: 26px;
+    font-size: 14px;
 
-    .contents .shortcut{
-        width: 33.33%;
-        height: 200px;
-        background-color: #fff;
-    }
-    .contents .shortcut ul{
-        display: flex;
-        justify-content: center;
-        gap: 5px;
-        margin-top: 20px;
-    }
-    .contents .shortcut img{
-        width: 125px;
-        height: auto;
-    }
-    .contents .shortcut p{
-        font-size: 15px;
-        text-align: center;
-        margin-top: 5px;
-    }
-    .contents .shortcut p:hover{
-        text-decoration: underline;
-    }
+}
+.popup button{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 25px;
 
-
-
-    footer{
-        width: 100%;
-        height: 100px;
-        display: flex;
-        background-color: #999;
-    }
-    footer .f_1{
-        width: 70%;
-        height: 100px;
-    }
-    footer .f_1 .f_menu{
-        width: 100%;
-        height: 50px;
-        position: relative;
-    }
-    footer .f_1 .f_menu .f_menus{
-        position: absolute;
-        top: 15px;
-        left: 20px;
-
-    }
-    footer .f_1 .f_menu .f_menus a{
-        font-size: 13px;
-    }
-    footer .f_1 .f_menu .f_menus a:hover{
-        text-decoration: underline;
-    }
-    footer .f_1 .f_menu .f_menus a:not(:last-child)::after{
-        content: '|';
-        margin: 0 10px;
-    }
-
-    footer .f_1 .f_copy{
-        width: 100%;
-        height: 50px;
-        position: relative;
-    }
-    footer .f_1 .f_copy p{
-        font-size: 11.5px;
-        position: absolute;
-        left: 20px;
-        bottom: 5px;
-    }
-    footer .f_2{
-        width: 30%;
-        height: 100px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    footer .f_2 ul{
-        display: flex;
-        gap: 3px;
-    }
-    footer .f_2 img{
-        width: 115px;
-    }
-
-    .popup{
-        position: fixed;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #fff;
-        width: 600px;
-        height: 405px;
-        border-radius: 10px;
-        border: 7px solid #555;
-        display: none;
-    }
-    .popup .p_title{
-        position: absolute;
-        top: 30px;
-        left: 30px;
-        font-size: 29px;
-    }
-    .popup p{
-        position: absolute;
-        top: 100px;
-        left: 30px;
-        right: 30px;
-        line-height: 27px;
-    }
-    .popup button{
-        position: absolute;
-        right: 30px;
-        bottom: 30px;
-        padding: 5px 25px;
-        border: 0;
-        border-radius: 5px;
-    }
+}
