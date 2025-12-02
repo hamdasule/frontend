@@ -23,7 +23,6 @@
         $('.slides li').eq(s-1).css('top',0).animate({'top':'-100%'},600);
     },3000);
 
-
     // 슬라이드 페이드인아웃
 
     var s = 0;
@@ -34,7 +33,6 @@
         $('.slides li').eq(s-1).fadeOut(800);
     },3000);
 
-
     // 탭메뉴
 
     $('.tab_title h2').click(function(){
@@ -43,7 +41,6 @@
         $('.tab_list .list').eq(t).css('display','block');
         $('.tab_title h2').removeClass('on').eq(t).addClass('on');
     });
-
 
     // 팝업
 
@@ -55,13 +52,13 @@
     });
 
     //팝업 모달
+
     $('table tr:first-child').click(function(){
         $('#pop').stop().show();
     });
     $('#pop .popup button').click(function(){
         $('#pop').stop().hide();
     });
-
 
     // 네비가로 기본
 
@@ -113,7 +110,6 @@
         }
         return false;
     });
-
 
     //네비세로 개별
 

@@ -84,10 +84,8 @@ header nav .gnb > li > ul > li > a:hover{
     height: 100%;
     display: none;
 }
-
 .slide .slides li:first-child{
     display: block;
-
 }
 .slide .slides img{
     display: block;
@@ -95,6 +93,7 @@ header nav .gnb > li > ul > li > a:hover{
     height: 100%;
     object-fit: cover;
 }
+
 .contents{
     width: 1200px;
     height: 200px;

@@ -1,0 +1,280 @@
+*{margin: 0;padding: 0;}
+body{background-color: #fff; color: #333;}
+ul, li{list-style: none;}
+a{text-decoration: none; color: #111;}
+
+#wrap{
+    width: 100%;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background-color: #f5faff;
+}
+header .header_container{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+.header_container .logo{
+    width: 20%;
+    height: 100px;
+    position: relative;
+}
+.header_container .logo img{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+.header_container nav{
+    width: 80%;
+    height: 100px;
+}
+.header_container nav .gnb{
+    width: 600px;
+    height: 50px;
+    background-color: #589deb;
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    z-index: 50;
+}
+.header_container nav .gnb > li{
+    float: left;
+    text-align: center;
+    width: 150px;
+}
+.header_container nav .gnb > li > a{
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+}
+.header_container nav .gnb > li:hover > a{
+    background-color: #173766;
+    color: #fff;
+}
+.header_container nav .gnb > li > ul{
+    line-height: 40px;
+    background-color: #b5ddfd;
+    display: none;
+    
+}
+.header_container nav .gnb > li > ul > li > a{
+    display: block;
+    width: 100%;
+}
+.header_container nav .gnb > li > ul > li > a:hover{
+    background-color: #5c9ae0;
+    color: #fff;
+}
+.header_container .nav-bg{
+    position: absolute;
+    top: 80px;
+    right: 25px;
+    height: 160px;
+    width: 600px;
+    background-color: #b5ddfd;
+    z-index: 10;
+    display: none;
+}
+.slide{
+    width: 1200px;
+    height: 300px;
+    background-color: #888;
+    margin: 0 auto;
+}
+.slide .slides{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.slide .slides li{
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide .slides li:first-child{
+    left: 0;
+}
+.slide .slides img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contents{
+    width: 1200px;
+    height: 200px;
+    display: flex;
+    margin: 0 auto;
+}
+.contents .c1{
+    width: 400px;
+    height: 200px;
+    background-color: #d1e8f5;
+}
+.c1 .tab_title{
+    display: flex;
+    gap: 10px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.c1 .tab_title h2{
+    cursor: pointer;
+}
+.c1 .tab_title h2.on{
+    text-decoration: underline;
+}
+.c1 .tab_title h2:first-child::after{
+    content: '|';
+    padding-left: 10px;
+    position: relative;
+    font-size: 20px;
+    top: -4px;
+    display: inline-block;
+}
+.contents .c1 .tab_list table{
+    width: 100%;
+    margin-top: 4px;
+}
+.c1 .tab_list table tr td{
+    font-size: 14px;
+}
+.c1 .tab_list table tr td:first-child{
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+.c1 .tab_list table tr td:first-child:hover{
+    text-decoration: underline;
+}
+.c1 .tab_list table tr td:last-child{
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 2px;
+}
+.contents .c1 .gallery{
+    display: none;
+}
+.contents .c1 .gallery img{
+    width: 125px;
+    height: 140px;
+    margin-top: 8px;
+    margin-left: 4px;
+}
+.contents .c2{
+    width: 400px;
+    height: 200px;
+    background-color: #fff;
+}
+.contents .c2 ul{
+    margin-top: 5px;
+}
+.contents .c3{
+    width: 400px;
+    height: 200px;
+}
+.contents .c3 ul{
+    display: flex;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #b1b1b1;
+}
+footer .footer_container{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+}
+.footer_container .f_1{
+    width: 20%;
+    height: 100px;
+    position: relative;
+}
+.footer_container .f_1 img{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+
+}
+.footer_container .f_2{
+    width: 80%;
+    height: 100px;
+}
+.footer_container .f_2 .f_menu{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.f_2 .f_menu .f_menus{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+.f_2 .f_menu .f_menus a{
+    font-size: 14px;
+}
+.f_2 .f_menu .f_menus a:hover{
+    text-decoration: underline;
+}
+.f_2 .f_menu .f_menus a:not(:last-child)::after{
+    content: '|';
+    margin: 0 10px;
+}
+.footer_container .f_2 .f_copy{
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+.footer_container .f_2 .f_copy p{
+    font-size: 14px;
+    position: absolute;
+    left: 50px;
+    top: 5px;
+}
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    width: 530px;
+    height: 380px;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 10px solid #222;
+    display: none;
+}
+.popup h2{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+}
+.popup p{
+    position: absolute;
+    top: 80px;
+    left: 30px;
+    right: 30px;
+    line-height: 26px;
+    font-size: 14px;
+
+}
+.popup button{
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 25px;
+
+}
