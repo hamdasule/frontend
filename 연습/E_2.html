@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>역사박물관</title>
     <link rel="stylesheet" href="css/style18.css">
-    <script src="./js/jquery-1.12.3.js"></script>
-
+    <script src="js/jquery-1.12.3.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
     <div id="wrap">
         <div id="main">
             <header>
-                <div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+                <div class="logo"><a href="#"><img src="images/img1(E2)/logo.png" alt="로고"></a></div>
                 <nav>
                     <ul class="gnb">
                         <li><a href="#">박물관 소개</a>
@@ -20,7 +20,7 @@
                                 <li><a href="#">인사말</a></li>
                                 <li><a href="#">박물관연혁</a></li>
                                 <li><a href="#">유물현황</a></li>
-                                <li><a href="#">괸람안내</a></li>
+                                <li><a href="#">관람안내</a></li>
                             </ul>
                         </li>
                         <li><a href="#">전시</a>
@@ -53,6 +53,7 @@
             <div class="contents">
                 <div class="notice">
                     <h2>공지사항</h2>
+                    <div class="table_container">
                     <table>
                         <tr>
                             <td>고대 문명 특별전 ‘시간의 연금술 개최 안내</td><td>2025.05.21</td>
@@ -66,38 +67,51 @@
                         <tr>
                             <td>한국문화유산재단 전시 지원금 1억 5천만 원 전달</td><td>2025.02.25</td>
                         </tr>
+                        <tr>
+                            <td>국내 유물 보존 연구소와 공동 학술 세미나 개최 안내</td><td>2025.01.30</td>
+                        </tr>
+                        <tr>
+                            <td>국제 문화유산 교류 프로그램 참여 기관 선정 발표</td><td>2024.12.18</td>
+                        </tr>
+                        <tr>
+                            <td>박물관 디지털 아카이브 시스템 업그레이드 안내</td><td>2024.11.05</td>
+                        </tr>
                     </table>
+                </div>
                 </div>
                 <div class="gallery">
                     <h2>갤러리</h2>
                     <ul>
-                        <li><a href="#"><img src="images/img1/g1.jpg" alt=""></a>
-                        <p>
-                           과거의 기록으로 <br/>시대의 흐름을 보여줍니다. 
-                        </p></li>
-                        <li><a href="#"><img src="images/img1/g2.jpg" alt=""></a>
-                        <p>
-                            전시의 시작을 알리는 <br/>박물관 입구입니다.
-                        </p></li>
+                        <li><a href="#"><img src="images/img1(E2)/g1.jpg" alt="갤러리이미지1">
+                        <p>과거의 기록으로 시대의<br/>흐름을 보여줍니다.</p></a></li>
+                        <li><a href="#"><img src="images/img1(E2)/g2.jpg" alt="갤러리이미지2">
+                        <p>전시의 시작을 알리는<br/>박물관 입구입니다.</p></a></li>
                     </ul>
                 </div>
-                <div class="link"></div>
+                <div class="link">
+                    <ul>
+                        <li><a href="#"><img src="images/img1(E2)/link1.jpg" alt="링크1"></a></li>
+                        <li><a href="#"><img src="images/img1(E2)/link2.jpg" alt="링크2"></a></li>
+                        <li><a href="#"><img src="images/img1(E2)/link3.jpg" alt="링크3"></a></li>
+                        <li><a href="#"><img src="images/img1(E2)/link4.jpg" alt="링크4"></a></li>
+                    </ul>
+                </div>
             </div>
 
             <div class="slide">
                 <ul class="slides">
-                    <li><a href="#"><img src="images/img1/s1.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="images/img1/s2.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="images/img1/s3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="images/img1(E2)/s1.jpg" alt="슬라이드이미지1"></a></li>
+                    <li><a href="#"><img src="images/img1(E2)/s2.jpg" alt="슬라이드이미지2"></a></li>
+                    <li><a href="#"><img src="images/img1(E2)/s3.jpg" alt="슬라이드이미지3"></a></li>
                 </ul>
             </div>
         </div>
 
         <footer>
-            <div class="f_logo"><a href="#"><img src="images/f_logo.png" alt=""></a></div>
+            <div class="f_logo"><a href="#"><img src="images/img1(E2)/f_logo.png" alt="푸터로고"></a></div>
             <div class="f_copy">
                 <p>
-                    Copyright City Museum Exhibition. All Rights Reserved.
+                   Copyright City Museum Exhibition. All Rights Reserved. 
                 </p>
             </div>
             <div class="f_site">
@@ -112,7 +126,7 @@
     </div>
     <div id="pop">
         <div class="popup">
-            <h2>시립현대미술관 2025년 봄 특별전 사전예약 안내</h2>
+            <h2>시립현대미술관 특별전<br/>사전예약 안내</h2>
             <p>
                 시립현대미술관에서 오는 2025년 봄 개최되는 특별전 ‘도시의 기억, 빛을 걷다’ 관람 사전예약을 진행합니다.
                 관심 있는 분들께서는 아래 안내사항 및 별첨 전시 소개자료, 예약 방법 등을 참고하시어 기한 내 반드시 신청해 주시기 바랍니다.
@@ -125,30 +139,15 @@
 </body>
 </html>
 <script>
-
     $(function(){
-
-        $('.gnb li ul').css('diplay','none');
-        $('.gnb > li > a').click(function(){
-            var n = $(this).next('.sub').css('display');
-            if(n === 'none'){
-                $('.sub').slideUp();
-                $(this).next('.sub').slideDown();
-            }else{
-                $('.sub').slideUp();
-            }
-            return false;
-        });
-
 
         var s = 0;
         setInterval(function(){
             s++;
-            if(s == 3){s=0;}
+            if(s==3){s=0;}
             $('.slides li').eq(s).css('top','100%').animate({'top':0},600);
             $('.slides li').eq(s-1).css('top',0).animate({'top':'-100%'},600);
         },3000);
-
 
         $('table tr:first-child').click(function(){
             $('#pop').stop().show();
@@ -157,6 +156,12 @@
             $('#pop').stop().hide();
         });
 
+        $('.gnb > li').mouseenter(function(){
+            $(this).children('.sub').stop().slideDown(270);
+        });
+        $('.gnb > li').mouseleave(function(){
+            $(this).children('.sub').stop().slideUp(270);
+        });
+        
     });
-
 </script>
