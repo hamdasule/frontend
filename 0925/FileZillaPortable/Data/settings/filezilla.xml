@@ -133,26 +133,11 @@
 		<Setting name="Local filelist column order">0,1,2,3</Setting>
 		<Setting name="Remote filelist column order">0,1,2,3,4,5</Setting>
 		<Setting name="Local filelist sortorder">0 0</Setting>
-		<Setting name="Site Manager position">0 1021 344 774 443 </Setting>
 		<Setting name="Window position and size">0 287 77 1184 843 </Setting>
+		<Setting name="Remote filelist sortorder">0 0</Setting>
+		<Setting name="Site Manager position">0 492 312 774 443 </Setting>
 		<Setting name="Tab data" sensitive="1">
 			<Tabs>
-				<Tab connected="1">
-					<Host>uoy1013.dothome.co.kr</Host>
-					<Port>21</Port>
-					<Protocol>0</Protocol>
-					<Type>0</Type>
-					<User>uoy1013</User>
-					<Pass encoding="base64">Z2thZWt0bWY5Nio=</Pass>
-					<Logontype>1</Logontype>
-					<PasvMode>MODE_DEFAULT</PasvMode>
-					<EncodingType>Auto</EncodingType>
-					<BypassProxy>0</BypassProxy>
-					<Name>dasule</Name>
-					<Site>0/dasule</Site>
-					<RemotePath>1 0 4 html</RemotePath>
-					<LocalPath>C:\dasule1\portfolio\</LocalPath>
-				</Tab>
 				<Tab connected="1" selected="1">
 					<Host>uoy1013.dothome.co.kr</Host>
 					<Port>21</Port>
@@ -166,11 +151,10 @@
 					<BypassProxy>0</BypassProxy>
 					<Name>dasule</Name>
 					<Site>0/dasule</Site>
-					<RemotePath>1 0</RemotePath>
-					<LocalPath>C:\dasule1\portfolio\</LocalPath>
+					<RemotePath>1 0 4 html</RemotePath>
+					<LocalPath>C:\dasule1\포트폴리오2\</LocalPath>
 				</Tab>
 			</Tabs>
 		</Setting>
-		<Setting name="Remote filelist sortorder">0 0</Setting>
 	</Settings>
 </FileZilla3>
